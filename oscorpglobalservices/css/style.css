@@ -1962,6 +1962,9 @@ figure:hover+span {
     .core__txt h5{
         margin-top: 1em;
     }
+    .section_grids a{
+        
+    }
 }
 @media(max-width:1080px) {
 	
