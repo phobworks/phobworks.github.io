@@ -20,17 +20,17 @@ document.addEventListener ("DOMContentLoaded", function () {
 /* Testimonial SlideShow */
 const testimonials = [ 
     {   
-        image: "./images/user-2.jpg",
+        image: "../images/user-2.jpg",
         text: "I couldn't be happier with the results!", 
         author: "Meg Kitchens" 
     },  
     { 
-        image: "./images/services02.jpg",
+        image: "../images/services02.jpg",
         text: "Amazing service! Highly recommended.", 
         author: "Jane Karibo" 
     },  
     { 
-        image: "./images/services02.jpg",
+        image: "../images/services02.jpg",
         text: "The best decision I've ever made!", 
         author: "Emeka Oti" 
     }
