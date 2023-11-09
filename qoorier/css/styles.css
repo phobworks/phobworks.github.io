@@ -302,6 +302,7 @@ nav {
     border: var(--action-color) solid 1px;
     border-radius: 5px;
     padding: 5px;
+    width: 90%;
 }
 
 .order__button button {
@@ -1026,6 +1027,12 @@ nav {
         top: 20px;
         right: 6rem;
         z-index: 2;
+    }
+    .banner__container {
+        margin: 5rem 3rem 2rem 3rem;
+    }
+    .banner__list {
+        margin: 3rem 1rem;
     }
     .hero__tag h1 {
         font-size: 40px;
