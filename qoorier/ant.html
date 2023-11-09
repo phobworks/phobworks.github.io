@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <title>Responsive Navigation Menu</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        .menu-toggle {
+            display: none;
+            /* Hide the icon by default */
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Existing CSS code */
+
+        .menu-toggle,
+        .close-toggle {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            /* Adjust the right distance as needed */
+            top: 5px;
+            /* Adjust the top distance as needed */
+        }
+
+
+        /* Media query for responsive design */
+        /* Your existing CSS code */
+        /* Your existing CSS code */
+        /* Your existing CSS code */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: fixed;
+                top: 35px;
+                /* Adjust the top distance to account for the icon */
+                right: 0;
+                width: 30%;
+                /* Set the width to 30% of the screen */
+                height: 100%;
+                /* Occupy the entire screen height */
+                z-index: 1;
+                /* Ensure the menu appears above other content */
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+                /* Show the icon on smaller devices */
+                font-size: 24px;
+                color: #fff;
+                cursor: pointer;
+                position: fixed;
+                top: 5px;
+                /* Adjust the top distance as needed */
+                right: 20px;
+                z-index: 2;
+                /* Ensure the icon appears above the menu */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="close-toggle">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const closeToggle = document.querySelector(".close-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function () {
+                menu.classList.add("active");
+                menuToggle.style.display = "none";
+                closeToggle.style.display = "block";
+            });
+
+            closeToggle.addEventListener("click", function () {
+                menu.classList.remove("active");
+                closeToggle.style.display = "none";
+                menuToggle.style.display = "block";
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
