@@ -220,7 +220,6 @@ nav {
 .menu {
     list-style: none;
     display: flex;
-    transition: ease-out .5s;
 }
 
 .menu li {
@@ -1006,10 +1005,10 @@ nav {
         position: fixed;
         top: 70px;
         right: 0;
-        width: 30%;
+        width: 50%;
         height: 100vh;
         z-index: 1;
-        transition: ease-in .5s;
+        transition: right .5s;
     }
     .menu.active {
         display: flex;
