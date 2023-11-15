@@ -28,7 +28,7 @@ const swiper = new Swiper('.swiper', {
 const testimonials = [ 
     {   
         image: "./images/user-5.jpg",
-        text: "Finian Services has been instrumental in improving our company's safety standards. Their trainings are comprehensive and their consultants are highly knowledgeable. We highly recommend their services.", 
+        text: "Finian Services has been instrumental in improving our company's safety standards.",
         author: "Miss Bridget Kenneth" 
     },  
     { 
