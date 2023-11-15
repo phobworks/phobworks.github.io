@@ -775,7 +775,7 @@ grid-template-rows: 1fr auto; */
     }
     .nav__menu {
         position: fixed;
-        bottom: 2rem;
+        bottom: 0;
         background-color: var(--container-color);
         box-shadow: 0 8px 24px hsla(288, 66%, 45%, .15);
         width: 98%;
