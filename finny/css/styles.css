@@ -839,7 +839,7 @@ grid-template-rows: 1fr auto; */
     .footer__end {
         grid-template-columns: repeat(2, auto);
         gap: 2rem;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
     }
     .footer__copyright {
         text-align: center;
@@ -853,7 +853,7 @@ grid-template-rows: 1fr auto; */
     }
     .nav__menu {
         position: fixed;
-        bottom: 2rem;
+        bottom: 0;
         background-color: var(--container-color);
         box-shadow: 0 8px 24px hsla(288, 66%, 45%, .15);
         width: 98%;
@@ -905,12 +905,13 @@ grid-template-rows: 1fr auto; */
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
     .footer__info ul {
         text-align: center;
     }
     .footer__end {
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
     }
 }
 
@@ -929,6 +930,66 @@ grid-template-rows: 1fr auto; */
     }
 }
 
-@media only screen and (min-width: 600px) {
-
+@media only screen and (max-width: 400px) {
+    .container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .nav {
+        margin: 1rem 1.5rem 0 1.5rem;
+    }
+    .nav__menu {
+        font-size: 12px;
+    }
+    .nav__menu span {
+        display: none;
+    }
+    .hero__tag1 p {
+        text-align: start;
+        text-justify: justify;
+    }
+   /*  .banner__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } */
+    .banner__image {
+        display: none;
+    }
+    .about__text {
+        align-items: center;
+    }
+    .about__text p {
+        text-align: left;
+    }
+    .services__hearders h2 {
+        font-size: 25px;
+    }
+    .services__hearders p {
+        text-align: start;
+    }
+    .service__content p {
+        /* padding: 0px 1rem; */
+        text-align: start;
+    }
+    .training__content  {
+        padding: 0 2rem;
+    }
+    .service__content h3 {
+        padding: 0;
+    }
+    .testimonial-container {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+    .testimonial-container h2 {
+        font-size: 25px;
+    }
+    .news__letter form {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5rem;
+    }
+    .news__letter form input, .news__letter form button {
+        border-radius: 10px;
+    }
 }
