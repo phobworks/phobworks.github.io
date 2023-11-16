@@ -1000,6 +1000,14 @@ grid-template-rows: 1fr auto; */
         text-align: center;
         padding: 2rem;
     }
+    .news__letter form {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5rem;
+    }
+    .news__letter form input, .news__letter form button {
+        border-radius: 10px;
+    }
     .footer__container {
         grid-template-columns: 1fr;   
     }
