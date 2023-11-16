@@ -330,21 +330,39 @@ grid-template-rows: 1fr auto; */
 
 /* ============ Client Logo ============== */
 .client__logo {
-    display: flex;
     margin-top: 5rem;
+}
+
+.client__logo h3 {
+    text-align: center;
+    font-size: 14px;
+}
+
+.client__container {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
 }
 
-.client__img {
-    display: flex;
-    
+
+
+.client__container img {
+    width: 150px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
 }
 
-.client__logo img {
-    width: 50px;
+/* .client__img3 {
+    width: 100%;
+} */
+.client__img4 {
+    width: 100px;
 }
-
+.client__img5 {
+    width: 100px;
+}
 
 /* =============== About Us Home page ============= */
 .about__section {
@@ -965,6 +983,12 @@ grid-template-rows: 1fr auto; */
     .swiper {
         display: none;
     }
+    /* .client__container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 1rem;
+    } */
     .training__content  {
         padding: 0 2rem;
     }
