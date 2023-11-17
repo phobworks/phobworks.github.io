@@ -95,6 +95,9 @@ img {
     -webkit-box-orient: vertical; 
     overflow: hidden;
 }
+.service__content .ben__start {
+    text-align: start;
+}
 
 .commercial__btn a, .schedule__btn button, .update__form form button {
     padding: .5rem 1rem;
@@ -120,9 +123,30 @@ img {
     top: 0;
     left: 0;
     width: 100%; 
-    background-color: var(--text-white);
+    background-color: transparent;
+    /* background-color: var(--text-white); */
     z-index: var(--z-fixed);
     transition: var(--transition);
+}
+
+.blur-header {
+    /* background: rgba(255, 255, 255, 0.1); */
+    background-color: var(--text-white);
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.blur-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    background-color: hsl(0, 0, 10%, 0.3%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .nav {
@@ -142,6 +166,14 @@ img {
     transition: var(--transition);
 }
 
+.active {
+    color: var(--primary-color);
+}
+.activate {
+    color: var(--text-white);
+    background-color: var(--nursary-color);
+}
+
 .nav__logo i {
     font-size: 1rem ;
 }
@@ -154,15 +186,17 @@ img {
 }
 
 .nav__button {
-    background-color: var(--nursary-color);
+    background-color: var(--primary-color);
     color: var(--text-white);
     padding: .5rem 1rem;
+    border: var(--primary-color) 1px solid;
     transition: var(--transition);
 }
 
 .nav__button:hover {
     color: var(--text-white);
-    background-color: var(--primary-color);
+    border: var(--text-white) 1px solid;
+    background-color: var(--nursary-color);
 }
 
 /* =========== BANNER SECTION ============ */
@@ -290,43 +324,6 @@ grid-template-rows: 1fr auto; */
     object-fit: cover;
 }
 
-/* .banner__socials {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    gap: 2rem;
-
-    top: 20rem;
-    
-    background-color: var(--container-color);
-    padding: 1rem;
-    border-radius: 60px;
-    left: 25%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 24px hsla(288, 66%, 45%, .15);
-    z-index: 1;
-} */
-
-/* .banner__socials i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--nursary-color);
-    font-size: 18px;
-    padding: 5px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    transition: var(--transition);
-} */
-
-/* .banner__socials i:hover {
-    color: var(--text-white);
-    background-color: var(--primary-color);
-    box-shadow: 0 8px 24px hsla(288, 66%, 45%, .15);
-
-} */
 
 /* ============ Client Logo ============== */
 .client__logo {
@@ -413,6 +410,69 @@ grid-template-rows: 1fr auto; */
     max-width: 640px;
 }
 
+/* About Page */
+.header__banner {
+    /* position: relative; */
+    /* position: absolute; */
+    background-image: url("/images/banner-other.jpg");
+    width: 100%;
+    height: 250px;
+    top: 0;
+}
+.header__banner-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+}
+.header__banner-sec h2 {
+    color: var(--text-white);
+}
+.about__sec {
+    margin-top: 5rem;
+}
+.about__cont {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.about__imgages img {
+    width: 100%;
+}
+.about__texting {
+    text-align: start;
+}
+.about__texting .span__bolder {
+    color: var(--nursary-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+.span__texting {
+    color: var(--nursary-color);
+    font-weight: bold;
+}
+
+.about__statement {
+    margin-top: 3rem;
+}
+.about__state {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+.about__state h3, .mision__stat h3 {
+    text-align: center;
+    color: var(--nursary-color);
+}
+.mision__stat {
+    margin-top: 2rem;
+}
+.mision__stat span {
+    color: var(--nursary-color);
+    font-weight: bold;
+}
+ 
+
 /* .about__btn a {
     padding: .5rem 1rem;
     cursor: pointer;
@@ -478,6 +538,31 @@ grid-template-rows: 1fr auto; */
     justify-content: center;
     margin-top: 3rem;
 }
+/* Services Page */
+.service__center {
+    margin-top: 5rem;
+}
+table.customTable {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #7EA8F8;
+    border-style: solid;
+    color: #000000;
+  }
+  
+  table.customTable td, table.customTable th {
+    border-width: 2px;
+    border-color: #7EA8F8;
+    border-style: solid;
+    padding: 5px;
+  }
+  
+  table.customTable thead {
+    background-color: #7EA8F8;
+  }
+  
 
 /* ====================== Service 3 ================ */
 
@@ -599,6 +684,63 @@ grid-template-rows: 1fr auto; */
 .contact__phone h4 {
     font-size: 20px;
 }
+
+/* Contact Section Start */
+.contact__section {
+    margin-top: 5rem;
+}
+
+.contact__section h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.contact__container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 5rem;
+}
+
+.address__book {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.address__book i {
+    padding-right: 5px;
+    color: var(--action-color);
+}
+
+.form__con {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form__con form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.form__con form input, .form__con form textarea {
+    border: var(--text-color) .5px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.map__section {
+    margin-top: 3rem;
+}
+
+.map__container {
+    border: var(--orange-color) 1px solid;
+}
+
+
+/* Contact Section End */
 
 /* ===================== Contact End ============================== */
 
@@ -738,10 +880,31 @@ grid-template-rows: 1fr auto; */
     color: var(--text-white);
 }
 
-/* ===================== Footer End =============================== */
+/* ===================== Footer End ============================= */
 
+/* ===================== Scroll up ============================== */
+.scrollup {
+    position: fixed;
+    left: 1rem;
+    bottom: -50%;
+    background-color: var(--primary-color);
+    padding: 6px;
+    display: inline-flex;
+    border-radius: 0.25rem;
+    color: var(--text-white);
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px hsla(288, 15%, 8%, .4);
+    z-index: 100;
+    transition: bottom 0.4s, transform 0.4s;
+}
 
-
+.scrollup:hover {
+    transform: translateY(-0.25rem);
+}
+/* show Scroll up */
+.show-scroll {
+    bottom: 6rem;
+}
 
 
 
@@ -837,6 +1000,18 @@ grid-template-rows: 1fr auto; */
         padding: .5rem;
         /* justify-content: center; */
     }
+    .active {
+        color: var(--text-white);
+        background-color: var(--nursary-color);
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+        align-items: center;
+        transition: ease-in .5s;
+    }
     .nav__link i {
         text-align: center;
         font-size: 1.5rem;
@@ -915,6 +1090,18 @@ grid-template-rows: 1fr auto; */
         padding: .5rem;
         /* justify-content: center; */
     }
+    .active {
+        color: var(--text-white);
+        background-color: var(--nursary-color);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+        align-items: center;
+        transition: ease-in .5s;
+    }
     .nav__link i {
         text-align: center;
         font-size: 1.5rem;
@@ -989,6 +1176,12 @@ grid-template-rows: 1fr auto; */
         align-items: center;
         margin-top: 1rem;
     } */
+    .about__state {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        align-items: center;
+    }
     .training__content  {
         padding: 0 2rem;
     }
@@ -1011,8 +1204,11 @@ grid-template-rows: 1fr auto; */
     .footer__container {
         grid-template-columns: 1fr;   
     }
+    .footer__copyright span {
+        font-size: 10px;
+    }
     .footer__end {
-        padding-bottom: 6rem;
+        padding-bottom: 8rem;
     }
 }
 

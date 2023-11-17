@@ -1,3 +1,15 @@
+/* ============ Blur Header =========== */
+const blurHeader = () => {
+	const header = document.getElementById("header");
+	this.scrollY >= 50
+	? header.classList.add("blur-header"): header.classList.remove("blur-header");
+}
+window.addEventListener("scroll", blurHeader);
+
+/* =================== Blur Header Ends ============== */
+
+
+/* =================== Slide Scroll ============== */
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     spaceBetween: 30,
@@ -22,6 +34,8 @@ const swiper = new Swiper('.swiper', {
     //And if we need scrollbar
 
 })
+
+/* =================== Slide Scroll Ends ============== */
 
 /* ============== Testimonials ==================== */
 /* Testimonial SlideShow */
@@ -78,3 +92,29 @@ const testimonialTextElem = document.getElementById("testimonial-text");
         nextBtn.addEventListener("click", nextTestimonial);
 
         showTestimonial();
+
+/* =================== Testimonial Ends ============== */
+
+/* =================== Scroll Up ============== */
+const scrollUp = () => {
+    const scrollUp = document.getElementById("scroll-up");
+    // when the scroll is higher than 350 vh, add the show-scroll class to the header tag
+    this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+};
+window.addEventListener('scroll', scrollUp);
+
+/* =================== Scroll up Ends ============== */
+
+/* =================== Scroll Reveal ================ */
+const sr = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2000,
+    delay: 400,
+});
+sr.reveal(`.client__logo, .services__hearders`);
+sr.reveal(`.hero__tag1`, {origin: 'left'});
+sr.reveal(`.banner__image`, {origin: 'right'});
+/* =================== Scroll Reveal End ============= */
