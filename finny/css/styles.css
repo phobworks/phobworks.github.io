@@ -43,10 +43,20 @@ ul {
     list-style: none;
 }
 
-/* img {
-    max-width: 100%;
-} */
-
+/* Center the alert box */
+#alert-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f8d7da; /* Red color for error, you can change it */
+    border: 1px solid #f5c6cb; /* Red border color for error */
+    color: #721c24; /* Text color for error */
+    border-radius: 5px;
+    text-align: center;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -731,6 +741,24 @@ table.customTable {
     border: var(--text-color) .5px solid;
     padding: 10px;
     border-radius: 10px;
+}
+
+.order__button {
+    display: flex;
+    justify-content: center;
+}
+
+.order__button button {
+    color: var(--text-white);
+    background-color: var(--nursary-color);
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: ease-in .5s;
+}
+
+.order__button button:hover {
+    color: var(--text-white);
+    background-color: var(--primary-color);
 }
 
 .map__section {
