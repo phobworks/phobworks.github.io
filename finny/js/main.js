@@ -113,8 +113,12 @@ const sr = ScrollReveal({
     distance: "60px",
     duration: 2000,
     delay: 400,
+    reset:true
 });
-sr.reveal(`.client__logo, .services__hearders`);
-sr.reveal(`.hero__tag1`, {origin: 'left'});
-sr.reveal(`.banner__image`, {origin: 'right'});
+sr.reveal(`.client__logo, .services__hearders, .services__hearders, .service__contents, 
+.services__btn, .testimonial-container, .contact__section, .news__letter, .hero__tag1, 
+.about__img, .schedule__container, .portfolio__train, .banner__image, .about__text, 
+.portfolio__img, .about__imgages, .about__texting, .about__state, .mision__stat`, {origin: 'bottom'});
+sr.reveal( {origin: 'left'});
+sr.reveal(` `, {origin: 'right'});
 /* =================== Scroll Reveal End ============= */

@@ -70,7 +70,7 @@
         <!-- ==================== Contact Form ==================  -->
         <div class="contact__section container">
             <h2>Get In Touch With Us</h2>
-            <div class="contact__container">
+            <div class="contacts__container">
                 <div class="address__book">
                     <h4>Address</h4>
                     <p><i class="fa-solid fa-location-dot"></i>
@@ -86,10 +86,10 @@
                     </div>
                 </div>
                 <div class="form__con">
-                    <form action="">
-                        <input type="text" name="" id="" placeholder="Name">
-                        <input type="email" name="" id="" placeholder="Email">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <form action="contact-form.php" method="POST" id="contact-form">
+                        <input type="text" name="" id="name" placeholder="Name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Message"></textarea>
                         <div class="order__button">
                             <button type="submit">Submit</button>
                         </div>
@@ -108,9 +108,20 @@
         </div>
         <!-- ==================== End ==================  -->
 
-        <!-- ==================== Mision Statements ==================  -->
+        <!-- ====================== Newsletter Start ===================== -->
+        <div class="news__container">
+            <div class="news__letter">
+                <h2>Stay Updated with Safety News</h2>
+                <p>Subscribe to our newsletter for the latest safety regulations and training schedules.</p>
+                <form action="sub-form.php" method="POST" id="sub-form">
+                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="term__sub">By subscribing, you agree to our Terms and Conditions.</p>
+            </div>
+        </div>
 
-        <!-- ==================== Mision End ==================  -->
+        <!-- ====================== Newsletter End ===================== -->
 
 
 
@@ -229,6 +240,39 @@
         <a href="#" class="scrollup" id="scroll-up">
             <i class="fa-solid fa-arrow-up"></i>
         </a>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#contact-form").submit(function (e) {
+                    e.preventDefault();
+
+                    $.ajax({
+                        type: "POST",
+                        url: "contact-form.php",
+                        data: $("#contact-form").serialize(),
+                        success: function (response) {
+                            var alertBox = document.createElement('div');
+                            alertBox.id = 'alert-box';
+                            document.body.appendChild(alertBox);
+
+                            if (response.trim() === 'success') {
+                                alertBox.innerHTML = 'Mail sent successfully!';
+                                form.trigger("reset"); // Reset the form
+                            } else {
+                                alertBox.innerHTML = 'Error sending mail. Please try again.';
+                            }
+
+                            alertBox.style.display = 'block';
+                            setTimeout(function () {
+                                alertBox.style.display = 'none';
+                            }, 3000); /* Hide the alert box after 3 seconds */
+                        }
+                    });
+                });
+            });
+        </script>
 </body>
 
 </html>

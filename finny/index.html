@@ -74,7 +74,7 @@
                         </p>
                     </div>
                     <div class="banner__btn">
-                        <a class="btn__black">Get in Touch</a>
+                        <a href="contact.html" class="btn__black">Get in Touch</a>
                         <a class="btn__white">E-Learning</a>
                     </div>
                 </div>
@@ -88,20 +88,20 @@
                             <!-- Slides -->
                             <div class="swiper-slide" style="background-image: url(images/banner003.jpg);">
                                 <div class="banner__tags">
-                                    <h3>Heading 01</h3>
-                                    <p>Description</p>
+                                    <h3>Navigating Safety Together</h3>
+                                    <p>"Your Trust, Our Expertise"</p>
                                 </div>
                             </div>
                             <div class="swiper-slide" style="background-image: url(images/banner002.jpg);">
                                 <div class="banner__tags">
-                                    <h3>Heading 02</h3>
-                                    <p>Description</p>
+                                    <h3>Your Safety Partners</h3>
+                                    <p>"Where Precaution Meets Precision"</p>
                                 </div>
                             </div>
                             <div class="swiper-slide" style="background-image: url(images/banner004.jpg);">
                                 <div class="banner__tags">
-                                    <h3>Heading 03</h3>
-                                    <p>Description</p>
+                                    <h3>Safety Arcchitects</h3>
+                                    <p>"Building a Secure Work Environment"</p>
                                 </div>
                             </div>
                         </div>
@@ -238,7 +238,7 @@
 
     <div class="about__section container">
         <div class="about__container">
-            <div class="about__text">
+            <div class="about__text portfolio__train">
                 <!-- <i class="fa-solid fa-helmet-safety"></i> -->
                 <h2>Training Portfolio.</h2>
                 <div class="training__content">
@@ -303,7 +303,7 @@
                     <a href="about.html">View More</a>
                 </div>
             </div>
-            <div class="about__img">
+            <div class="about__img portfolio__img">
                 <img src="images/training-pp.jpg" alt="About us Image">
             </div>
         </div>
@@ -436,21 +436,21 @@
     <!-- ====================== Newsletter End ===================== -->
 
     <!-- ====================== Update Start ===================== -->
-    <div class="update__section container">
+    <!-- <div class="update__section container">
         <div class="update__container">
             <div class="update__text">
                 <h4>Get our updates</h4>
                 <p>Stay informed with our latest news and updates</p>
             </div>
             <div class="update__form">
-                <form action="">
-                    <input type="email" name="" id="" placeholder="Enter Email">
-                    <button>Submit</button>
+                <form action="update-form.php" method="POST" id="update-form">
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                    <button type="submit">Submit</button>
                 </form>
                 <p>By subscribing, you agree to our Privacy Policy</p>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- ====================== Update End ===================== -->
 
@@ -562,6 +562,39 @@
     <a href="#" class="scrollup" id="scroll-up">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#sub-form").submit(function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    type: "POST",
+                    url: "sub-form.php",
+                    data: $("#sub-form").serialize(),
+                    success: function (response) {
+                        var alertBox = document.createElement('div');
+                        alertBox.id = 'alert-box';
+                        document.body.appendChild(alertBox);
+
+                        if (response.trim() === 'success') {
+                            alertBox.innerHTML = 'Mail sent successfully!';
+                            form.trigger("reset"); // Reset the form
+                        } else {
+                            alertBox.innerHTML = 'Error sending mail. Please try again.';
+                        }
+
+                        alertBox.style.display = 'block';
+                        setTimeout(function () {
+                            alertBox.style.display = 'none';
+                        }, 3000); /* Hide the alert box after 3 seconds */
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

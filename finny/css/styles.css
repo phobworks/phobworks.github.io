@@ -466,6 +466,7 @@ grid-template-rows: 1fr auto; */
 
 .about__statement {
     margin-top: 3rem;
+    margin-bottom: 5rem;
 }
 .about__state {
     display: flex;
@@ -707,7 +708,7 @@ table.customTable {
     margin-bottom: 5rem;
 }
 
-.contact__container {
+.contacts__container {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 5rem;
@@ -763,6 +764,7 @@ table.customTable {
 
 .map__section {
     margin-top: 3rem;
+    margin-bottom: -5.5rem;
 }
 
 .map__container {
@@ -794,7 +796,7 @@ table.customTable {
 }
 
 .news__letter form input {
-    padding: 10px 30px;
+    padding: 10px 30px 10px 10px;
     border-radius: 10px 0 0 10px;
     border: none;
 }
@@ -803,6 +805,7 @@ table.customTable {
     padding: 10px 30px;
     border-radius: 0 10px 10px 0px;
     border: none;
+    cursor: pointer;
     background-color: var(--nursary-color);
     color: var(--text-white);
     transition: ease-in .5s;
@@ -838,7 +841,7 @@ table.customTable {
 
 .update__form form input {
     border: var(--text-black) 1px solid;
-    padding: .5rem 5rem;
+    padding: .5rem 5rem .5rem 10px;
 }
 
 .update__form p {
@@ -854,7 +857,7 @@ table.customTable {
     /* object-fit: cover; */
     /* background-repeat: no-repeat; */
     padding: .5rem 0 0 0;
-    margin-top: 5rem;
+    margin-top: 0;
 }
 .footer__section {
     margin-top: 5rem;
@@ -1031,7 +1034,23 @@ table.customTable {
         display: flex;
         flex-direction: column;
         padding: .5rem;
-        /* justify-content: center; */
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        align-items: center;
+        transition: ease-in .5s;
+        justify-content: center;
+    }
+    .nav__link:hover {
+        color: var(--text-white);
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+        align-items: center;
     }
     .active {
         color: var(--text-white);
@@ -1145,7 +1164,7 @@ table.customTable {
         row-gap: 1rem;
         align-items: center;
     }
-    .contact__container {
+    .contact__container, .contacts__container {
         grid-template-columns: 1fr;
         text-align: center;
     }
