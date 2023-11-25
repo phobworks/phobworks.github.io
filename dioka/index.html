@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-GEp/fOWt+JwFvVtVx8z00pZ8HE75yKM5qitQhAMP4W6umF3fW1Ge1O6fuLW7oH3/cbo15fQBDW8J9lQ4XxFb1NQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="./js/main.js" defer></script>
+    <title>Dioka Integrated Services LTD</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="slider__section">
+            <div class="sliding-text">Welcome to Our Website!</div>
+            <div class="social__section">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        <header>
+            <div class="container containers">
+                <div class="logo">
+                    <img src="images/DIOKA-LOGO.png" alt="">
+                </div>
+                <div>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="sliding-banner">
+        <div class="slide active">
+            <img src="images/banner01.jpg" alt="Image 1">
+            <div class="banner-content">
+                <h2>Slogan 1</h2>
+                <p>Description of the first image</p>
+                <button>Button 1</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/banner02.jpg" alt="Image 2">
+            <div class="banner-content">
+                <h2>Slogan 2</h2>
+                <p>Description of the second image</p>
+                <button>Button 2</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/banner03.jpg" alt="Image 3">
+            <div class="banner-content">
+                <h2>Slogan 3</h2>
+                <p>Description of the third image</p>
+                <button>Button 3</button>
+            </div>
+        </div>
+        <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="next" onclick="changeSlide(1)">&#10095;</div>
+    </div>
+
+    <!-- ================== Statement Header =============== -->
+
+    <div class="statement__section">
+        <div class="statement__container">
+            <div class="stat__main">
+                <i class="fa-solid fa-eye"></i>
+                <h3>Our Vision</h3>
+                <p>To be a leading world class company providing excellent engineering and support services to oil &amp;
+                    gas industry, through technology and innovations</p>
+            </div>
+
+            <div class="stat__main">
+                <i class="fa-solid fa-person-walking"></i>
+                <h3>Our Mision</h3>
+                <p>To provide best in class products &amp; services to our clients in line with industry best practices
+                    working in harmony with host communities &amp; in compliance with Health, Safety &amp; Environmental
+                    standards.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================== Statement Header End =============== -->
+
+    <!-- ================== About Section =============== -->
+    <div class="about__section containers">
+        <div class="about__container">
+            <div class="about__content001">
+                <h3>About Us</h3>
+            </div>
+            <div class="about__content002">
+                <p><span>Dioka Integrated Services Limited</span> is an indigenous company in Nigeria with
+                    specialization in procurement, warehousing, laboratory &amp; oilfield engineering &amp; support
+                    services.</p>
+            </div>
+        </div>
+    </div>
+    <!-- ================== About Section End =============== -->
+
+    <!-- ================== Services HomePage Section =============== -->
+    <div class="service__section containers">
+        <h3>Our Services</h3>
+        <div class="service__container">
+            <div class="service__content">
+                <img src="images/s15.jpg" alt="">
+                <h3>Power Services</h3>
+                <p class="ben__texting">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sequi sit.
+                    Rerum, sunt
+                    necessitatibus!</p>
+                <a href="">Read More</a>
+            </div>
+            <div class="service__content">
+                <img src="images/s12.jpg" alt="">
+                <h3>Procurement</h3>
+                <p class="ben__texting">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sequi sit.
+                    Rerum, sunt
+                    necessitatibus!</p>
+                <a href="">Read More</a>
+            </div>
+            <div class="service__content">
+                <img src="images/s11.jpg" alt="">
+                <h3>Engineering Services</h3>
+                <p class="ben__texting">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sequi sit.
+                    Rerum, sunt
+                    necessitatibus!</p>
+                <a href="">Read More</a>
+            </div>
+            <div class="service__content">
+                <img src="images/s10.jpg" alt="">
+                <h3>Construction Services</h3>
+                <p class="ben__texting">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sequi sit.
+                    Rerum, sunt
+                    necessitatibus!</p>
+                <a href="">Read More</a>
+            </div>
+            <div class="service__content">
+                <img src="images/s13.jpg" alt="">
+                <h3>Logistics Services</h3>
+                <p class="ben__texting">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sequi sit.
+                    Rerum, sunt
+                    necessitatibus!</p>
+                <a href="">Read More</a>
+            </div>
+            <div class="service__content">
+                <img src="images/s14.jpg" alt="">
+                <h3>Chemicals &amp; Marine Coating</h3>
+                <p class="ben__texting">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sequi sit.
+                    Rerum, sunt
+                    necessitatibus!</p>
+                <a href="">Read More</a>
+            </div>
+        </div>
+    </div>
+    <!-- ================== Services End =============== -->
+
+    <!-- ================== Profile download Section =============== -->
+
+    <div class="profile__section ">
+        <h3>Our Projects</h3>
+        <div class="profile__container containers">
+            <div class="download__btn">
+                <img src="images/DIOKA-LOGO.png" alt="">
+                <a href="pdf/DIOKA_PROFILE__Rebrand_NEW_.pdf" target="_blank"><i
+                        class="fa-solid fa-file-pdf"></i>Download Profile</a>
+            </div>
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <ul class="carousel">
+                    <li class="card">
+                        <div class="img"><img src="images/g1.jpg" alt="img" draggable="false"></div>
+
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="images/g2.jpg" alt="img" draggable="false"></div>
+                        <!-- <h2>Joenas Brauers</h2>
+                        <span>Web Developer</span> -->
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="images/g3.jpg" alt="img" draggable="false"></div>
+
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="images/g4.jpg" alt="img" draggable="false"></div>
+
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="images/g5.jpg" alt="img" draggable="false"></div>
+
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="images/g6.jpg" alt="img" draggable="false"></div>
+
+                    </li>
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================== Profile download Section End =============== -->
+
+    <!-- ================== Services 2 Home page Section =============== -->
+    <div class="services2__section containers">
+        <div class="services2__container">
+            <div class="service2__content">
+                <i class="fa-solid fa-warehouse"></i>
+                <h3>Warehousing &amp; Materials Handling</h3>
+                <p>We offer warehousing/materials handling services from our giant warehouses located within our
+                    corporate office complex in the heart of Trans Amadi, Port Harcourt, with 24hours constant
+                    electricity supply in a well secured environment.
+                </p>
+            </div>
+            <div class="service2__content">
+                <i class="fa-solid fa-truck-moving"></i>
+                <h3>Rental &amp; Sales Of Equipment</h3>
+                <p>Working in relationship with Hoover Ferguson, we are in a position to rent, lease or sell equipment
+                    &amp; accessories such as ISO Tanks, Pumps, Tote &amp; offshore chemical tanks</p>
+            </div>
+            <div class="service2__content">
+                <i class="fa-solid fa-gears"></i>
+                <h3>Maintenance</h3>
+                <p>With Our team of well-trained Engineers &amp; Technicians, we have the skill &amp; required
+                    competence to carry out total refurbishing &amp; maintenance services in Sandblasting,
+                    Spray-painting, Mechanical &amp; Electrical maintenance of Portacabins, Containers, Baskets &amp;
+                    Tanks.</p>
+            </div>
+        </div>
+    </div>
+    <!-- ================== Section End =============== -->
+
+    <!-- ================== Letters Section =============== -->
+    <div class="letter__section">
+        <h3>Letter From Partners</h3>
+        <div class="letter__container containers">
+            <div class="letter__content">
+                <img src="images/pdf-images/AFC.jpg" alt="">
+                <a href="/pdf/AFC.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/APPOINTMENT-AS-EXCLUSIVE-REPRESENTATIVE-IN-NIGERIA_001.jpg" alt="">
+                <a href="/pdf/APPOINTMENT-AS-EXCLUSIVE-REPRESENTATIVE-IN-NIGERIA.pdf" target="_blank"><i
+                        class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/Authorization-Letter-of-Representative_001.jpg" alt="">
+                <a href="/pdf/Authorization-Letter-of-Representative.pdf" target="_blank"><i
+                        class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/BATTERIES-AND-BATTERY-CHARGERS_001.jpg" alt="">
+                <a href="/pdf/BATTERIES-AND-BATTERY-CHARGERS.pdf" target="_blank"><i
+                        class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/Catalogue-TECPESA-2015_001.jpg" alt="">
+                <a href="/pdf/Catalogue-TECPESA-2015.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/CERTIFICATE-OF-AUTHORIZATION_2024_001.jpg" alt="">
+                <a href="/pdf/CERTIFICATE-OF-AUTHORIZATION_2024.pdf" target="_blank"><i
+                        class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/Certificate-XD.jpg" alt="">
+                <a href="/pdf/Certificate-XD-HI.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/Declaration-of-Integrity.jpg" alt="">
+                <a href="/pdf/Declaration-of-Integrity.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/Execulisivity_001.jpg" alt="">
+                <a href="/pdf/Execulisivity.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/Presentación-general-TECPESA_001.jpg" alt="">
+                <a href="/pdf/Presentación-general-TECPESA.pdf" target="_blank"><i
+                        class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+            <div class="letter__content">
+                <img src="images/pdf-images/Qianneng-statement_001.jpg" alt="">
+                <a href="/pdf/Qianneng-statement.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>View</a>
+            </div>
+        </div>
+    </div>
+    <!-- ================== Section End =============== -->
+
+    <!-- ================== Testimonial Section ================ -->
+    <div class="testimonial-container">
+        <h3>What Clients are saying...</h3>
+        <div class="image__user" id="img">
+            <img id="testimonial-image" src="" alt="User Image">
+        </div>
+        <div id="testimonial-text"></div>
+        <h4 id="author"></h4>
+        <button id="prev-btn">Prev</button>
+        <button id="next-btn">Next</button>
+    </div>
+
+
+    <!-- ================== Section End ================ -->
+
+    <!-- ================== Contact Home Page Section =============== -->
+    <div class="contact__section containers">
+        <div class="contact__container">
+            <div class="contact__phone">
+                <i class="fa-regular fa-envelope"></i>
+                <h4>Email</h4>
+                <p>Send us a mail to get in touch with us.</p>
+                <p>info@dioka.com</p>
+            </div>
+            <div class="contact__phone">
+                <i class="fa-solid fa-phone"></i>
+                <h4>Phone</h4>
+                <p>For any urgent inquiries, please call us directly.</p>
+                <p>+234-803-7235-195 | +234-909-4480-874</p>
+            </div>
+            <div class="contact__phone">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Office</h4>
+                <p>Visit our office during business hours.</p>
+                <p>NNPC Retail Jetty Koko Ama, Eastern By Pass, Port Harcourt, Rivers State Nigeria.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================== Section End =============== -->
+
+    <!-- ================== Footer Section =============== -->
+    <footer class="footer__section">
+        <div class="footer__container containers">
+            <div class="footer__about">
+                <div class="footer__logo">
+                    <img src="images/DIOKA-LOGO.png" alt="">
+                </div>
+                <div class="footer__about__content">
+                    <p><span>Dioka Integrated Services Ltd</span> has gained vast and quality experience in Engineering
+                        and Construction. The company's scope of services is designated to the respective departments.
+                        The departments' interest is to complement each other in tecnical abilities and so the actual
+                        services, which <span>Dioka Integrated Services Ltd</span> can provide, are far greater than the
+                        sum of its constituent departments</p>
+                </div>
+            </div>
+            <div class="footer__services">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="">Brine Filtration Equipment &amp; Service</a></li>
+                    <li><a href="">Solid COntrol Equipment &amp; Services</a></li>
+                    <li><a href="">Oilfield Equipment &amp; Tanks Rentals Services</a></li>
+                    <li><a href="">Offshore Support &amp; Engineering Services</a>Offshore Support &amp; Engineering
+                        Services</li>
+                    <li><a href="">EPIC (Procurement &amp; Installation)</a></li>
+                    <li><a href="">Chemicals</a></li>
+                </ul>
+            </div>
+            <div class="footer__newsletter">
+                <form action="">
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </form>
+                <div class="footer__values">
+                    <h3>Our Core Values</h3>
+                    <ul>
+                        <li>Excellence</li>
+                        <li>Trust</li>
+                        <li>Team Work</li>
+                        <li>Safety</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer__end containers">
+            <div class="footer__copyright">
+                <span><i class="fa-regular fa-copyright"></i> Copyright 2023 @ Finny Integrated Services Limited.
+                    All
+                    rights reserved |
+                    Design
+                    by <a href="#">phobworks</a> </span>
+            </div>
+        </div>
+    </footer>
+    <!-- ================== Section End =============== -->
+
+</body>
+
+</html>

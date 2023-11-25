@@ -44,19 +44,29 @@ ul {
 }
 
 /* Center the alert box */
+
+
 #alert-box {
-    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #f8d7da; /* Red color for error, you can change it */
-    border: 1px solid #f5c6cb; /* Red border color for error */
-    color: #721c24; /* Text color for error */
+    padding: 10px;
     border-radius: 5px;
-    text-align: center;
+    display: none;
 }
+
+.success {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.error {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+
 
 body {
     font-family: 'Montserrat', sans-serif;

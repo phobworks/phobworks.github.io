@@ -277,6 +277,43 @@
         <a href="#" class="scrollup" id="scroll-up">
             <i class="fa-solid fa-arrow-up"></i>
         </a>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#sub-form").submit(function (e) {
+                    e.preventDefault();
+
+                    var form = $(this); // Reference the form element
+
+                    $.ajax({
+                        type: "POST",
+                        url: "sub-form.php",
+                        data: form.serialize(),
+                        success: function (response) {
+                            var alertBox = document.createElement('div');
+                            alertBox.id = 'alert-box';
+                            document.body.appendChild(alertBox);
+
+                            if (response.trim() === 'success') {
+                                alertBox.innerHTML = 'Mail sent successfully!';
+                                alertBox.className = 'success'; // Add a class for styling success
+                                form.trigger("reset"); // Reset the form
+                            } else {
+                                alertBox.innerHTML = 'Error sending mail. Please try again.';
+                                alertBox.className = '.error'; // Add a class for styling error
+                            }
+
+                            alertBox.style.display = 'block';
+                            setTimeout(function () {
+                                alertBox.style.display = 'none';
+                            }, 3000); /* Hide the alert box after 3 seconds */
+                        }
+                    });
+                });
+            });
+        </script>
 </body>
 
 </html>

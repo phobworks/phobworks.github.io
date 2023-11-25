@@ -65,13 +65,16 @@
                     <div class="hero__tag1">
                         <h3>Finny Integrated Services Limited</h3>
                         <h1>
-                            Safety and Professionalism for Your Business
+                            A Sure partnership That Provides Support Services
                         </h1>
-                        <p>
+                        <p>Geared Towards Providing Solution To Your
+                            Occupational Health, Safety, &amp; Environmental Challenges While You Focus More On
+                            Achieving Your Core Business Objectives.</p>
+                        <!-- <p>
                             An organization with the expertise to manage your Occupational Health, Safety &amp;
                             Environment Concerns both in training &amp; management system consultancy services to help
                             you comply with industry statutory requirements &amp; achieve your core business objectives.
-                        </p>
+                        </p> -->
                     </div>
                     <div class="banner__btn">
                         <a href="contact.html" class="btn__black">Get in Touch</a>
@@ -372,7 +375,8 @@
             <h2>Expert Safety Trainings and Consultancy</h2>
             <p>Unlock your company's potential with our comprehensive safety trainings and consultancy services.</p>
             <div class="schedule__btn commercial__btn">
-                <button>Schedule</button>
+                <a href="contact.html"><button>Schedule</button></a>
+
             </div>
         </div>
     </div>
@@ -570,10 +574,12 @@
             $("#sub-form").submit(function (e) {
                 e.preventDefault();
 
+                var form = $(this); // Reference the form element
+
                 $.ajax({
                     type: "POST",
                     url: "sub-form.php",
-                    data: $("#sub-form").serialize(),
+                    data: form.serialize(),
                     success: function (response) {
                         var alertBox = document.createElement('div');
                         alertBox.id = 'alert-box';
@@ -581,9 +587,11 @@
 
                         if (response.trim() === 'success') {
                             alertBox.innerHTML = 'Mail sent successfully!';
+                            alertBox.className = 'success'; // Add a class for styling success
                             form.trigger("reset"); // Reset the form
                         } else {
                             alertBox.innerHTML = 'Error sending mail. Please try again.';
+                            alertBox.className = '.error'; // Add a class for styling error
                         }
 
                         alertBox.style.display = 'block';
@@ -595,6 +603,7 @@
             });
         });
     </script>
+
 
 </body>
 
