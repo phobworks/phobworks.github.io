@@ -943,7 +943,7 @@ body {
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 50px;
+      top: 125px;
       right: 0;
       width: 70%;
       background-color: var(--aqu--color);    
@@ -1003,6 +1003,10 @@ body {
     .containers {
       margin: 0 2rem 0 2rem;
     } 
+    .nav {
+      top: 125px;
+    
+    }
     .slider__section {
       margin: 0;
       padding: 1rem 0;
