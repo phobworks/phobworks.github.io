@@ -968,6 +968,10 @@ body {
     .containers {
       margin: 0 2rem 0 2rem;
     } 
+    .slider__section {
+      margin: 0;
+      padding: 1rem 0;
+    }
     .statement__section {
       /* position: relative; */
       margin: 0 1rem 0 1rem;
