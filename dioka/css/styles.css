@@ -400,7 +400,7 @@ body {
 /* ================ Profile download Home Page =============== */
 .profile__section {
   margin-top: 5rem;
-  background-image: url(/images/banner-other.jpg);
+  background-image: url(../images/banner-other.jpg);
   background-repeat: no-repeat;
   object-fit: contain;
   padding: 3rem 0;
@@ -606,7 +606,7 @@ body {
 /* ================ Letter Section =============== */
 .letter__section {
   margin-top: 5rem;
-  background-image: url(/images/banner-other.jpg);
+  background-image: url(../images/banner-other.jpg);
   background-repeat: no-repeat;
   object-fit: cover;
   overflow: hidden;
