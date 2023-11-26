@@ -896,6 +896,12 @@ body {
     .slider__section {
       grid-template-columns: 1fr;
       gap: 1rem;
+      margin: 0;
+      padding: 1rem 0;
+    }
+    .slider__section {
+      margin: 0 2rem 0 2rem;
+      justify-content: center;
     }
     .container {
       margin: 0 1rem;
@@ -971,6 +977,10 @@ body {
     .slider__section {
       margin: 0;
       padding: 1rem 0;
+    }
+    .slider__section {
+      margin: 0 2rem 0 2rem;
+      justify-content: center;
     }
     .statement__section {
       /* position: relative; */
