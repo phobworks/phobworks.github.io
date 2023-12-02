@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-GEp/fOWt+JwFvVtVx8z00pZ8HE75yKM5qitQhAMP4W6umF3fW1Ge1O6fuLW7oH3/cbo15fQBDW8J9lQ4XxFb1NQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <script src="./js/main.js" defer></script> -->
+    <title>Dioka Integrated Services LTD</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*         body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f1f4fd;
+        } */
+
+        .contain {
+            max-width: 900px;
+            width: 95%;
+        }
+
+        .slider-wrapper {
+            position: relative;
+        }
+
+        .slider-wrapper .slide-button {
+            position: absolute;
+            top: 50%;
+            outline: none;
+            border: none;
+            height: 50px;
+            width: 50px;
+            z-index: 5;
+            color: #fff;
+            display: flex;
+            cursor: pointer;
+            font-size: 2.2rem;
+            background: #000;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .slider-wrapper .slide-button:hover {
+            background: #404040;
+        }
+
+        .slider-wrapper .slide-button#prev-slide {
+            left: -25px;
+            display: none;
+        }
+
+        .slider-wrapper .slide-button#next-slide {
+            right: -25px;
+        }
+
+        .slider-wrapper .image-list {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 18px;
+            font-size: 0;
+            list-style: none;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .slider-wrapper .image-list::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider-wrapper .image-list .image-item {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .contain .slider-scrollbar {
+            height: 24px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-scrollbar .scrollbar-track {
+            background: #ccc;
+            width: 100%;
+            height: 2px;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .slider-scrollbar:hover .scrollbar-track {
+            height: 4px;
+        }
+
+        .slider-scrollbar .scrollbar-thumb {
+            position: absolute;
+            background: #000;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            cursor: grab;
+            border-radius: inherit;
+        }
+
+        .slider-scrollbar .scrollbar-thumb:active {
+            cursor: grabbing;
+            height: 8px;
+            top: -2px;
+        }
+
+        .slider-scrollbar .scrollbar-thumb::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -10px;
+            bottom: -10px;
+        }
+
+        /* Styles for mobile and tablets */
+        @media only screen and (max-width: 1023px) {
+            .slider-wrapper .slide-button {
+                display: none !important;
+            }
+
+            .slider-wrapper .image-list {
+                gap: 10px;
+                margin-bottom: 15px;
+                scroll-snap-type: x mandatory;
+            }
+
+            .slider-wrapper .image-list .image-item {
+                width: 280px;
+                height: 380px;
+            }
+
+            .slider-scrollbar .scrollbar-thumb {
+                width: 20%;
+            }
+        }
+
+        .profile {
+            display: flex;
+            margin: 0 6rem;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .download__btn {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--white-color);
+            padding: 1rem;
+        }
+
+        .download__btn img {
+            width: 150px;
+            padding-bottom: 1rem;
+        }
+
+        .download__btn a {
+            display: flex;
+            align-items: center;
+            padding: .5rem 1rem;
+            gap: 2px;
+            color: var(--white-color);
+            background-color: var(--blue-color);
+            transition: ease-in .5s;
+        }
+
+        .download__btn a:hover {
+            color: var(--black-color);
+            background-color: var(--aqu--color);
+        }
+    </style>
+    <div class="profile">
+        <div class="download__btn">
+            <img src="images/DIOKA-LOGO.png" alt="">
+            <a href="pdf/DIOKA_PROFILE__Rebrand_NEW_.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>Download
+                Profile</a>
+        </div>
+        <div class="contain">
+            <div class="slider-wrapper">
+
+                <i id="prev-slide" class="fa-solid fa-arrow-circle-left slide-button"></i>
+
+                <ul class="image-list">
+                    <img class="image-item" src="images/g1.jpg" alt="img-1" />
+                    <img class="image-item" src="images/g2.jpg" alt="img-2" />
+                    <img class="image-item" src="images/g3.jpg" alt="img-3" />
+                    <img class="image-item" src="images/g4.jpg" alt="img-4" />
+                    <img class="image-item" src="images/g5.jpg" alt="img-5" />
+                    <img class="image-item" src="images/g6.jpg" alt="img-6" />
+                    <img class="image-item" src="images/g2.jpg" alt="img-7" />
+                    <img class="image-item" src="images/g4.jpg" alt="img-8" />
+                    <img class="image-item" src="images/g3.jpg" alt="img-9" />
+                    <img class="image-item" src="images/g5.jpg" alt="img-10" />
+                </ul>
+
+                <i id="next-slide" class="fa-solid fa-arrow-circle-right slide-button"></i>
+
+            </div>
+            <div class="slider-scrollbar">
+                <div class="scrollbar-track">
+                    <div class="scrollbar-thumb"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================== Statement Header =============== -->
+
+
+    <!-- ================== Section End =============== -->
+
+    <script>
+        const initSlider = () => {
+            const imageList = document.querySelector(".slider-wrapper .image-list");
+            const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+            const sliderScrollbar = document.querySelector(".contain .slider-scrollbar");
+            const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+            const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+            // Handle scrollbar thumb drag
+            scrollbarThumb.addEventListener("mousedown", (e) => {
+                const startX = e.clientX;
+                const thumbPosition = scrollbarThumb.offsetLeft;
+                const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+
+                // Update thumb position on mouse move
+                const handleMouseMove = (e) => {
+                    const deltaX = e.clientX - startX;
+                    const newThumbPosition = thumbPosition + deltaX;
+
+                    // Ensure the scrollbar thumb stays within bounds
+                    const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                    const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+                    scrollbarThumb.style.left = `${boundedPosition}px`;
+                    imageList.scrollLeft = scrollPosition;
+                }
+
+                // Remove event listeners on mouse up
+                const handleMouseUp = () => {
+                    document.removeEventListener("mousemove", handleMouseMove);
+                    document.removeEventListener("mouseup", handleMouseUp);
+                }
+
+                // Add event listeners for drag interaction
+                document.addEventListener("mousemove", handleMouseMove);
+                document.addEventListener("mouseup", handleMouseUp);
+            });
+
+            // Slide images according to the slide button clicks
+            slideButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const direction = button.id === "prev-slide" ? -1 : 1;
+                    const scrollAmount = imageList.clientWidth * direction;
+                    imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+                });
+            });
+
+            // Show or hide slide buttons based on scroll position
+            const handleSlideButtons = () => {
+                slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+                slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+            }
+
+            // Update scrollbar thumb position based on image scroll
+            const updateScrollThumbPosition = () => {
+                const scrollPosition = imageList.scrollLeft;
+                const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+                scrollbarThumb.style.left = `${thumbPosition}px`;
+            }
+
+            // Call these two functions when image list scrolls
+            imageList.addEventListener("scroll", () => {
+                updateScrollThumbPosition();
+                handleSlideButtons();
+            });
+        }
+
+        window.addEventListener("resize", initSlider);
+        window.addEventListener("load", initSlider);
+    </script>
+</body>
+
+</html>

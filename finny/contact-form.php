@@ -1,19 +1,51 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['textarea'];
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $message = filter_input(INPUT_POST, 'textarea', FILTER_SANITIZE_STRING);
     $to = "finian.iwu@fintserv.com";
     $subject = "Mail from Contact Form";
 
-    $headers = "From: " . $email . "\r\n" .
-        "CC: info@fintserv.com"; // You can add a CC address if needed
+    // Verify reCAPTCHA
+    $recaptcha_secret_key = "6Lc6Zh8pAAAAAOyoiSGKxbpLSBoUOrEoAPVJb0Tz"; // Replace with your actual secret key
+    $recaptcha_response = $_POST['g-recaptcha-response'];
 
-    $txt =  "A Message from a user with " . "Name: " . $name . "\r\nEmail: " . $email . "\r\nMessage: " . $message;
+    $recaptcha_url = "https://www.google.com/recaptcha/api/siteverify";
+    $recaptcha_data = [
+        'secret' => $recaptcha_secret_key,
+        'response' => $recaptcha_response,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    ];
 
-    if ($name != "" && $email != "" && $message != "") {
-        mail($to, $subject, $txt, $headers);
-        echo 'success'; // Send success response to AJAX
+    $recaptcha_options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($recaptcha_data)
+        ]
+    ];
+
+    $recaptcha_context = stream_context_create($recaptcha_options);
+    $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+    $recaptcha_data = json_decode($recaptcha_result, true);
+
+    if (!$recaptcha_data['success']) {
+        echo 'captcha_error'; // Send captcha error response to AJAX
+        exit();
+    }
+
+    // Continue with the rest of your code for form submission
+    if ($name && $email && $message) {
+        $headers = "From: " . $email . "\r\n" .
+            "CC: info@fintserv.com"; // You can add a CC address if needed
+
+        $txt = "A Message from a user with " . "Name: " . $name . "\r\nEmail: " . $email . "\r\nMessage: " . $message;
+
+        if (mail($to, $subject, $txt, $headers)) {
+            echo 'success'; // Send success response to AJAX
+        } else {
+            echo 'error'; // Send error response to AJAX
+        }
     } else {
         echo 'error'; // Send error response to AJAX
     }

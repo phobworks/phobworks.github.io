@@ -13,6 +13,8 @@
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <div class="elfsight-app-a9c2bfac-6e5b-4e7c-ad1f-f5dfa8792109" data-elfsight-app-lazy></div>
     <script src="./js/scrollreveal.min.js" defer></script>
+    <!-- Add this just before the closing </head> tag -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="./js/main.js" defer></script>
     <title>Finny Integrated Services Limited</title>
 </head>
@@ -147,7 +149,8 @@
                 <p>Subscribe to our newsletter for the latest safety regulations and training schedules.</p>
                 <form action="sub-form.php" method="POST" id="sub-form">
                     <input type="email" name="email" id="email" placeholder="Your Email">
-                    <button type="submit">Subscribe</button>
+                    <button class="g-recaptcha" data-sitekey="6Lco7x8pAAAAAA8i2UWbWHtT-l1D2Z9waIUeAEMC"
+                        data-callback="onSubmit" type="submit">Subscribe</button>
                 </form>
                 <p class="term__sub">By subscribing, you agree to our Terms and Conditions.</p>
             </div>
@@ -224,7 +227,7 @@
 
                     <div class="footer__info">
                         <h4>Our Vision</h4>
-                        <p>TTo be the preferred in training and manpower development</p>
+                        <p>To be the preferred in training and manpower development</p>
                         <h4>Our Core Values</h4>
                         <ul>
                             <li>
@@ -281,38 +284,56 @@
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
         <script>
-            $(document).ready(function () {
-                $("#sub-form").submit(function (e) {
-                    e.preventDefault();
+            function onSubmit(token) {
+                // Set the reCAPTCHA response in the hidden field
+                document.getElementById('g-recaptcha-response').value = token;
 
-                    var form = $(this); // Reference the form element
+                // Continue with the form submission
+                var form = document.getElementById("sub-form");
 
-                    $.ajax({
-                        type: "POST",
-                        url: "sub-form.php",
-                        data: form.serialize(),
-                        success: function (response) {
-                            var alertBox = document.createElement('div');
-                            alertBox.id = 'alert-box';
-                            document.body.appendChild(alertBox);
+                // Verify reCAPTCHA response before submitting the form
+                var recaptchaResponse = document.getElementById('g-recaptcha-response').value;
+                if (!recaptchaResponse) {
+                    alert("Please complete the reCAPTCHA challenge.");
+                    return;
+                }
 
-                            if (response.trim() === 'success') {
-                                alertBox.innerHTML = 'Mail sent successfully!';
-                                alertBox.className = 'success'; // Add a class for styling success
-                                form.trigger("reset"); // Reset the form
-                            } else {
-                                alertBox.innerHTML = 'Error sending mail. Please try again.';
-                                alertBox.className = '.error'; // Add a class for styling error
-                            }
+                // Submit the form using Ajax
+                $.ajax({
+                    type: "POST",
+                    url: "sub-form.php",
+                    data: $(form).serialize(),
+                    success: function (response) {
+                        var alertBox = document.createElement('div');
+                        alertBox.id = 'alert-box';
+                        document.body.appendChild(alertBox);
 
-                            alertBox.style.display = 'block';
-                            setTimeout(function () {
-                                alertBox.style.display = 'none';
-                            }, 3000); /* Hide the alert box after 3 seconds */
+                        if (response.trim() === 'success') {
+                            alertBox.innerHTML = 'Mail sent successfully!';
+                            alertBox.className = 'success'; // Add a class for styling success
+                            form.reset(); // Reset the form
+                        } else {
+                            alertBox.innerHTML = 'Error sending mail. Please try again.';
+                            alertBox.className = 'error'; // Add a class for styling error
                         }
-                    });
+
+                        alertBox.style.display = 'block';
+                        setTimeout(function () {
+                            alertBox.style.display = 'none';
+                        }, 3000); /* Hide the alert box after 3 seconds */
+                    }
                 });
-            });
+            }
+
+            function validate(event) {
+                event.preventDefault();
+                grecaptcha.execute();
+            }
+
+            function onload() {
+                var element = document.getElementById('submit');
+                element.onclick = validate;
+            }
         </script>
 </body>
 

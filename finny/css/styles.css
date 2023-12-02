@@ -43,8 +43,12 @@ ul {
     list-style: none;
 }
 
-/* Center the alert box */
+/* google captcha */
+/* .g-recaptcha {
+    width: 50px;
+} */
 
+/* Center the alert box */
 
 #alert-box {
     position: fixed;
@@ -803,7 +807,13 @@ table.customTable {
     row-gap: 2rem;
     align-items: center;
     padding: 50px 0;
+    overflow-y: hidden;
 }
+
+.news__letter form {
+    display: flex;
+}
+
 
 .news__letter form input {
     padding: 10px 30px 10px 10px;
