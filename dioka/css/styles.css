@@ -1002,6 +1002,23 @@ body {
   color: var(--black-color);
   background-color: var(--aqu--color);
 }
+
+.letter__addition {
+  display: flex;
+  column-gap: 3rem;
+  margin: 3rem 6rem 0 6rem;
+}
+
+.letter__ads {
+  display: flex;
+  align-items: center;
+}
+
+.letter__video {
+ 
+  display: flex;
+  justify-content: center;
+}
 /* ================ End =============== */
 
 /* ================= Our Client ============== */
@@ -1617,6 +1634,12 @@ width: 100%!important;
   .footer__container {
     grid-template-columns: 1fr;
   }
+  .letter__addition {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    margin: 3rem 6rem 0 6rem;
+  }
 
 }
 
@@ -1797,6 +1820,12 @@ width: 100%!important;
     }
     .client__section {
       margin: 5rem 2rem 0 2rem;
+    }
+    .letter__addition {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+      margin: 3rem 2rem 0 2rem;
     }
 
   }
