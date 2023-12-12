@@ -1842,6 +1842,7 @@ width: 100%!important;
   .contacts__container {
     grid-template-columns: 1fr;
     text-align: center;
+    place-content: center;
 }
   .footer__container {
     grid-template-columns: 1fr;
