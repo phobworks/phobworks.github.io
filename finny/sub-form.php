@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "Mail from Subscription Form";
 
     // Verify reCAPTCHA
-    $recaptcha_secret_key = "6Lco7x8pAAAAAI_7hqaH1tPGyRhMPGSxKvf8o2r8"; // Replace with your actual secret key
+    $recaptcha_secret_key = ""; // Replace with your actual secret key
     $recaptcha_response = $_POST['g-recaptcha-response'];
 
     $recaptcha_url = "https://www.google.com/recaptcha/api/siteverify";
