@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/audelz/static/css/main.eecb92f0.css",
+    "main.js": "/audelz/static/js/main.401d21ac.js",
+    "static/media/audelz-banner.png": "/audelz/static/media/audelz-banner.56348d3c7b8e5b57ccbf.png",
+    "static/media/set-apart.jpg": "/audelz/static/media/set-apart.d662bc9d8e7fd0a03bf0.jpg",
+    "static/media/user2.jpg": "/audelz/static/media/user2.46aa6ff01d654465b461.jpg",
+    "static/media/testimonialImage.jpg": "/audelz/static/media/testimonialImage.e3f4bd54e329fc4457a0.jpg",
+    "static/media/newsletter-image.jpg": "/audelz/static/media/newsletter-image.de484f1d75df1e35ea86.jpg",
+    "static/media/user1.jpg": "/audelz/static/media/user1.5b41b03ea60bceadab96.jpg",
+    "static/media/about-home.jpg": "/audelz/static/media/about-home.bfd7cf02cebbf2315a27.jpg",
+    "static/media/banner-chart2.png": "/audelz/static/media/banner-chart2.68929667840ec660f9bf.png",
+    "static/media/banner-chart1.png": "/audelz/static/media/banner-chart1.2c373b3717bf009ecd52.png",
+    "index.html": "/audelz/index.html",
+    "main.eecb92f0.css.map": "/audelz/static/css/main.eecb92f0.css.map",
+    "main.401d21ac.js.map": "/audelz/static/js/main.401d21ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eecb92f0.css",
+    "static/js/main.401d21ac.js"
+  ]
+}
