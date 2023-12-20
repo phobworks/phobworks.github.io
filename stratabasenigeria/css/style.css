@@ -616,7 +616,8 @@ ul.callbacks_tabs li {
 	/*--w3layouts--*/
 	/*--agileits--*/
 	padding: 100px 0 50px;
-	background: rgba(0,0,0,0.6) url("../images/footer.jpg");
+	background-color: #000;
+	/* background: rgba(0,0,0,0.6) url("../images/footer.jpg"); */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -909,7 +910,7 @@ ul.social-icons li a.youtube:hover {
     
 }
 .details-grid11{
-   height: 632px; 
+   height: 650px; 
 }
 
 .details-grid-info p {
@@ -4745,3 +4746,6 @@ p.contact-p {
 
 
 /*-- //Responsive Code --*/
+.details-grid-image.agileits.w3layouts img {
+	width: 100%;
+}
