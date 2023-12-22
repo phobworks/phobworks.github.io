@@ -127,3 +127,44 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+
+/*  Booking Form Input Validation */
+
+let id = (id) => document.getElementById(id);
+let classes = (classes) => document.getElementsByClassName(classes);
+
+let senderAddress = id("senderAddress"),
+  senderPhone = id("senderPhone"),
+  receiverAddress = id("receiverAddress"),
+  receiverPhone = id("receiverPhone"),
+  form = id("form"),
+  errorMsg = classes("error"),
+  successIcon = classes("success-icon");
+failureIcon = classes("failure-icon");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  engine(senderAddress, 0, "Address cannot be empty ");
+  engine(receiverAddress, 1, "Address cannot be empty ");
+  engine(senderPhone, 2, "Address cannot be empty ");
+  engine(receiverPhone, 3, "Address cannot be empty ");
+});
+
+let engine = (id, serial, message) => {
+  if (id.value === "") {
+    errorMsg[serial].innerHTML = message;
+    id.style.border = "2px solid red";
+
+    // icons
+    failureIcon[serial].style.opacity = "1";
+    successIcon[serial].style.opacity = "0";
+  } else {
+    errorMsg[serial].innerHTML = "";
+    id.style.border = "2px solid green";
+
+    // icons
+    failureIcon[serial].style.opacity = "0";
+    successIcon[serial].style.opacity = "1";
+  }
+};
