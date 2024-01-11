@@ -640,6 +640,11 @@ form div i {
     color: var(--white-color);
 } */
 
+/* .service__headers img {
+  width: 100%;
+  height: auto;
+} */
+
 .service__buttom {
   display: flex;
   justify-content: space-between;
