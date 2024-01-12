@@ -19,19 +19,34 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Testimonial SlideShow */
 const testimonials = [
   {
-    image: "./images/user-2.jpg",
+    image: "./images/qoorier-logo.png",
     text: "I couldn't be happier with the results!",
-    author: "Meg Kitchens",
+    author: "Thelma Lawson",
   },
   {
-    image: "./images/services02.jpg",
+    image: "./images/qoorier-logo.png",
     text: "Amazing service! Highly recommended.",
-    author: "Jane Karibo",
+    author: "Honi Treatz",
   },
   {
-    image: "./images/services02.jpg",
+    image: "./images/qoorier-logo.png",
     text: "The best decision I've ever made!",
     author: "Emeka Oti",
+  },
+  {
+    image: "./images/qoorier-logo.png",
+    text: "Qoorier services are fast and reliable",
+    author: "Diobu Market",
+  },
+  {
+    image: "./images/qoorier-logo.png",
+    text: "Nice services from you guys",
+    author: "Nwanyi Enugu",
+  },
+  {
+    image: "./images/qoorier-logo.png",
+    text: "Thank you for your timely delivery",
+    author: "Belize Lounge",
   },
 ];
 let currentTestimonial = 0;
