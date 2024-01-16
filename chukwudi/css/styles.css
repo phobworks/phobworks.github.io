@@ -312,7 +312,7 @@ nav {
 
 /* =========== Sign up Start  ==========  */
 .sign__section {
-  background-image: url(../images/banner-bg.jpg);
+  /* background-image: url(../images/banner-bg.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -326,11 +326,11 @@ nav {
 }
 
 .sign__container h3 {
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .sign__container h1 {
-  color: var(--white-color);
+  color: var(--primary-color);
   font-size: 5rem;
 }
 
@@ -364,6 +364,8 @@ nav {
 
 .footer__section {
   margin-top: 5rem;
+  border-top: #c4c4c4 1px solid;
+  padding-top: 3rem;
 }
 
 .footer__container {
