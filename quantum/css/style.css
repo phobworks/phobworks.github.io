@@ -2064,3 +2064,9 @@ a.move-top span {
 .survey-serv {
   margin-top: -6em;
 }
+.element__section h4 {
+  margin: 2rem 0;
+}
+.marg-top {
+  margin-top: 2rem;
+}
