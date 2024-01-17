@@ -565,6 +565,20 @@ nav {
   gap: 3rem;
 }
 
+/* .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 4fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
 /* =========== Endoresment Page Ends =========== */
 
 /* =========== Contact Page Starts =========== */
