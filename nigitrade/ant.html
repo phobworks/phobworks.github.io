@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Card Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slider-container {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .card {
+        min-width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        position: absolute;
+        bottom: 10px;
+        font-size: 20px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+</style>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <link rel="stylesheet" href="css/fontawesome/css/all.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet">
+        <script src="js/main.js" defer></script>
+
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <title>Nigitrade International Limited</title>
+    </head>
+
+    <body>
+
+
+
+
+
+        <!-- ========= Projects starts ============ -->
+        <div class="project__section">
+            <div class="card__container swiper">
+                <div class="card__content">
+                    <div class="swiper-wrapper">
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="images/avatar-1.png" alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <h3 class="card__name">Kell Dawx</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="images/avatar-2.png" alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <h3 class="card__name">Lotw Fox</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="images/avatar-3.png" alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <h3 class="card__name">Sara Mit</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="images/avatar-4.png" alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <h3 class="card__name">Jenny Wert</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="images/avatar-5.png" alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <h3 class="card__name">Lexa Kin</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+
+        <!-- ========= projects ends ============ -->
+
+        <!--=============== SWIPER JS ===============-->
+
+
+    </body>
+
+    </html>
