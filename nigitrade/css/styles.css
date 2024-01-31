@@ -384,9 +384,11 @@ nav {
   border-radius: 5px 5px 0 0;
 }
 
-.text__container h3 {
+.text__container h5 {
   text-align: center;
   padding: 1rem 0;
+  font-size: 14px;
+  color: var(--primary-color);
 }
 
 .text__container p {
