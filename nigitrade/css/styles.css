@@ -212,12 +212,12 @@ nav {
 .banner__text h1 {
   font-weight: 900;
   font-size: 40px;
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .banner__text p {
   font-size: 18px;
-  color: var(--white-color);
+  color: var(--primary-color);
   margin-top: 1rem;
 }
 
@@ -227,7 +227,10 @@ nav {
 }
 
 .banner__btn a {
-  color: var(--white-color);
+  padding: 1rem 2rem;
+  color: var(--primary-color);
+  border-radius: 10px;
+  border: var(--primary-color) 2px solid;
   transition: ease-in 0.5s;
 }
 
