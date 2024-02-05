@@ -461,6 +461,13 @@ nav {
 }
 
 /* what we do page */
+.header__bg2 {
+  background-image: url(../images/bannars3.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 380px;
+}
 .whatwedo__section2 {
   width: 100%;
   margin-top: 3rem;
@@ -1018,6 +1025,9 @@ nav {
 .contact__address ul li i {
   color: var(--primary-color);
 }
+.map__section {
+  margin-top: 5rem;
+}
 
 /* ========= contact page ends ============= */
 
@@ -1347,7 +1357,7 @@ nav {
     font-size: 14px;
   }
   .header__bg {
-    background-image: url(../images/bannars.jpg);
+    background-image: url(../images/bannars2.jpg);
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1431,7 +1441,12 @@ nav {
   .footer__container,
   .footer__copyright,
   .whoweare__page-sec,
-  .whatwedo__container2 {
+  .whatwedo__container2,
+  .contact__container,
+  .qaqc__container,
+  .hse__container,
+  .community__container,
+  .planning__container {
     margin: 0 3rem 0 3rem;
   }
   .whoweare__right p {
