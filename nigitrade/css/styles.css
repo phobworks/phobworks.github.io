@@ -1364,7 +1364,14 @@ nav {
     font-size: 14px;
   }
   .header__bg {
-    background-image: url(../images/bannars2.jpg);
+    background-image: url(../images/bannars-small2.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+  }
+  .header__bg2 {
+    background-image: url(../images/bannars-small.jpg);
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
