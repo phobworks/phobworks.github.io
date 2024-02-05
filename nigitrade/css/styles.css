@@ -304,7 +304,7 @@ nav {
 }
 /* who we are page */
 .header__bg {
-  background-image: url(../images/bannars.jpg);
+  background-image: url(../images/banner01.jpg);
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1362,13 +1362,6 @@ nav {
   }
   .banner__text p {
     font-size: 14px;
-  }
-  .header__bg {
-    background-image: url(../images/bannars-small2.jpg);
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 380px;
   }
   .header__bg2 {
     background-image: url(../images/bannars-small.jpg);
