@@ -994,6 +994,13 @@ nav {
 
 /* ========== footer ends =============  */
 /* ========= contact page starts ============ */
+.header__bg3 {
+  background-image: url(../images/bannars4.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 380px;
+}
 .contact__section {
   width: 100%;
   margin-top: 5rem;
