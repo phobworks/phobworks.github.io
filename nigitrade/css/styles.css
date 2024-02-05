@@ -1439,6 +1439,9 @@ nav {
   .other__list {
     grid-template-columns: 1fr;
   }
+  .other__list {
+    gap: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
