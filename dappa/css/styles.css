@@ -434,7 +434,6 @@ header {
   background: var(--orange-color);
 }
 
-
 /* ========== Exhibitions Section ========= */
 #exhibitions {
   margin-top: 10rem;
@@ -510,8 +509,6 @@ header {
   box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
 }
 
-
-
 /* ========= Footer Section ====== */
 
 footer {
@@ -557,4 +554,3 @@ footer {
   align-items: center;
   gap: 5rem;
 }
-
