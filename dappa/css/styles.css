@@ -587,6 +587,26 @@ header {
   margin-top: 1rem;
 }
 
+/* title 1 */
+.galleries__containers {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 8%;
+}
+
+.galleries__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.galleries__images {
+  width: 100%;
+}
+
 /* =========== Gallery Page Section Ends ============ */
 
 /* ========= Footer Section ====== */
