@@ -214,7 +214,7 @@ header {
 }
 
 .header__right p {
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 85%;
 }
 
@@ -390,20 +390,21 @@ header {
   margin: 0 4rem 1.5rem 0;
 }
 /* =============== About Page Section Starts ============= */
-.abouts__container {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2rem; */
-  margin-top: 7rem;
+.abouts__section {
+  margin-top: 10rem;
+}
+.abouts__section h3 {
+  margin-bottom: 2rem;
 }
 
 .abouts__content002 img {
   max-width: 600px;
   float: left;
   margin-right: 2rem;
+  border: 0.5rem solid var(--color-bg-4);
 }
 
-.abouts__content002 h3 {
+.abouts__content002 h4 {
   /* margin: 5rem 0 3rem 0; */
   font-size: 30px;
   color: var(--blue-color);
@@ -421,7 +422,7 @@ header {
 }
 
 .abouts__section p {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 /* =============== About Page Section Ends ============= */
 
@@ -545,6 +546,48 @@ header {
 .exhibitions__gallery article:hover {
   box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
 }
+
+/* =========== Services Page Section Starts ============ */
+.services__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.services__contents img {
+  border: 0.5rem solid var(--color-bg-4);
+}
+
+.services__contents h4 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* =========== Services Page Section Starts ============ */
+
+/* =========== Gallery Page Section Starts ============ */
+.galleries__section {
+  margin-top: 10rem;
+}
+
+.galleries__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.galleries__content img {
+  border: 0.5rem solid var(--color-bg-4);
+}
+
+.galleries__content p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* =========== Gallery Page Section Ends ============ */
 
 /* ========= Footer Section ====== */
 
