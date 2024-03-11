@@ -390,10 +390,11 @@ header {
   margin: 0 4rem 1.5rem 0;
 }
 /* =============== About Page Section Starts ============= */
-abouts__container {
+.abouts__container {
   /* display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem; */
+  margin-top: 7rem;
 }
 
 .abouts__content002 img {
