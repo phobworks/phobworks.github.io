@@ -89,6 +89,7 @@ nav {
   background: var(--color-bg-2);
   border-bottom: 0.2rem solid var(--color-bg-3);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  height: 7rem;
 }
 
 .nav__container {
@@ -96,6 +97,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 .nav__toggle-btn {
@@ -103,7 +105,7 @@ nav {
 }
 
 .nav__logo {
-  width: 10rem;
+  width: 6rem;
 }
 
 .nav__links {
@@ -387,8 +389,42 @@ header {
 .about__right p {
   margin: 0 4rem 1.5rem 0;
 }
+/* =============== About Page Section Starts ============= */
+abouts__container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem; */
+}
 
-/* =============== Gallery Section ============= */
+.abouts__content002 img {
+  max-width: 600px;
+  float: left;
+  margin-right: 2rem;
+}
+
+.abouts__content002 h3 {
+  /* margin: 5rem 0 3rem 0; */
+  font-size: 30px;
+  color: var(--blue-color);
+}
+
+.abouts__content002 p span,
+.abouts__section p span {
+  font-weight: bold;
+  color: var(--blue-color);
+}
+
+.abouts__content002 p,
+.abouts__section p {
+  line-height: 2rem;
+}
+
+.abouts__section p {
+  margin-top: 2rem;
+}
+/* =============== About Page Section Ends ============= */
+
+/* =============== Gallery Section Starts ============= */
 .gallery {
   margin-top: 12rem;
 }
