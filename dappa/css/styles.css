@@ -821,8 +821,8 @@ footer {
   }
 
   /* ======== Gallery ======= */
-  #gallery {
-    margin-top: 8rem;
+  .gallery {
+    margin-top: 5rem;
   }
   .gallery__container p {
     width: 100%;
