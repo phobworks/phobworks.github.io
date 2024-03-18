@@ -6,7 +6,7 @@ window.addEventListener("scroll", () => {
 });
 /* ======== nav bar scroll reveal end ========= */
 
-/* ======= Swiper Js ======= */
+/* ======= Competition Swiper Js ======= */
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -26,6 +26,31 @@ var swiper = new Swiper(".mySwiper", {
     },
     1023: {
       slidesPerView: 3,
+      spaceBetween: 60,
+    },
+  },
+});
+
+/* ======= Team Swiper Js ======= */
+var swiper = new Swiper(".mySwipers", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  freeMode: true,
+  /* autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  }, */
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    599: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+    },
+    1023: {
+      slidesPerView: 1,
       spaceBetween: 60,
     },
   },

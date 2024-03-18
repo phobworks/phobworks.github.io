@@ -558,7 +558,7 @@ header {
 }
 
 .swiper-wrapper {
-  margin-top: 5rem;
+  padding-top: 5rem;
   height: 37rem;
   padding-bottom: 5rem;
 }
@@ -584,8 +584,8 @@ header {
   filter: saturate(1);
 }
 
-.swiper-pagination-bullet-active {
-  background: var(--color-bg-2);
+.swiper-pagination-bullet {
+  background: var(--color-primary-variant);
 }
 
 /* ============ Competition Section Ends ============ */
@@ -666,6 +666,65 @@ header {
   transition: var(--transition);
 }
 /* ========== shop Section Ends ================== */
+
+/* ============ Team Section Starts ========== */
+.competition {
+  margin-top: 7rem;
+}
+
+.swiper-wrapper {
+  padding-top: 5rem;
+  height: auto;
+  padding-bottom: 5rem;
+}
+
+.swiper-slide {
+  border: 0.5rem solid var(--color-bg-2);
+  height: fit-content;
+  max-height: 36rem;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.swiper-slide:hover {
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.team__container {
+  display: grid;
+  grid-template-columns: 30% 65%;
+  gap: 5%;
+  padding: 0.5rem;
+}
+
+.user__info {
+  display: inline-block;
+}
+
+.user__info h5 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.user__info p {
+  color: var(--primary-color);
+  margin-top: -2px;
+}
+
+/* .swiper-slide img {
+  filter: saturate(0);
+  transition: var(--transition);
+}
+
+.swiper-slide:hover img {
+  filter: saturate(1);
+} */
+
+.swiper-pagination-bullet {
+  background: var(--color-primary-variant);
+}
+
+/* ============ Team Section Ends ============ */
 
 /* ========== Footer Section Starts ================== */
 footer {
