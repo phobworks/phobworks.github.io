@@ -44,7 +44,7 @@ h2 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--white-color);
 }
 
@@ -242,6 +242,11 @@ header {
   padding-top: 10rem;
 }
 
+.header__left span {
+  color: var(--color-primary-variant);
+  font-size: 1rem;
+}
+
 .header__left p {
   color: var(--white-color);
 }
@@ -428,14 +433,25 @@ header {
   background-size: cover;
 }
 
+/* .services__section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+} */
+
 .services__section h2 {
   margin-bottom: 3rem;
 }
 
-.services__container {
+/* .services__container {
   width: 100%;
   height: 100vh;
-}
+  position: relative;
+  overflow: hidden;
+  height: inherit;
+  width: 100vw;
+} */
 
 .services__contents {
   display: grid;
@@ -569,6 +585,7 @@ header {
   max-height: 36rem;
   overflow: hidden;
   transition: var(--transition);
+  border-radius: 10px;
 }
 
 .swiper-slide:hover {
@@ -668,33 +685,25 @@ header {
 /* ========== shop Section Ends ================== */
 
 /* ============ Team Section Starts ========== */
-.competition {
+.team {
   margin-top: 7rem;
 }
 
-.swiper-wrapper {
-  padding-top: 5rem;
-  height: auto;
-  padding-bottom: 5rem;
-}
-
-.swiper-slide {
-  border: 0.5rem solid var(--color-bg-2);
-  height: fit-content;
-  max-height: 36rem;
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-.swiper-slide:hover {
-  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
-}
-
-.team__container {
+.team__section {
   display: grid;
-  grid-template-columns: 30% 65%;
-  gap: 5%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.team__card {
+  border: 0.1rem solid var(--color-bg-2);
   padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.user__details img {
+  border-radius: 6px;
 }
 
 .user__info {
@@ -711,20 +720,48 @@ header {
   margin-top: -2px;
 }
 
-/* .swiper-slide img {
-  filter: saturate(0);
+/* ============ Team Section Ends ============ */
+
+/* ============ Testimonials Section Starts ============ */
+.swiper-wrapper {
+  padding-top: 5rem;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+.swiper-slide {
+  /* border: 0.5rem solid var(--color-bg-2); */
+  height: fit-content;
+  max-height: 100%;
+  overflow: hidden;
   transition: var(--transition);
 }
 
-.swiper-slide:hover img {
-  filter: saturate(1);
-} */
+.testi__content {
+  padding: 0.5rem;
+}
+
+.testi__star {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.testi__star i {
+  color: #ffea00;
+}
+
+.testi__info {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  /* background-color: var(--blue-color); */
+}
 
 .swiper-pagination-bullet {
   background: var(--color-primary-variant);
 }
-
-/* ============ Team Section Ends ============ */
+/* ========== Testimonials Section Ends ================== */
 
 /* ========== Footer Section Starts ================== */
 footer {
@@ -876,6 +913,10 @@ footer {
     gap: 2rem;
   }
 
+  .team__section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .footer__contents {
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
@@ -986,6 +1027,9 @@ footer {
     flex-direction: column;
   }
   .shop__contents {
+    grid-template-columns: 1fr;
+  }
+  .team__section {
     grid-template-columns: 1fr;
   }
   .footer__contents {

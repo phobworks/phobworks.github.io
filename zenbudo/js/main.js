@@ -31,7 +31,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-/* ======= Team Swiper Js ======= */
+/* ======= Testimonials Swiper Js ======= */
 var swiper = new Swiper(".mySwipers", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -50,7 +50,7 @@ var swiper = new Swiper(".mySwipers", {
       spaceBetween: 40,
     },
     1023: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 60,
     },
   },
@@ -82,3 +82,18 @@ nav.querySelectorAll("li a").forEach((navLink) => {
 });
 
 /* ======== Gsap ============= */
+/* const container = document.querySelector(".services__section");
+
+const sections = gsap.utils.toArray(".services__section .services__container");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".container",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: () => "+=" + container.offsetWidth,
+  },
+}); */
