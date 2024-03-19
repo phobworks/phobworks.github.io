@@ -394,6 +394,22 @@ header {
   border: var(--color-bg-2) 0.5rem solid;
   border-radius: 1rem;
 }
+
+/* ====== About Page Starts ============== */
+.hearders__sections {
+  display: flex;
+  padding: 7rem 0 3rem 0;
+  justify-content: center;
+}
+
+.statem {
+  margin-top: 7rem;
+}
+
+.statem__content {
+  display: flex;
+  gap: 3rem;
+}
 /* ========== About Section Ends ================== */
 
 /* ========== Services Section Starts ================== */
@@ -839,6 +855,44 @@ footer {
 }
 /* ========== Footer Section Ends ================== */
 
+/* =========== Contact Section Starts ============= */
+.contacts {
+  margin-top: 7rem;
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts__container p {
+  font-size: 20px;
+}
+/* =========== Contact Section Ends =============== */
+
+/* =========== Gallery Page Section Starts ============ */
+.galleries__containers {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 8%;
+}
+
+.galleries__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.galleries__images {
+  width: 100%;
+}
+
+/* =========== Gallery Page Section Ends ============ */
+
 /* ======= Media Queries (Medium Devices)====== */
 @media screen and (max-width: 1024px) {
   .container {
@@ -933,6 +987,12 @@ footer {
     margin-top: 0;
     padding-top: 0;
   } */
+  .about__section {
+    align-items: start;
+  }
+  .statem__content {
+    flex-direction: column;
+  }
   /* ============= ANIMATION 2 ================ */
   .nav__links li {
     transform: rotateY(90deg) rotateX(-90deg);
