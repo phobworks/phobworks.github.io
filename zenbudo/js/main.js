@@ -81,6 +81,25 @@ nav.querySelectorAll("li a").forEach((navLink) => {
   navLink.addEventListener("click", closeNav);
 });
 
+/* ===========dropdown menu ============== */
+const dropDown = document.querySelector(".dropdown");
+const dropDownMenu = document.querySelector(".dropdown__menu");
+
+const toggleDropDown = function () {
+  dropDownMenu.classList.toggle("show");
+};
+
+dropDown.addEventListener("click", function (e) {
+  e.stopPropagation();
+  toggleDropDown();
+});
+
+document.documentElement.addEventListener("click", function () {
+  if (dropDownMenu.classList.contains("show")) {
+    toggleDropDown();
+  }
+});
+
 /* ======== Gsap ============= */
 /* const container = document.querySelector(".services__section");
 
