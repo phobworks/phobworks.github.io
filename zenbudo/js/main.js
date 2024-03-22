@@ -84,9 +84,11 @@ nav.querySelectorAll("li a").forEach((navLink) => {
 /* ===========dropdown menu ============== */
 const dropDown = document.querySelector(".dropdown");
 const dropDownMenu = document.querySelector(".dropdown__menu");
+const toggleArrow = document.getElementById("arrow");
 
 const toggleDropDown = function () {
   dropDownMenu.classList.toggle("show");
+  toggleArrow.classList.toggle("arrow");
 };
 
 dropDown.addEventListener("click", function (e) {

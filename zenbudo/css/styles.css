@@ -202,7 +202,7 @@ nav {
 }
 
 .dropdown i {
-  padding-left: 5px;
+  margin-left: 5px;
 }
 
 .dropdown__menu {
@@ -236,9 +236,11 @@ nav {
   padding: 0 1rem 0.2rem 0.5rem;
 }
 
-/* .dropdown:hover .dropdown__menu {
-  display: block;
-} */
+.arrow {
+  transform: rotate(180deg);
+  transition: var(--transition);
+  /* margin-left: 5px; */
+}
 
 .show li {
   transform: rotateY(90deg) rotateX(-90deg);
@@ -972,6 +974,14 @@ footer {
 }
 
 /* =========== Gallery Page Section Ends ============ */
+
+/* =========== Competition Page Section Starts ============= */
+.competition__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+/* =========== Competition Page Section Starts ============= */
 
 /* ======= Media Queries (Medium Devices)====== */
 @media screen and (max-width: 1024px) {
