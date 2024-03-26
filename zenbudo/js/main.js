@@ -82,26 +82,59 @@ nav.querySelectorAll("li a").forEach((navLink) => {
 });
 
 /* ===========dropdown menu ============== */
-const dropDown = document.querySelector(".dropdown");
-const dropDownMenu = document.querySelector(".dropdown__menu");
-const toggleArrow = document.getElementById("arrow");
 
-const toggleDropDown = function () {
-  dropDownMenu.classList.toggle("show");
-  toggleArrow.classList.toggle("arrow");
+const dropDowns = document.querySelectorAll(".dropdown");
+const dropDownMenus = document.querySelectorAll(".dropdown__menu");
+const toggleArrows = document.querySelectorAll(".fa-solid.fa-chevron-down");
+
+const toggleDropDown = function (index) {
+  dropDownMenus.forEach((menu, i) => {
+    if (i !== index) {
+      menu.classList.remove("show");
+      toggleArrows[i].classList.remove("arrow");
+    }
+  });
+
+  dropDownMenus[index].classList.toggle("show");
+  toggleArrows[index].classList.toggle("arrow");
 };
 
-dropDown.addEventListener("click", function (e) {
-  e.stopPropagation();
-  toggleDropDown();
+dropDowns.forEach((dropDown, index) => {
+  dropDown.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleDropDown(index);
+  });
 });
 
 document.documentElement.addEventListener("click", function () {
-  if (dropDownMenu.classList.contains("show")) {
-    toggleDropDown();
-  }
+  dropDownMenus.forEach((menu, index) => {
+    if (menu.classList.contains("show")) {
+      toggleDropDown(index);
+    }
+  });
 });
 
+/* ===========submenu dropdown ============== */
+/* const subMenu = document.querySelector(".submenu");
+const submenuDropdown = document.querySelector(".submenu__dropdown");
+const toggleArrows = document.getElementById("arrows");
+
+const toggleSubMenu = function () {
+  submenuDropdown.classList.toggle("shows");
+  toggleArrows.classList.toggle("arrows");
+};
+
+subMenu.addEventListener("click", function (e) {
+  e.stopPropagation();
+  toggleSubMenu();
+});
+
+document.documentElement.addEventListener("click", function () {
+  if (submenuDropdown.classList.contains("shows")) {
+    toggleSubMenu();
+  }
+});
+ */
 /* ======== Gsap ============= */
 /* const container = document.querySelector(".services__section");
 
@@ -118,3 +151,16 @@ gsap.to(sections, {
     end: () => "+=" + container.offsetWidth,
   },
 }); */
+
+// gsap.registerPlugin(ScrollTrigger);
+// gsap code here!
+/* gsap.from(".header__left", {
+  ScrollTrigger: {
+    trigger: ".header__left",
+    markers: true,
+    scrub: true,
+  },
+  opacity: 0,
+  scale: 0.5,
+});
+ */
