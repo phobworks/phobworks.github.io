@@ -1099,8 +1099,8 @@ footer {
   .header__slogan {
     display: flex;
     justify-content: center;
-    padding-bottom: -3rem;
-    padding-left: 3rem;
+    padding-bottom: 5rem;
+    /* padding-left: 3rem; */
   }
 
   .intro__left h2 {
