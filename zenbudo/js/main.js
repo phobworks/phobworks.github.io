@@ -152,15 +152,19 @@ gsap.to(sections, {
   },
 }); */
 
-// gsap.registerPlugin(ScrollTrigger);
-// gsap code here!
-/* gsap.from(".header__left", {
+/* gsap.registerPlugin(ScrollTrigger); */
+//gsap code here!
+/* gsap.to(".header__left", {
   ScrollTrigger: {
     trigger: ".header__left",
-    markers: true,
+    start: "top center",
+    end: "top 100px",
     scrub: true,
+    mmarkers: true,
   },
+  rotation: 360,
+  ease: "none",
+  duration: 3,
   opacity: 0,
-  scale: 0.5,
-});
- */
+  scale: 1,
+}); */
