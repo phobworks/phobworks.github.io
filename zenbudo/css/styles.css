@@ -1259,8 +1259,7 @@ footer {
     align-items: center;
   }
   .header__image {
-    margin-right: 2.3rem;
-    width: 24rem;
+    width: 22rem;
   }
   .header__slogan {
     padding: 0;
@@ -1276,7 +1275,7 @@ footer {
     margin-top: 2rem;
   }
   .about__right {
-    width: 390px;
+    width: 360px;
     display: flex;
     text-align: center;
     /* justify-content: center; */
