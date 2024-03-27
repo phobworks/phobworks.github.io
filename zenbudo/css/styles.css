@@ -1114,13 +1114,13 @@ footer {
   }
 
   .about__section {
-    grid-template-columns: 45% 50%;
+    grid-template-columns: 1fr;
     gap: 5%;
     align-items: center;
   }
 
   .about__right {
-    width: 400px;
+    width: 100%;
   }
 
   .shop__contents {
