@@ -1275,7 +1275,7 @@ footer {
     margin-top: 2rem;
   }
   .about__right {
-    width: 360px;
+    width: 100%;
     display: flex;
     text-align: center;
     /* justify-content: center; */
