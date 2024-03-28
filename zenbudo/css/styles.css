@@ -506,6 +506,7 @@ header {
 /* ====== About Page Starts ============== */
 .hearders__sections {
   display: flex;
+  flex-direction: column;
   padding: 7rem 0 3rem 0;
   justify-content: center;
 }
@@ -651,6 +652,34 @@ header {
   grid-row-end: span 1;
   aspect-ratio: 1 / 1;
 }
+
+/* ============ Girls Empowerment Section Starts ========= */
+.girls__empowerment {
+  margin-top: 7rem;
+}
+
+.girls__container {
+  display: block;
+}
+
+.girls__contents {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 5rem;
+}
+
+.girls__link {
+  margin-top: 2rem;
+}
+
+.girls__link a {
+  border: var(--blue-color) 1px solid;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+/* ============ Girls Empowerment Section Ends ========= */
 
 /* ============ Competition Section Starts ========== */
 .competition {
@@ -1114,13 +1143,18 @@ footer {
   }
 
   .about__section {
-    grid-template-columns: 1fr;
-    gap: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
     align-items: center;
   }
 
   .about__right {
     width: 100%;
+  }
+
+  .girls__contents {
+    flex-direction: column;
   }
 
   .shop__contents {
@@ -1153,6 +1187,9 @@ footer {
   }
   .statem__content {
     flex-direction: column;
+  }
+  .competition__content {
+    grid-template-columns: repeat(2, 1fr);
   }
   /* ============= ANIMATION 2 ================ */
   .nav__links li {
@@ -1300,6 +1337,9 @@ footer {
   }
   .services__contents2 {
     display: flex;
+    flex-direction: column;
+  }
+  .girls__contents {
     flex-direction: column;
   }
   .shop__contents {
