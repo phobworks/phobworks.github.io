@@ -818,7 +818,7 @@ header {
 }
 
 .team__card {
-  border: 0.1rem solid var(--blue-color);
+  border: 0.5rem solid var(--blue-color);
   padding: 0.5rem;
   border-radius: 10px;
 }
@@ -828,7 +828,7 @@ header {
 }
 
 .user__details img {
-  border-radius: 6px;
+  border-radius: 0 0 6px 6px;
 }
 
 .user__info {
@@ -998,8 +998,29 @@ header {
 }
 
 .testi__content {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem 2rem 1rem;
+  overflow-y: scroll;
+  height: 15rem;
 }
+
+.testi__content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.testi__content::-webkit-scrollbar-thumb {
+  /* background-color: blue; */ /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid var(--color-primary-variant); /* creates padding around scroll thumb */
+}
+
+.testi__content::-webkit-scrollbar-track {
+  /*  background: orange; */ /* color of the tracking area */
+}
+
+/* .testi__content:hover {
+  scrollbar-width: thin;
+  scrollbar-color: blue;
+} */
 
 .testi__star {
   display: flex;
@@ -1016,6 +1037,25 @@ header {
   text-align: center;
   padding: 1rem 0;
   /* background-color: var(--blue-color); */
+}
+
+.scroll__sign,
+.scroll__sign i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  /* margin: 0; */
+  padding: 50px 0;
+
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, var(--color-bg-3));
+}
+
+.scroll__sign i {
+  color: var(--white-color);
+  padding-top: 30px;
 }
 
 .swiper-pagination-bullet {
@@ -1370,6 +1410,7 @@ footer {
   .competition__content {
     grid-template-columns: repeat(2, 1fr);
   }
+
   /* ============= ANIMATION 2 ================ */
   .nav__links li {
     transform: rotateY(90deg) rotateX(-90deg);
