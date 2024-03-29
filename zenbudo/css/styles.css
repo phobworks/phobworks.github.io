@@ -823,6 +823,10 @@ header {
   border-radius: 10px;
 }
 
+.user__details {
+  position: relative;
+}
+
 .user__details img {
   border-radius: 6px;
 }
@@ -839,6 +843,141 @@ header {
 .user__info p {
   color: var(--primary-color);
   margin-top: -2px;
+}
+
+.team__btn {
+  padding-top: 1rem;
+}
+
+.open-modal-btn {
+  color: var(--white-color);
+  cursor: pointer;
+  background-color: transparent;
+  transition: var(--transition);
+}
+
+.open-modal-btn:hover {
+  color: var(--blue-color);
+}
+
+.team__links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.team__links i {
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(var(--color-primary-variant), var(--blue-color));
+  border-radius: 0.5rem;
+  color: var(--color-bg-4);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.team__links i:hover {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+  color: var(--white-color);
+}
+
+/* --- Team Modal ------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+  position: relative;
+  background-color: var(--color-bg-2);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--color-light);
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+
+.modal__contents {
+  display: grid;
+  grid-template-columns: 30% auto;
+  color: var(--white-color);
+  gap: 10%;
+  margin: 1rem 0;
+}
+
+.modal__img {
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--blue-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__header {
+  padding: 0.5rem 16px;
+  background-color: var(--color-bg-3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__body {
+  padding: 2px 16px;
+}
+
+.modal__footer {
+  padding: 1rem 16px;
+  background-color: var(--color-bg-3);
+  color: white;
 }
 
 /* ============ Team Section Ends ============ */
@@ -943,6 +1082,10 @@ footer {
   line-height: 2;
 }
 
+.training__schs {
+  margin-top: 2rem;
+}
+
 .footer__mission {
   border-top: var(--color-bg-2) 1px solid;
   margin-top: 2rem;
@@ -964,16 +1107,52 @@ footer {
 /* =========== Contact Section Starts ============= */
 .contacts {
   margin-top: 7rem;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 10%;
+  place-content: center;
 }
 
 .contacts__container {
   display: flex;
   flex-direction: column;
+}
+
+.contacts__container p i {
+  padding-right: 5px;
+}
+
+.training__sch h3:nth-child(4) {
+  margin-top: 1rem;
+}
+
+.socials__linkers {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
   align-items: center;
 }
 
-.contacts__container p {
-  font-size: 20px;
+.socials__linkers i {
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(var(--color-primary-variant), var(--blue-color));
+  border-radius: 0.5rem;
+  color: var(--color-bg-4);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.socials__linkers i:hover {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+  color: var(--white-color);
+}
+
+.contact__map {
+  margin-top: 3rem;
+  border-top: var(--blue-color) 1px solid;
 }
 /* =========== Contact Section Ends =============== */
 
@@ -1167,7 +1346,7 @@ footer {
   }
 
   .footer__contents {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
 
@@ -1348,6 +1527,9 @@ footer {
   .team__section {
     grid-template-columns: 1fr;
   }
+  .contacts {
+    grid-template-columns: 1fr;
+  }
   .footer__contents {
     grid-template-columns: 1fr;
   }
@@ -1358,6 +1540,9 @@ footer {
   .competition__content {
     display: flex;
     flex-direction: column;
+  }
+  .modal__content {
+    width: 90%;
   }
 }
 .competition__container p:nth-child(2) {

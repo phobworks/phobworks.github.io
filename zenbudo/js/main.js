@@ -114,6 +114,32 @@ document.documentElement.addEventListener("click", function () {
   });
 });
 
+/* =========== Modal Section ============== */
+// Get all buttons that open modals
+// Get all buttons that open modals
+var btns = document.querySelectorAll(".open-modal-btn");
+
+// Attach click event listener to each button
+btns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var modalId = this.getAttribute("data-modal-id");
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+  });
+});
+
+// When the user clicks anywhere outside of the modal or on a close button, close the modal
+document.body.addEventListener("click", function (event) {
+  var modals = document.querySelectorAll(".modal");
+  modals.forEach(function (modal) {
+    if (event.target.closest(".close") && event.target.closest(".modal")) {
+      modal.style.display = "none"; // Close the modal by setting display to "none"
+    } else if (event.target === modal) {
+      modal.style.display = "none"; // Close the modal if clicked outside of it
+    }
+  });
+});
+
 /* ===========submenu dropdown ============== */
 /* const subMenu = document.querySelector(".submenu");
 const submenuDropdown = document.querySelector(".submenu__dropdown");
