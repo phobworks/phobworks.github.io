@@ -460,12 +460,12 @@ header {
 }
 
 .swiper-slide img {
-  filter: saturate(0);
+  filter: saturate(1);
   transition: var(--transition);
 }
 
 .swiper-slide:hover img {
-  filter: saturate(1);
+  filter: saturate(0);
 }
 
 .swiper-pagination-bullet-active {
@@ -535,12 +535,12 @@ header {
 
 .exhibitions__gallery article img {
   height: 100%;
-  filter: saturate(0);
+  filter: saturate(1);
   transition: var(--transition);
 }
 
 .exhibitions__gallery article:hover img {
-  filter: saturate(1);
+  filter: saturate(0);
 }
 
 .exhibitions__gallery article:hover {
@@ -600,11 +600,26 @@ header {
 .galleries__images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 10px;
+}
+
+.galleries__images a {
+  border: 0.5rem solid var(--color-bg-4);
 }
 
 .galleries__images {
   width: 100%;
+}
+
+.galleries__images img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border: var(--blue-color) 0.5rem solid;
+}
+
+.back__link {
+  margin: 1rem;
 }
 
 /* =========== Gallery Page Section Ends ============ */
