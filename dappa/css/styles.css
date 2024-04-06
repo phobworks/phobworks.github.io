@@ -472,6 +472,11 @@ header {
   background: var(--orange-color);
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: red;
+}
+
 /* ========== Exhibitions Section ========= */
 #exhibitions {
   margin-top: 10rem;
@@ -911,6 +916,11 @@ footer {
   }
   .swiper-slide {
     border: 0;
+  }
+
+  /* ========= Services ======== */
+  .services__container {
+    grid-template-columns: 1fr;
   }
 
   /* ========= Gallery ========= */
