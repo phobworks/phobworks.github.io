@@ -520,6 +520,7 @@ header {
 }
 
 .exhibitions__gallery article {
+  position: relative;
   border: 0.5rem solid var(--color-bg-4);
   transition: var(--transition);
 }
@@ -550,6 +551,22 @@ header {
 
 .exhibitions__gallery article:hover {
   box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+.exhibitions__gallery article .overlapping {
+  position: absolute;
+  width: 100%;
+  background-color: var(--primary-color);
+  bottom: 0;
+  opacity: 0.75;
+}
+
+.exhibitions__gallery article .overlapping p {
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 16px;
 }
 
 /* =========== Services Page Section Starts ============ */
