@@ -578,7 +578,7 @@ header {
 
 .galleries__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 1rem;
 }
@@ -852,6 +852,9 @@ footer {
     margin-top: 4rem;
     height: fit-content;
   }
+  .galleries__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   /* ========= Projects ============= */
   .exhibitions__head > p {
@@ -932,6 +935,9 @@ footer {
   }
   .swiper-wrapper {
     margin-top: 3rem;
+  }
+  .galleries__container {
+    grid-template-columns: 1fr;
   }
 
   /* ========= Projects ========= */
