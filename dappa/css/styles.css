@@ -642,6 +642,7 @@ header {
 
 .back__link {
   margin: 1rem;
+  cursor: pointer;
 }
 
 /* =========== Gallery Page Section Ends ============ */
