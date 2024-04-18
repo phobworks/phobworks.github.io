@@ -113,6 +113,21 @@ nav {
   gap: 3rem;
 }
 
+/* .nav__links li:nth-child(5) {
+  background: linear-gradient(
+    var(--color-primary-variant),
+    var(--orange-color)
+  );
+  padding: 5px 20px;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.nav__links li:nth-child(5):hover {
+  color: var(--color-bg-1);
+  background: var(--white-color);
+} */
+
 .nav__socials {
   display: flex;
   gap: 1rem;
@@ -651,6 +666,21 @@ header {
 
 /* =========== Gallery Page Section Ends ============ */
 
+/* =========== Contact Page Section Starts ============ */
+.contacts__container {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.contacts__container p i {
+  padding-right: 5px;
+}
+
+/* =========== Contact Page section Ends ============== */
+
 /* ========= Footer Section ====== */
 
 footer {
@@ -992,7 +1022,7 @@ footer {
     flex-direction: column;
   }
   .footer__head h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .footer__links {
     flex-direction: column;
