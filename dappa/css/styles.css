@@ -569,6 +569,10 @@ header {
   font-size: 16px;
 }
 
+.exhibitions__gallery article .overlapping p:hover {
+  color: var(--orange-color);
+}
+
 /* =========== Services Page Section Starts ============ */
 .services__container {
   display: grid;
@@ -835,6 +839,9 @@ footer {
   }
 
   /* =========== About ======== */
+  .about__section {
+    margin-top: 15rem;
+  }
   .about__container {
     grid-template-columns: 40% 54%;
     gap: 6%;
@@ -860,7 +867,7 @@ footer {
 
   /* ======== Gallery ======= */
   .gallery {
-    margin-top: 5rem;
+    margin-top: 10rem;
   }
   .gallery__container p {
     width: 100%;
@@ -875,6 +882,9 @@ footer {
   }
 
   /* ========= Projects ============= */
+  #exhibitions {
+    margin-top: 10rem;
+  }
   .exhibitions__head > p {
     width: 100%;
     margin-bottom: 2rem;
