@@ -608,7 +608,7 @@ i.fa-step-backward {
 /* ========= Media Section Starts ========== */
 .media__section {
   margin-top: 7rem;
-  background: url("/images/curator-bg.jpg");
+  background: url("../images/curator-bg.jpg");
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
