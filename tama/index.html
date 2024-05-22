@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <script src="js/main.js/" defer></script> -->
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="images/icon.png">
+    <title>Tama Nisa</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar container">
+            <div class="navitems">
+                <ul>
+                    <li>
+                        <a>The Artist</a>
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </li>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#">Music</a>
+                        </li>
+                        <li>
+                            <a href="#">Film</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="index.html"><img src="/images/tama-logo.png" alt=""></a>
+            </div>
+            <div class="navitems">
+                <ul>
+                    <li>
+                        <a>The Other Life</a>
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </li>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#">Curator</a>
+                        </li>
+                        <li>
+                            <a href="#">Manchandise</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="navbtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar__sm">
+        <div class="navitems__sm">
+            <ul>
+                <li>
+                    <a>The Artist</a>
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <ul class="dropdown__sm">
+                        <li>
+                            <a href="#">Music</a>
+                        </li>
+                        <li>
+                            <a href="#">Film</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a>The Other Life</a>
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <ul class="dropdown__sm">
+                        <li>
+                            <a href="#">Curator</a>
+                        </li>
+                        <li>
+                            <a href="#">Manchandise</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============= Banner Section Starts ============ -->
+    <section class="banner__section">
+        <div class="banner__container container">
+            <div class="banner__herotag">
+                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque reiciendis consequatur itaque
+                    numquam atque, iusto voluptas consectetur maiores sit.</p>
+                <div class="action__btn">
+                    <a href="#">Get In Touch <i class="fa-solid fa-hand-point-left"></i></a>
+                </div>
+                <div class="social__banner">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="banner__image">
+                <img src="/images/banner.jpg" alt="banner Image">
+            </div>
+            <div class="banner__music">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <!-- Music Player -->
+                <div class="player">
+                    <div class="wrapper">
+                        <div class="details">
+                            <div class="now-playing">PLAYING x OF y</div>
+                            <div class="track-art"></div>
+                            <div class="track-name">Track Name</div>
+                            <div class="track-artist">Track Artist</div>
+                        </div>
+                        <div class="slider_container">
+                            <div class="current-time">00:00</div>
+                            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" />
+                            <div class="total-duration">00:00</div>
+                        </div>
+                        <div class="slider_container">
+                            <i class="fa fa-volume-down"></i>
+                            <input type="range" min="1" max="100" value="99" class="volume_slider"
+                                onchange="setVolume()" />
+                            <i class="fa fa-volume-up"></i>
+                        </div>
+                        <div class="buttons">
+                            <div class="random-track" onclick="randomTrack()">
+                                <i class="fas fa-random fa-2x" title="random"></i>
+                            </div>
+                            <div class="prev-track" onclick="prevTrack()">
+                                <i class="fa fa-step-backward fa-2x"></i>
+                            </div>
+                            <div class="playpause-track" onclick="playpauseTrack()">
+                                <i class="fa fa-play-circle fa-5x"></i>
+                            </div>
+                            <div class="next-track" onclick="nextTrack()">
+                                <i class="fa fa-step-forward fa-2x"></i>
+                            </div>
+                            <div class="repeat-track" onclick="repeatTrack()">
+                                <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                            </div>
+                        </div>
+                        <div id="wave">
+                            <span class="stroke"></span>
+                            <span class="stroke"></span>
+                            <span class="stroke"></span>
+                            <span class="stroke"></span>
+                            <span class="stroke"></span>
+                            <span class="stroke"></span>
+                            <span class="stroke"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= Banner Section Starts ============ -->
+
+    <!-- ============= Marquee Section Starts =========== -->
+    <section class="marquee__section">
+        <div class="carousel__content container">
+            <div class="marquee__container">
+                <img src="images/escape.jpg" alt="Escape">
+                <img src="images/forever-love.jpg" alt="Forever Love">
+                <img src="images/go-away.jpg" alt="Go Away">
+                <img src="images/stronger.jpg" alt="Stronger">
+            </div>
+            <div class="marquee__container">
+                <img src="images/escape.jpg" alt="Escape">
+                <img src="images/forever-love.jpg" alt="Forever Love">
+                <img src="images/go-away.jpg" alt="Go Away">
+                <img src="images/stronger.jpg" alt="Stronger">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= Marquee Section Ends =========== -->
+
+    <!-- ============= About Section Starts =========== -->
+    <section class="about__section">
+        <div class="about__container container">
+            <div class="about__content">
+                <div class="about__artist">
+                    <div class="artist__image">
+                        <img src="images/the-artist.jpg" alt="The Artist">
+                    </div>
+                    <div class="artist__bio">
+                        <h4>Tama Nisa The Artist</h4>
+                        <p>Where words fail, music speaks, to soothe the mind and calm the heart, with its rhythm and
+                            flow,
+                            your soul made whole.</p>
+                        <p>Born and raised in Port Harcourt, Nigeria, I am the typical essence of the African middle
+                            class
+                            young woman. I enjoy travel, fashion as a form of art and personal expression. I am Tama
+                            Nisa
+                            and music is my life, my art is an expression of our African Royal Heritage, a reminder of
+                            Love,
+                            Romance, elevation of the mind, and call to create a strong, united and thriving Africa. I
+                            am a
+                            dreamer.</p>
+                        <p>The EP- Pillars and Leaves is a collection of diverse African beats and rhythm to create a
+                            fused
+                            style of sensual Afro pop, Afro house, and Afro soul that tells about our passion,
+                            resilience,
+                            strength, love, romance, and the essence that drives humanity...</p>
+                        <div class="about__btn btn">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__sub">
+                    <div class="sub__content">
+                        <h5>Musician</h5>
+                        <p>Tama Nisa's musical prowess transcends genres, blending soulful melodies with
+                            Afrobeat rhythms, creating a sound that resonates globally.
+                        </p>
+                    </div>
+                    <div class="sub__content">
+                        <h5>Actor</h5>
+                        <p>With a natural ﬂair for the dramatic, Tama Nisa brings characters to life on both
+                            stage and screen, captivating audiences with her emotive performances.
+                        </p>
+                    </div>
+                    <div class="sub__content">
+                        <h5>Writer</h5>
+                        <p>A wordsmith at heart, Tama Nisa's storytelling abilities shine through her lyrics,
+                            scripts, and literary works.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about__otherlife">
+                <div class="otherlife__bio">
+                    <h4>The Other Life of Tama Nisa</h4>
+                    <p>On this journey called life, we are all tailored to our unique experiences that shapes us and
+                        makes us. Sometimes something new is born for the greatest good of humanity, other times it
+                        brings about chaos and self-destruction.</p>
+                    <p>Our world today, we see the echoes of negativity around us and the need for more voices of hope
+                        and the courage to persevere cannot be over emphasized.</p>
+                    <p>That is why I lend my voice not only through my music but activating programs and building the
+                        brand to become an icon of hope, re-invention of self, inspire ideas for positive influences
+                        advocating mental well- being by creating a support system for people struggling with
+                        depression.</p>
+                    <div class="about__btn btn">
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="otherlife__image">
+                    <img src="images/the-other-life.jpg" alt="The Other Life">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= About Section Starts =========== -->
+
+    <!-- ============= Media Section Starts =========== -->
+    <section class="media__section">
+        <div class="media__display">
+            <div class="media__header container">
+                <h4>Play Videos</h4>
+                <a href="#">View all</a>
+            </div>
+            <div class="media__container container">
+
+                <iframe src="https://www.youtube.com/embed/d8uDxdplkz4?si=tYWAFey5SWR9pIXq" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+                <iframe src="https://www.youtube.com/embed/wSeCMbyjf7o?si=tEJQeQhUQ8Ri5aEN" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+                <iframe src="https://www.youtube.com/embed/qcR2s4O1ph4?si=WVI9wUR7Su6SR-4P" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+                <iframe src="https://www.youtube.com/embed/AzIMmDRQbCI?si=DqHWIhqKzeLjy9wt" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+        </div>
+        <div class="media__display2">
+            <div class="media__header container">
+                <h4>Play Musics</h4>
+                <a href="#">View all</a>
+            </div>
+            <div class="media__container container">
+                <iframe style="border-radius:12px" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/4UFKSJ03rrTMhu8unWR9Hi?utm_source=generator&theme=0"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============= Media Section Ends =========== -->
+
+    <!-- ============= Curator/News Section Starts =========== -->
+    <section class="curator__section">
+        <div class="curator__container container">
+            <div class="curator__content">
+                <div class="curator__image">
+                    <img src="images/curator-img.jpg" alt="Curator Image">
+                </div>
+                <div class="curator__bio">
+                    <h4>The Curator</h4>
+                    <p>The Curator brings a fresh and innovative
+                        approach to transforming any environment into a
+                        vibrant, community-driven hub through tailored
+                        creative and entertainment services, creating an
+                        avenue for businesses to also drive social impact.</p>
+                    <p>A dynamic and Multi-talented artist with a diverse
+                        skill set, spanning music, acting, writing, creative
+                        entrepreneurship and humanitarian work. </p>
+                    <p>My vision to inspire and connect communities
+                        through the power of art and entertainment. </p>
+                    <div class="about__btn btn">
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="news__container">
+                <p>Latest News</p>
+                <div id="news-container" class="news__content"></div>
+                <div class="pagination-buttons">
+                    <button id="prev-button"><i class="fa-solid fa-chevron-left page__btn"></i></button>
+                    <button id="next-button"><i class="fa-solid fa-chevron-right page__btn"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============= Curator/News Section Ends =========== -->
+
+    <!-- ============= Investment Section Starts =========== -->
+    <section class="investment__section">
+        <div class="investment__container container">
+            <div class="investment__intro">
+                <h4>Investing in Tama Nisa - Empowering Dreams, Enriching Souls</h4>
+                <p><span>Introduction</span> We are excited to present an extraordinary investment opportunity in the
+                    vibrant and
+                    versatile Tama Nisa, a rising star in the world of arts, creative entrepreneurship, and
+                    humanitarianism. </p>
+                <p>Tama Nisa is not just an artist; she is a force of creativity,
+                    entrepreneurship, and social change. With a brand that embodies her power and
+                    uniqueness - Tama Nisa is set to revolutionize the entertainment industry.</p>
+            </div>
+            <div class="investment__content">
+                <h5>Why Invest in Tama Nisa</h5>
+                <div class="investment__wrap">
+                    <div class="investment__why">
+                        <h5>Proven Track Record</h5>
+                        <p><span>Artistic Success: </span>Tama Nisa is a fast rising personality known for her unique
+                            creativities,
+                            she is fast gaining recognition for her inspiring stories, talents and inﬂuential
+                            personality.
+                        </p>
+                        <p><span>Entrepreneurial Acumen: </span>The success of creative projects spearheaded by Tama
+                            Nisa
+                            demonstrates Tama Nisa's ability to lead and manage ventures effectively.</p>
+                    </div>
+                    <div class="investment__why">
+                        <h5>Social Impact</h5>
+                        <p><span>Aligned Values: </span>Investors will be part of a fast rising global brand committed
+                            to
+                            making a
+                            positive impact on society through holistic evolution, Art, cultural preservation and social
+                            re-engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============= Investment Section Ends =========== -->
+
+    <!-- ============= Contact Section Starts =========== -->
+    <section class="contact__section">
+        <div class="contact__container container">
+            <div class="form__section">
+                <div class="smedia__container">
+                    <p>Contact</p>
+                    <h3>Want To Find Out More?</h3>
+                    <div class="socials__content">
+                        <div class="email__content">
+                            <p>zoetsapphire@gmail.com</p>
+                        </div>
+                        <div class="social__media">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__container">
+                    <form class="form__content">
+                        <textarea name="textarea" id="textarea" rows="10" placeholder="Your Message"></textarea>
+                        <div class="form__detail">
+                            <input type="text" name="name" id="name" placeholder="Your Name">
+                            <input type="email" name="email" id="email" placeholder="Your E-mail">
+                        </div>
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="subscribe__section">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= Contact Section Ends =========== -->
+
+    <!-- ============= Footer Section Starts =========== -->
+    <footer class="footer__section">
+        <div class="footer__container container">
+            <div class="footer__copyright">
+                <span><i class="fa-regular fa-copyright"></i> Copyright 2024 @ Tama Nisa. All rights reserved |
+                    Design
+                    by <a href="#">phobworks</a> </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============= Footer Section Ends =========== -->
+</body>
+
+</html>

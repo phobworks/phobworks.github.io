@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .news__content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .news__contents {
+            display: grid;
+            grid-template-columns: 50% 45%;
+            gap: 5%;
+        }
+
+        .date__author {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pagination-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .pagination-buttons button {
+            padding: 5px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news__container">
+        <div id="news-container" class="news__content"></div>
+        <div class="pagination-buttons">
+            <button id="prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const newsContainer = document.getElementById("news-container");
+            const prevButton = document.getElementById("prev-button");
+            const nextButton = document.getElementById("next-button");
+            const itemsPerPage = 4;
+            let currentPage = 1;
+            let newsData = [];
+
+            fetch("news.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    newsData = data;
+                    displayNews();
+                });
+
+            const displayNews = () => {
+                newsContainer.innerHTML = "";
+                const start = (currentPage - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const currentNews = newsData.slice(start, end);
+
+                currentNews.forEach((news) => {
+                    const newsContent = document.createElement("div");
+                    newsContent.classList.add("news__contents");
+                    newsContent.innerHTML = `
+                <div class="news__topic">
+                    <p>${news.topic}</p>
+                    <h6>${news.content}</h6>
+                </div>
+                <img src="${news.image}" alt="">
+                <div class="date__author">
+                    <p>${news.date}</p>
+                    <p>${news.author}</p>
+                </div>
+            `;
+                    newsContainer.appendChild(newsContent);
+                });
+
+                prevButton.disabled = currentPage === 1;
+                nextButton.disabled =
+                    currentPage === Math.ceil(newsData.length / itemsPerPage);
+            };
+
+            prevButton.addEventListener("click", () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    displayNews();
+                }
+            });
+
+            nextButton.addEventListener("click", () => {
+                if (currentPage < Math.ceil(newsData.length / itemsPerPage)) {
+                    currentPage++;
+                    displayNews();
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
