@@ -740,6 +740,9 @@ footer {
   h2 {
     font-size: 2.5rem;
   }
+  .nav {
+    position: relative;
+  }
 
   .nav__socials {
     display: none;

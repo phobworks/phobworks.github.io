@@ -1203,9 +1203,9 @@ i.fa-step-backward {
     display: block;
   }
   .navlinks {
-    position: absolute;
+    position: fixed;
     z-index: 999;
-    top: calc(50% - 15rem);
+    top: 9%;
     right: 0;
     display: flex;
     flex-direction: column;

@@ -47,41 +47,41 @@ let updateTimer;
 
 const music_list = [
   {
-    img: "images/AUD-1.jpg",
+    img: "../images/AUD-1.jpg",
     name: "Escape",
     artist: "Tama Nisa",
-    music: "/music/01-TAMA-NISA_ESCAPE-prod.TUNEZFAKTORY.mp3",
+    music: "../music/01-TAMA-NISA_ESCAPE-prod.TUNEZFAKTORY.mp3",
   },
   {
     img: "../images/AUD-2.jpg",
     name: "Burning",
     artist: "Tama Nisa",
-    music: "/music/02-Tama-Nisa-Burning.mp3-prod.Atta-Otigba.mp3",
+    music: "../music/02-Tama-Nisa-Burning.mp3-prod.Atta-Otigba.mp3",
   },
   {
     img: "../images/AUD-3.jpg",
     name: "Forever Love",
     artist: "Tama Nisa",
     music:
-      "/music/03-Tama-Nisa-Forever-Love-ft-Nicodemus-Tomiti-produced-by-Kunle-Ayo-and-Kimosabe.mp3",
+      "../music/03-Tama-Nisa-Forever-Love-ft-Nicodemus-Tomiti-produced-by-Kunle-Ayo-and-Kimosabe.mp3",
   },
   {
     img: "../images/AUD-1.jpg",
     name: "Go Carry Am",
     artist: "Tama Nisa",
-    music: "/music/04-Tama-Nisa-Go-Carry-Am-Prod.mp3",
+    music: "../music/04-Tama-Nisa-Go-Carry-Am-Prod.mp3",
   },
   {
     img: "../images/AUD-4.jpg",
     name: "Lonely Path",
     artist: "Tama Nisa",
-    music: "/music/05-Tama-Nisa-Lonely-Path-produced-by-Oz-dbeat.mp3",
+    music: "../music/05-Tama-Nisa-Lonely-Path-produced-by-Oz-dbeat.mp3",
   },
   {
     img: "../images/AUD-3.jpg",
     name: "Stronger",
     artist: "Tama Nisa",
-    music: "/music/06-Tama-Nisa-Stronger.mp3 _ Prod. Kimosabe.mp3",
+    music: "../music/06-Tama-Nisa-Stronger.mp3 _ Prod. Kimosabe.mp3",
   },
 ];
 
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentPage = 1;
   let newsData = [];
 
-  fetch("/js/news.json")
+  fetch("../js/news.json")
     .then((response) => response.json())
     .then((data) => {
       newsData = data;
