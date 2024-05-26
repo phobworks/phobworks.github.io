@@ -1320,7 +1320,7 @@ i.fa-step-backward {
     grid-template-columns: 1fr;
   }
   .a-banner__image {
-    width: 350px;
+    width: 100%;
   }
   .art-about__container {
     display: flex;
