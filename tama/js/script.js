@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentPage = 1;
   let newsData = [];
 
-  fetch("../js/news.json")
+  fetch("./js/news.json")
     .then((response) => response.json())
     .then((data) => {
       newsData = data;
