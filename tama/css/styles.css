@@ -185,34 +185,13 @@ ul li .navitems {
   color: var(--color-primary);
 }
 
-.logo {
-  width: 150px;
-}
-
-.dropdown {
-  position: absolute;
-  background: var(--color-black);
-  box-shadow: 0 1rem 1rem rgba(48, 48, 48, 0.3);
-  padding: 0.5rem 1rem;
-  width: 200px;
-  border-radius: 1rem;
-}
-
-.dropdown li a {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  justify-content: start;
-  /* padding: 1rem 0; */
-}
-
-.navitems .dropdown {
-  display: none; /* Initially hide the dropdown */
-  transition: var(--transition);
-}
-
-.navitems:hover .dropdown {
-  display: block; /* Show the dropdown on hover */
+.logo a,
+.navbar__logo a {
+  /* width: 150px; */
+  font-size: 30px;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .navbtn {
@@ -222,7 +201,10 @@ ul li .navitems {
 
 .navbar__sm {
   display: none;
+  background: var(--color-black);
+  border-left: 1px solid var(--color-gray-400);
 }
+
 /* ========= NavBar Section End ============= */
 
 /* ========= Banner Section Starts ========== */
@@ -237,12 +219,14 @@ ul li .navitems {
   gap: 2rem;
 }
 
-.banner__herotag h1 {
+.banner__herotag h1,
+.a-banner__herotag h1 {
   font-size: 2.2rem;
   font-weight: 500;
 }
 
-.banner__herotag p {
+.banner__herotag p,
+.a-banner__herotag p {
   margin-top: 1rem;
   font-weight: 300;
 }
@@ -292,12 +276,14 @@ ul li .navitems {
 }
 
 .social__banner i,
-.social__media i {
+.social__media i,
+.social__banners i {
   color: var(--color-gray-500);
   transition: var(--transition);
 }
 
 .social__banner i:hover,
+.social__banners i:hover,
 .social__media i:hover {
   color: var(--color-gray-0);
 }
@@ -608,7 +594,7 @@ i.fa-step-backward {
 /* ========= Media Section Starts ========== */
 .media__section {
   margin-top: 7rem;
-  background: url("../images/curator-bg.jpg");
+  background: url("/images/curator-bg.jpg");
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -770,6 +756,7 @@ i.fa-step-backward {
 .form__section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .smedia__container {
@@ -813,6 +800,13 @@ i.fa-step-backward {
 
 .form__content button {
   padding: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.form__content button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-gray-0);
 }
 
 /* ========= Contact Section Ends ========== */
@@ -825,7 +819,284 @@ i.fa-step-backward {
   padding: 30px 0;
 }
 
+.footer__copyright a {
+  font-size: 14px;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.footer__copyright a:hover {
+  color: var(--color-gray-200);
+}
+
 /* ========= Footer Section Ends ========== */
+
+/* ========= The Artist Page  ========== */
+/* Nav Section Starts */
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.navbar__container ul {
+  display: flex;
+  gap: 5rem;
+}
+
+.social__banners {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Nav Section Ends */
+
+/* Banner Section Starts */
+.artist__banner {
+  margin-top: 7rem;
+}
+
+.a-banner__container {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  gap: 10%;
+  align-items: center;
+}
+
+.a-banner__herotag p {
+  margin-top: 2rem;
+}
+
+.a-banner__image {
+  width: 500px;
+  /*  -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(#000, rgba(0, 0, 0, 0)); */
+}
+
+/* Banner Section Ends */
+
+/* Business Logo Starts */
+.business__logo {
+  margin-top: 7rem;
+}
+
+.business-logo__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.business-logo__container img {
+  width: 15%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
+/* Business Logo Ends */
+
+/* Artist About Starts */
+.art-about__container {
+  /* display: grid;
+  grid-template-columns: 50% 45%;
+  gap: 5%; */
+}
+
+.art-about__img {
+  float: left;
+  margin-right: 30px;
+  width: 480px;
+}
+
+.art-about__container p {
+  margin-top: 1rem;
+}
+
+/* Artist About Ends */
+
+/* Art Media Section Starts */
+.art-media__section {
+  margin-top: 5rem;
+  /* height: 100vh; */
+  display: grid;
+  align-items: center;
+}
+
+.art-media__containers {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  gap: 10%;
+  align-items: center;
+}
+
+.art-media__containerss {
+  display: grid;
+  grid-template-columns: 60% 30%;
+  gap: 10%;
+  align-items: center;
+}
+
+.art-media__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.art-media__container {
+  margin-top: 2rem;
+}
+
+.art-media__container a {
+  color: var(--color-gray-500);
+}
+
+.art-musics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.art-media__text p {
+  margin-top: 2rem;
+}
+
+.art-media__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Art Media Section Ends */
+/* ========= The Artist Page Ends ========== */
+
+/* ========= The Other Life Page Ends ========== */
+/* Banner Section Starts */
+.other-banner__section {
+  margin-top: 8rem;
+}
+
+.other__hero {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.other__hero h2,
+.other__hero p {
+  text-align: center;
+}
+
+.other-banner__img {
+  /* margin-top: 2rem; */
+  /* width: 800px;
+  height: 500px; */
+  margin: 2rem auto;
+}
+
+.other-banner__img img {
+}
+
+/* Banner Section Ends */
+
+/* About Section Starts */
+.other-about__section {
+  margin-top: 7rem;
+}
+
+.other-about__container h4 {
+  text-align: center;
+}
+
+.other-about__container p {
+  margin-top: 1rem;
+}
+
+/* About Section Ends */
+
+/* Curator Section Starts */
+.other-curator__section {
+  margin-top: 7rem;
+  /* background: url("/images/the-other-life/bg-img2.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+  background-size: cover; */
+  /* background-attachment: fixed; */
+  /* overflow: hidden;
+  padding: 2rem 0; */
+}
+
+.other-curator__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.other-curator__image {
+}
+
+.other-curator__text p {
+  margin-top: 1rem;
+}
+
+/* Curator Section Ends */
+
+/* Other Skills Starts*/
+.other-skills__section {
+  margin-top: 7rem;
+}
+
+.other-skills__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.skills__container p {
+  margin-top: 1rem;
+}
+
+.offering__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.curator__card {
+  background-color: var(--color-gray-0);
+  color: var(--color-black);
+  padding: 1.5rem 1rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.curator__card p {
+  color: var(--color-black);
+  text-align: center;
+}
+
+.curator__card img {
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  top: -2rem;
+  left: calc(50% - 2rem);
+}
+
+/* Other Skills Ends */
+
+/* ========= The Other Life Page Ends ========== */
 
 @media screen and (max-width: 992px) {
   .banner__section {
@@ -856,6 +1127,29 @@ i.fa-step-backward {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding-right: 1rem;
+  }
+  .a-banner__image {
+    width: 400px;
+  }
+  .art-about__img {
+    width: 380px;
+  }
+  .art-media__containers {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .art-media__containerss {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .other__hero {
+    width: 100%;
+  }
+  .other-curator__container {
+    grid-template-columns: 1fr;
+  }
+  .other-skills__container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -895,45 +1189,70 @@ i.fa-step-backward {
   .sectionHeader {
     margin-bottom: 1.5rem;
   }
-  .navbar__sm {
-    display: none;
-  }
-  .navbtn {
-    display: block;
-  }
   .navitems {
     display: none;
   }
   .navbar__sm {
-    position: relative;
-    margin-right: 2rem;
+    display: block;
   }
-  .navbar__sm ul li {
-    margin-top: 1rem;
+  .navbtn {
+    display: block;
   }
-  .navitems__sm {
+  .navlinks {
     position: absolute;
+    z-index: 999;
+    top: calc(50% - 15rem);
     right: 0;
-    margin-top: 5rem;
-  }
-  .navitems__sm .dropdown__sm {
+    display: flex;
+    flex-direction: column;
     display: none;
   }
-  .navitems__sm ul li:hover .dropdown__sm {
-    display: block; /* Show the dropdown on hover */
+  /* .navitems__sm ul {
+    display: flex;
+    flex-direction: column;
+  } */
+  .navlinks li {
+    background: var(--color-gray-500);
+    color: var(--color-gray-0);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem 1rem 3rem;
+    border-top: 1px solid var(--color-bg-2);
   }
-  .navitems__sm ul li a:hover {
-    color: var(--color-primary);
+  .navbtn {
+    display: inline-block;
+    font-size: 2rem;
+    background: transparent;
+    cursor: pointer;
+    color: var(--white-color);
+  }
+  #nav__toggle-close {
+    display: none;
+  }
+  .navlinks {
+    perspective: none;
+  }
+  /* ============= ANIMATION 2 ================ */
+  .navlinks li {
+    transform: rotateY(90deg) rotateX(-90deg);
+    transform-origin: top right;
+    animation: animation2 1s ease forwards;
+    opacity: 0;
   }
 
-  .navitems__sm ul li i {
-    transition: var(--transition);
+  .navinks li:nth-child(2) {
+    animation-delay: 300ms;
   }
 
-  .navitems__sm ul li:hover i {
-    transform: rotate(180deg);
-    color: var(--color-primary);
+  @keyframes animation2 {
+    to {
+      transform: rotate(0);
+      opacity: 1;
+    }
   }
+  /* ============= End ============ */
   .banner__container {
     grid-template-columns: 1fr;
   }
@@ -1024,5 +1343,25 @@ i.fa-step-backward {
   }
   .social__media {
     justify-content: center;
+  }
+  .a-banner__container {
+    grid-template-columns: 1fr;
+  }
+  .a-banner__image {
+    width: 350px;
+  }
+  .art-about__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .art-about__img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .art-musics {
+    grid-template-columns: 1fr;
+  }
+  .art-media__container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

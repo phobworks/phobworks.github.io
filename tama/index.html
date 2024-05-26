@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- <script src="js/main.js/" defer></script> -->
     <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="./css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="images/icon.png">
     <title>Tama Nisa</title>
 </head>
@@ -22,71 +23,39 @@
             <div class="navitems">
                 <ul>
                     <li>
-                        <a>The Artist</a>
-                        <i class="fa-solid fa-chevron-up"></i>
+                        <a href="the-artist.html">The Artist</a>
+                        <!-- <i class="fa-solid fa-chevron-up"></i> -->
                     </li>
-                    <ul class="dropdown">
-                        <li>
-                            <a href="#">Music</a>
-                        </li>
-                        <li>
-                            <a href="#">Film</a>
-                        </li>
-                    </ul>
                 </ul>
             </div>
             <div class="logo">
-                <a href="index.html"><img src="./images/tama-logo.png" alt=""></a>
+                <a href="index.html">
+                    Tama Nisa
+                </a>
             </div>
             <div class="navitems">
                 <ul>
                     <li>
-                        <a>The Other Life</a>
-                        <i class="fa-solid fa-chevron-up"></i>
+                        <a href="the-other-life.html">The Other Life</a>
+                        <!-- <i class="fa-solid fa-chevron-up"></i> -->
                     </li>
-                    <ul class="dropdown">
-                        <li>
-                            <a href="#">Curator</a>
-                        </li>
-                        <li>
-                            <a href="#">Manchandise</a>
-                        </li>
-                    </ul>
                 </ul>
             </div>
-            <div class="navbtn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+            <button class="navbtn" id="nav__toggle-open"><i class="fa-solid fa-bars"></i></button>
+            <button class="navbtn" id="nav__toggle-close"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </nav>
     <div class="navbar__sm">
         <div class="navitems__sm">
-            <ul>
+            <ul class="navlinks">
                 <li>
                     <a>The Artist</a>
-                    <i class="fa-solid fa-chevron-up"></i>
-                    <ul class="dropdown__sm">
-                        <li>
-                            <a href="#">Music</a>
-                        </li>
-                        <li>
-                            <a href="#">Film</a>
-                        </li>
-                    </ul>
+                    <!-- <i class="fa-solid fa-chevron-up"></i> -->
                 </li>
                 <li>
                     <a>The Other Life</a>
-                    <i class="fa-solid fa-chevron-up"></i>
-                    <ul class="dropdown__sm">
-                        <li>
-                            <a href="#">Curator</a>
-                        </li>
-                        <li>
-                            <a href="#">Manchandise</a>
-                        </li>
-                    </ul>
+                    <!-- <i class="fa-solid fa-chevron-up"></i> -->
                 </li>
-
             </ul>
         </div>
     </div>
@@ -268,7 +237,7 @@
     <section class="media__section">
         <div class="media__display">
             <div class="media__header container">
-                <h4>Play Videos</h4>
+                <h5>Play Videos</h5>
                 <a href="#">View all</a>
             </div>
             <div class="media__container container">
@@ -300,7 +269,7 @@
         </div>
         <div class="media__display2">
             <div class="media__header container">
-                <h4>Play Musics</h4>
+                <h5>Play Musics</h5>
                 <a href="#">View all</a>
             </div>
             <div class="media__container container">
