@@ -716,38 +716,6 @@ i.fa-step-backward {
 
 /* ========= Curator Section Ends ========== */
 
-/* ========= Investment Section Starts ========== */
-.investment__section {
-  margin-top: 7rem;
-}
-
-.investment__intro p {
-  margin-top: 1rem;
-}
-
-.investment__content {
-  margin-top: 3rem;
-}
-
-.investment__wrap {
-  display: flex;
-  gap: 3rem;
-}
-
-.investment__wrap {
-  margin-top: 2rem;
-}
-
-.investment__why p {
-  margin-top: 1rem;
-}
-
-.investment__why span {
-  color: var(--color-gray-100);
-}
-
-/* ========= Investment Section Ends ========== */
-
 /* ========= Contact Section Starts ========== */
 .contact__section {
   margin-top: 7rem;
@@ -1367,5 +1335,9 @@ i.fa-step-backward {
   }
   .art-media__container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .art-media__header a {
+    color: var(--color-gray-400);
+    font-size: 12px;
   }
 }
