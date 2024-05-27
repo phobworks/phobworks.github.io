@@ -952,9 +952,13 @@ i.fa-step-backward {
   margin: auto;
 }
 
-.other__hero h2,
+.other__hero h1,
 .other__hero p {
   text-align: center;
+}
+
+.other__hero p {
+  margin-top: 1rem;
 }
 
 .other-banner__img {
@@ -1134,7 +1138,7 @@ i.fa-step-backward {
     font-size: 1;
   }
   a {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .container {
@@ -1322,9 +1326,15 @@ i.fa-step-backward {
   .a-banner__image {
     width: 100%;
   }
+  .a-banner__herotag {
+    text-align: center;
+  }
   .art-about__container {
     display: flex;
     flex-direction: column;
+  }
+  .art-about__container h4 {
+    text-align: center;
   }
   .art-about__img {
     width: 100%;
@@ -1339,5 +1349,13 @@ i.fa-step-backward {
   .art-media__header a {
     color: var(--color-gray-400);
     font-size: 12px;
+  }
+  .art-media__text h5 {
+    text-align: center;
+  }
+  .other-curator__text h4,
+  .skills__container h4,
+  .offering__container h4 {
+    text-align: center;
   }
 }
