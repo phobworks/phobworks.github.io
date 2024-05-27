@@ -176,6 +176,10 @@ ul li .navitems {
   color: var(--color-primary);
 }
 
+.navitems ul li a.active {
+  color: var(--color-primary);
+}
+
 .navitems ul li i {
   transition: var(--transition);
 }
@@ -192,6 +196,10 @@ ul li .navitems {
   font-family: "Zen Dots", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.logo a:hover {
+  color: var(--color-secondary);
 }
 
 .navbtn {
@@ -1152,6 +1160,9 @@ i.fa-step-backward {
   .logo a {
     font-size: 1.5rem;
   }
+  .logo a:hover {
+    color: var(--color-secondary);
+  }
 
   .sectionHeader p {
     width: var(--container-width-md);
@@ -1188,7 +1199,7 @@ i.fa-step-backward {
     flex-direction: column;
   } */
   .navlinks li {
-    background: var(--color-gray-500);
+    background: var(--color-gray-800);
     color: var(--color-gray-0);
     height: 100%;
     width: 100%;
@@ -1196,6 +1207,11 @@ i.fa-step-backward {
     align-items: center;
     padding: 1rem 5rem 1rem 3rem;
     border-top: 1px solid var(--color-bg-2);
+    transition: var(--transition);
+  }
+  .navlinks li:hover {
+    background: var(--color-gray-0);
+    color: var(--color-black);
   }
   .navbtn {
     display: inline-block;
@@ -1203,6 +1219,9 @@ i.fa-step-backward {
     background: transparent;
     cursor: pointer;
     color: var(--white-color);
+  }
+  .navbtn i:hover {
+    color: var(--color-secondary);
   }
   #nav__toggle-close {
     display: none;
