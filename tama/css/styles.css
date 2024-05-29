@@ -224,6 +224,7 @@ ul li .navitems {
   display: grid;
   grid-template-columns: 350px 540px 20%;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
