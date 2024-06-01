@@ -302,7 +302,6 @@ ul li .navitems {
 }
 /* ========= Music Player ======== */
 .player {
-  margin-top: 2rem;
 }
 .wrapper {
   border: 2px solid #fff;
@@ -875,15 +874,15 @@ i.fa-step-backward {
 
 /* Artist About Starts */
 .art-about__container {
-  /* display: grid;
+  display: grid;
   grid-template-columns: 50% 45%;
-  gap: 5%; */
+  gap: 5%;
 }
 
 .art-about__img {
-  float: left;
-  margin-right: 30px;
-  width: 480px;
+  /* float: left; */
+  /* margin-right: 30px; */
+  /* width: 480px; */
 }
 
 .art-about__container p {
@@ -933,6 +932,7 @@ i.fa-step-backward {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
+  margin-top: 1rem;
 }
 
 .art-media__text p {
@@ -955,7 +955,7 @@ i.fa-step-backward {
 }
 
 .other__hero {
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   margin: auto;
