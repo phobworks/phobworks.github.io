@@ -29,7 +29,8 @@
   --container-width-lg: 88%;
   --container-width-md: 92%;
 
-  --boxshadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+  --boxshadow-red: 0 0 15px var(--color-secondary);
+  --boxshadow-white: 0 0 15px var(--color-gray-0);
 }
 
 body {
@@ -104,6 +105,7 @@ p {
 .btn:hover {
   background-color: var(--color-gray-0);
   color: var(--color-black);
+  box-shadow: var(--boxshadow-white);
 }
 
 .btn.sm {
@@ -254,6 +256,7 @@ ul li .navitems {
 .action__btn a:hover {
   background-color: var(--color-secondary);
   color: var(--color-gray-0);
+  box-shadow: var(--boxshadow-red);
 }
 
 .action__btn i {
@@ -289,12 +292,19 @@ ul li .navitems {
 .social__banners i {
   color: var(--color-gray-500);
   transition: var(--transition);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.social__banner i:hover,
-.social__banners i:hover,
+.social__banner a i:hover,
+.social__banners a i:hover,
 .social__media i:hover {
   color: var(--color-gray-0);
+  box-shadow: var(--boxshadow-white);
 }
 
 .banner__image {
@@ -373,6 +383,28 @@ ul li .navitems {
 
 .playpause-track i {
   font-size: 20px;
+}
+
+.random-track i,
+.repeat-track i,
+.next-track i,
+.prev-track i,
+.playpause-track i {
+  font-size: 10px;
+  width: 1rem;
+  height: 1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.random-track i:hover,
+.repeat-track i:hover,
+.next-track i:hover,
+.prev-track i:hover,
+.playpause-track i:hover {
+  box-shadow: var(--boxshadow-white);
 }
 
 .slider_container {
@@ -783,6 +815,7 @@ i.fa-step-backward {
 .form__content button:hover {
   background-color: var(--color-secondary);
   color: var(--color-gray-0);
+  box-shadow: var(--boxshadow-red);
 }
 
 /* ========= Contact Section Ends ========== */

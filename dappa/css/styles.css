@@ -750,6 +750,7 @@ footer {
   .nav__links {
     position: absolute;
     top: 100%;
+    width: 100%;
     right: 0;
     flex-direction: column;
     gap: 0;
