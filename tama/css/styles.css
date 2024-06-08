@@ -234,6 +234,7 @@ ul li .navitems {
 .a-banner__herotag h1 {
   font-size: 2.2rem;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .banner__herotag p,
@@ -243,7 +244,7 @@ ul li .navitems {
 }
 
 .action__btn {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .action__btn a {
@@ -1068,7 +1069,7 @@ i.fa-step-backward {
 
 .other-skills__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
 }
