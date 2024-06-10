@@ -270,3 +270,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Initial zoom-out animation on page load
+gsap.fromTo(".banner__image img", { scale: 0 }, { scale: 1, duration: 5 });
+
+// Scroll-triggered zoom-in animation
+gsap.fromTo(
+  ".banner__image img",
+  { scale: 1 },
+  {
+    scale: 0,
+    scrollTrigger: {
+      trigger: ".banner__image",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  }
+);
