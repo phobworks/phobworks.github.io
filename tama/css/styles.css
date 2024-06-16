@@ -1170,7 +1170,7 @@ i.fa-step-backward {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   h2 {
@@ -1287,7 +1287,7 @@ i.fa-step-backward {
     grid-template-columns: 1fr;
   }
   .banner__herotag h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
   }
   .carousel__content:before,
