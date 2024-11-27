@@ -40,11 +40,11 @@ h1,
 h2 {
   line-height: 1.1;
   font-weight: 600;
+  color: var(--color-bg-1);
 }
 
 h1 {
   font-size: 4rem;
-  color: var(--color-bg-1);
 }
 
 h2 {
@@ -183,9 +183,14 @@ nav {
 
 .nav__links li a {
   color: var(--white-color);
+  transition: var(--transition);
 }
 
-.nav__links li:nth-child(5) a {
+.nav__links li a:hover {
+  color: var(--color-bg-1);
+}
+
+.nav__links li:nth-child(4) a {
   display: none;
 }
 
@@ -357,6 +362,28 @@ nav {
 .about__card p {
   margin-top: 1.5rem;
 }
+/* About page starts */
+.main__subheader {
+  margin-top: 7rem;
+  padding: 2rem 0;
+  border-bottom: var(--color-bg-3) 0.2rem solid;
+  position: relative;
+}
+
+.subheader__content {
+  margin-top: 3rem;
+}
+
+.cocoa-subimage {
+  position: absolute;
+  transform: translateY(50%);
+  bottom: 0;
+  width: 30px;
+  right: 50%;
+  z-index: 2;
+}
+
+/* About page ends */
 
 /* ======= About section ends ========== */
 
@@ -436,6 +463,50 @@ nav {
 .card__content a:hover {
   color: var(--primary-color);
 }
+
+/* Product page :start */
+.product__section2 {
+  margin-top: 8rem;
+}
+
+.product__content2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.products__cards2 {
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.card__img2 {
+  border: var(--color-bg-3) 0.2rem solid;
+  position: relative;
+}
+
+.card__content2 {
+  padding: 0.5rem;
+}
+
+.card__content2 h4 {
+  margin-top: 2rem;
+}
+
+.card__content2 p {
+  margin-bottom: 1rem;
+}
+
+.cocoa__icon-card2 {
+  position: absolute;
+  width: 30px;
+  bottom: 0; /* Center vertically */
+  transform: translateY(50%); /* Adjust to the exact center */
+  left: 50%; /* Move half the width of the icon outside */
+  z-index: 99;
+}
+/* Product page :ends */
 
 /* ======= Products section ends ========== */
 
@@ -563,6 +634,34 @@ nav {
 
 /* ======= Newsletter section ends ========== */
 
+/* ======= Contact section start ========== */
+.contact__section2 {
+  margin-top: 8rem;
+}
+
+.contact__content2 {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 10%;
+  align-items: center;
+}
+
+.contact__card2-left iframe {
+  border: var(--color-bg-3) 0.2rem solid;
+}
+
+.contact__card2-right p {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.contact__card2-right i {
+  color: var(--color-bg-2);
+}
+
+/* ======= Contact section ends ========== */
+
 /* ======= Footer section start ========== */
 .footer__section {
   margin-top: 8rem;
@@ -627,6 +726,16 @@ nav {
 
 .footer__process p {
   margin-top: 1rem;
+}
+
+.contact__card2-footer p {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.contact__card2-footer i {
+  color: var(--white-color);
 }
 
 .footer__copyright {
@@ -786,6 +895,9 @@ nav {
     /* margin-left: 50%; */
     transform: translateX(0);
   }
+  .product__content2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -841,5 +953,11 @@ nav {
   .footer__content {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .product__content2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact__content2 {
+    grid-template-columns: 1fr;
   }
 }
