@@ -97,6 +97,7 @@ p {
 .btn {
   display: inline-block;
   background: var(--color-secondary);
+  color: var(--color-black);
   padding: 0.8rem 2rem;
   width: fit-content;
   cursor: pointer;
@@ -277,7 +278,7 @@ ul li .navitems {
 .action__btn a:hover {
   background-color: var(--color-gray-0);
   color: var(--color-black);
-  box-shadow: var(--boxshadow-red);
+  box-shadow: var(--boxshadow-white);
 }
 
 .action__btn i {
