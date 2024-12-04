@@ -66,7 +66,7 @@ const music_list = [
       "./music/03-Tama-Nisa-Forever-Love-ft-Nicodemus-Tomiti-produced-by-Kunle-Ayo-and-Kimosabe.mp3",
   },
   {
-    img: "./images/AUD-1.jpg",
+    img: "./images/AUD-5.jpg",
     name: "Go Carry Am",
     artist: "Tama Nisa",
     music: "./music/04-Tama-Nisa-Go-Carry-Am-Prod.mp3",
@@ -78,7 +78,7 @@ const music_list = [
     music: "./music/05-Tama-Nisa-Lonely-Path-produced-by-Oz-dbeat.mp3",
   },
   {
-    img: "./images/AUD-3.jpg",
+    img: "./images/AUD-6.jpg",
     name: "Stronger",
     artist: "Tama Nisa",
     music: "./music/06-Tama-Nisa-Stronger.mp3 _ Prod. Kimosabe.mp3",
