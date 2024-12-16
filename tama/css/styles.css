@@ -1488,14 +1488,16 @@ i.fa-step-backward {
   /* margin-top: 10rem; */
   height: 100vh;
   position: relative;
-  text-align: center;
 }
 
-.in__production h1 {
-  color: var(--color-yellow);
+.o__product {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.o__product h1 {
   text-align: center;
+  color: var(--color-yellow);
 }
