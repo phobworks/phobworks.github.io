@@ -291,3 +291,46 @@ gsap.fromTo(
     },
   }
 );
+
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.querySelector(".banner__herotag");
+
+  // Slide in on page load
+  gsap.fromTo(
+    banner,
+    { x: "-100%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 3, ease: "power2.out" }
+  );
+
+  // Slide out on scroll out of the section
+
+  ScrollTrigger.create({
+    trigger: banner,
+    start: "top center", // When the top of the section hits the middle of the viewport
+    end: "bottom top", // When the bottom of the section leaves the top of the viewport
+    onLeave: () => gsap.to(banner, { x: "-100%", opacity: 0, duration: 2 }),
+    onEnterBack: () => gsap.to(banner, { x: "0%", opacity: 1, duration: 2 }),
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const player = document.querySelector(".player__slider-in");
+
+  // Slide in from the right on page load
+  gsap.fromTo(
+    player,
+    { x: "100%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 3, ease: "power2.out" }
+  );
+
+  // Slide out on scroll out of the section
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: player,
+    start: "top center", // Start animation when the section enters the viewport
+    end: "bottom top", // End animation when the section leaves the viewport
+    onLeave: () => gsap.to(player, { x: "100%", opacity: 0, duration: 2 }),
+    onEnterBack: () => gsap.to(player, { x: "0%", opacity: 1, duration: 2 }),
+  });
+});
