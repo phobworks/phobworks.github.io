@@ -639,24 +639,21 @@ header {
 }
 
 .galleries__images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
+  border: var(--blue-color) 0.5rem solid;
+  columns: 300px;
 }
 
-.galleries__images a {
+/* .galleries__images a {
   border: 0.5rem solid var(--color-bg-4);
-}
+} */
 
 .galleries__images {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .galleries__images img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border: var(--blue-color) 0.5rem solid;
+  border: 0.5rem solid var(--color-bg-4);
+  margin-bottom: 1rem;
 }
 
 .back__link {

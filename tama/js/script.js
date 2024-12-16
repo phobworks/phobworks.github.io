@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
       newsContent.innerHTML = `
               <div class="news__topic">
                   <p>${news.topic}</p>
-                  <h6>${news.content}</h6>
+                  <a href=""><h6>${news.content}</h6></a>
               </div>
               <div class="news__img">
                   <img src="${news.image}" alt="">
@@ -247,6 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div><p>${news.date}</p></div>
                   <div><p>${news.author}</p></div> 
               </div>
+            
           `;
       newsContainer.appendChild(newsContent);
     });

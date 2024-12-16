@@ -1,37 +1,37 @@
 [
   {
     "topic": "Topic",
-    "content": "Releasing soon A love story.",
+    "content": "Coming soon Saki.",
+    "date": "17/05/2024",
+    "author": "Tamanisa",
+    "image": "./images/news/saki.png"
+  },
+  {
+    "topic": "Topic",
+    "content": "Coming soon A love story.",
     "date": "21/05/2024",
     "author": "Tamanisa",
     "image": "./images/news/a-love-story.png"
   },
   {
     "topic": "Topic",
-    "content": "Releasing soon Bigger & better.",
+    "content": "Coming soon Bigger & better.",
     "date": "20/05/2024",
     "author": "Tamanisa",
     "image": "./images/news/bigger-better.png"
   },
   {
     "topic": "Topic",
-    "content": "Releasing soon Cleansing bath.",
+    "content": "Coming soon Cleansing bath.",
     "date": "19/05/2024",
     "author": "Tamanisa",
     "image": "./images/news/cleansing-bath.png"
   },
   {
     "topic": "Topic",
-    "content": "Releasing soon Falling for you.",
+    "content": "Coming soon Falling for you.",
     "date": "18/05/2024",
     "author": "Tamanisa",
     "image": "./images/news/falling-for-you.png"
-  },
-  {
-    "topic": "Topic",
-    "content": "Releasing soon Saki.",
-    "date": "17/05/2024",
-    "author": "Tamanisa",
-    "image": "./images/news/saki.png"
   }
 ]
