@@ -1483,3 +1483,19 @@ i.fa-step-backward {
     text-align: center;
   }
 }
+
+.in__production {
+  /* margin-top: 10rem; */
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.in__production h1 {
+  color: var(--color-yellow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
