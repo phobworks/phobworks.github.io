@@ -334,3 +334,85 @@ document.addEventListener("DOMContentLoaded", () => {
     onEnterBack: () => gsap.to(player, { x: "0%", opacity: 1, duration: 2 }),
   });
 });
+
+function initializeForm() {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Clear previous error messages
+    document
+      .querySelectorAll(".error-message")
+      .forEach((el) => (el.style.display = "none"));
+
+    // Get form values
+    const textarea = document.getElementById("textarea").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    // Validation flags
+    let isValid = true;
+
+    // Validate message
+    if (textarea === "") {
+      document.getElementById("textareaError").innerText =
+        "Message is required.";
+      document.getElementById("textareaError").style.display = "block";
+      isValid = false;
+    }
+
+    // Validate name
+    if (name === "") {
+      document.getElementById("nameError").innerText = "Name is required.";
+      document.getElementById("nameError").style.display = "block";
+      isValid = false;
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      document.getElementById("emailError").innerText =
+        "Enter a valid email address.";
+      document.getElementById("emailError").style.display = "block";
+      isValid = false;
+    }
+
+    if (isValid) {
+      // Send form data using AJAX
+      const formData = new FormData();
+      formData.append("textarea", textarea);
+      formData.append("name", name);
+      formData.append("email", email);
+
+      fetch("contact.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            alert("Message sent successfully!");
+            form.reset();
+          } else {
+            alert("There was an error sending your message. Please try again.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Something went wrong. Please try again later.");
+        });
+    }
+  });
+}
+
+// Fetch and include the form in the desired element
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("form.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("formContainer").innerHTML = html;
+      initializeForm(); // Call the initialization function for validation
+    });
+});

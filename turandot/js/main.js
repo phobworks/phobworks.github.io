@@ -44,37 +44,58 @@ window.addEventListener("scroll", () => {
 /* ======== nav bar scroll reveal end ========= */
 
 /* ========  Newsletter Validation ======= */
-document
-  .getElementById("formNewsletter")
-  .addEventListener("submit", async function (event) {
-    event.preventDefault();
 
-    const form = event.target;
-    const emailInput = form.querySelector("#email");
-    const feedbackContainer = document.createElement("div");
-    feedbackContainer.id = "feedback";
+/*========== Carousel =========*/
 
-    // Remove any existing feedback messages
-    document.querySelector(".newsletter__form").prepend(feedbackContainer);
-    feedbackContainer.innerHTML = "";
+const slides = document.querySelectorAll(".carousel__slide");
+const prevBtn = document.querySelector(".carousel__prev");
+const nextBtn = document.querySelector(".carousel__next");
+let currentSlide = 0;
+let autoPlayInterval;
 
-    try {
-      const response = await fetch("newsletter.php", {
-        method: "POST",
-        body: new FormData(form),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        feedbackContainer.innerHTML = `<p class="success">${result.message}</p>`;
-        emailInput.value = ""; // Clear the input
-      } else {
-        result.errors.forEach((error) => {
-          feedbackContainer.innerHTML += `<p class="error">${error}</p>`;
-        });
-      }
-    } catch (error) {
-      feedbackContainer.innerHTML = `<p class="error">An unexpected error occurred. Please try again later.</p>`;
-    }
+// Function to show the current slide
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
   });
+  slides[index].classList.add("active");
+}
+
+// Function to change slide (next)
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Function to change slide (previous)
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto-play function
+function startAutoPlay() {
+  autoPlayInterval = setInterval(nextSlide, 5000); // Adjust interval as needed
+}
+
+// Pause auto-play when navigating manually
+function stopAutoPlay() {
+  clearInterval(autoPlayInterval);
+}
+
+// Event listeners for buttons
+nextBtn.addEventListener("click", () => {
+  stopAutoPlay();
+  nextSlide();
+  startAutoPlay();
+});
+
+prevBtn.addEventListener("click", () => {
+  stopAutoPlay();
+  prevSlide();
+  startAutoPlay();
+});
+
+// Initialize
+showSlide(currentSlide);
+startAutoPlay();

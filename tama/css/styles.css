@@ -868,11 +868,12 @@ i.fa-step-backward {
 }
 
 .form__detail {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-.form__detail input {
+.input-group input {
   width: 100%;
   padding: 15px 5px;
 }
@@ -1500,4 +1501,11 @@ i.fa-step-backward {
 .o__product h1 {
   text-align: center;
   color: var(--color-yellow);
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: none;
 }

@@ -1,12 +1,15 @@
 :root {
   --primary-color: #000000;
   --color-primary-variant: #e5a55d;
-  --color-bg-1: #603f26;
-  --color-bg-2: #6c4e31;
+  --color-bg-1: #026f04;
+  --color-bg-2: #009603;
   --color-bg-3: #ffdbb5;
   --color-bg-4: #ffeac5;
   --color-light: #85a2b2;
   --white-color: #ffffff;
+  --color-yellow: #ffdd00;
+  --color-lightyellow: #ffef89;
+  --color-green: #00ff04;
 
   --container-width-lg: 88%;
   --container-width-md: 92%;
@@ -44,7 +47,7 @@ h2 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.4rem;
 }
 
 h2 {
@@ -90,16 +93,20 @@ img {
 }
 
 /* =========== NavBar ============ */
-header {
+main-head {
   position: relative;
-  /* max-width: 100vh; */
-  /* height: 100vh; */
-  /* overflow: hidden; */
   top: 0;
+  /* background-image: url(/images/banner-bg.jpg); */
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Ensures the background image doesn't move */
 }
 
 .header__gradient {
-  width: 100%;
+  /* width: 100%;
   height: 10rem;
   background-image: linear-gradient(
     to bottom,
@@ -108,54 +115,43 @@ header {
     #ad8969,
     #d5b18e,
     #ffdbb5
-  );
-  /* background-image: linear-gradient(
-    to bottom,
-    #603f26,
-    #624228,
-    #65442a,
-    #67472c,
-    #694a2e,
-    #765639,
-    #826244,
-    #8f6f4f,
-    #aa8967,
-    #c6a380,
-    #e2bf9a,
-    #ffdbb5
   ); */
 
   /* Blurring the edges */
-  filter: blur(50px); /* Adjust the blur radius */
+  /* Adjust the blur radius */
+  /* filter: blur(50px);  */
 
   /* Positioning in the center of the page */
-  position: absolute;
+  /* position: absolute;
   top: -10%;
   left: 50%;
   transform: translate(-50%, -80%);
 
   z-index: -99;
-  margin: 0;
+  margin: 0; */
   /* Creating the semi-circle shape */
-  border-radius: 0 0 50% 50%;
+  /* border-radius: 0 0 50% 50%; */
 }
 
 nav {
-  height: 5rem;
-  width: 100vw;
+  height: 7rem;
+  width: 100%;
+  background: var(--color-bg-1);
   display: grid;
   place-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 9;
+  transition: var(--transition);
 }
 
-.window-scrolled {
-  background: var(--color-bg-2);
+nav.window-scrolled {
+  position: fixed;
+  background: var(--color-bg-1);
   border-bottom: 0.2rem solid var(--color-bg-3);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
   height: 7rem;
+  top: 0;
+  left: 0;
   z-index: 999;
 }
 
@@ -187,7 +183,7 @@ nav {
 }
 
 .nav__links li a:hover {
-  color: var(--color-bg-1);
+  color: var(--color-bg-3);
 }
 
 .nav__links li:nth-child(4) a {
@@ -200,9 +196,9 @@ nav {
 }
 
 .nav__action-btn li a {
-  background-color: var(--color-bg-1);
+  background-color: var(--white-color);
   padding: 0.8rem 2rem;
-  color: var(--white-color);
+  color: var(--color-bg-2);
   transition: var(--transition);
 }
 
@@ -211,26 +207,158 @@ nav {
   color: var(--color-bg-1);
 }
 
-/* .nav__socials i {
-  width: 2rem;
-  height: 2rem;
-  background: var(--color-bg-1);
-  border-radius: 0.5rem;
-  color: var(--color-bg-4);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  transition: var(--transition);
-} */
-
-/* .nav__socials i:hover {
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
-  color: var(--white-color);
-} */
-
 /* ======= header ========== */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* Start as fully transparent */
+  visibility: hidden; /* Make it non-interactable */
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s; /* Delayed visibility toggle */
+}
+
+.carousel__slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 2;
+}
+
+.carousel__slide:nth-child(1) {
+  background-image: url("/images/banner-bg.jpg");
+}
+
+.carousel__slide:nth-child(2) {
+  background-image: url("/images/banner-bg2.jpg");
+}
+
+.carousel__slide:nth-child(3) {
+  background-image: url("/images/banner-bg3.jpg");
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* Start as fully transparent */
+  visibility: hidden; /* Make it non-interactable */
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s; /* Delayed visibility toggle */
+}
+
+.carousel__slide.active {
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Show the slide when active */
+  transition: opacity 0.5s ease-in-out, visibility 0s 0s; /* Instant visibility change */
+  animation: wiggle 0.5s ease-in-out; /* Add wiggle animation */
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(-10px);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousel__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  z-index: 3; /* Ensure the content appears above the overlay */
+}
+
+.carousel__content h1 {
+  font-size: 3rem;
+  color: var(--white-color);
+}
+
+.carousel__content p {
+  font-size: 1.5rem;
+  color: var(--color-bg-3);
+}
+
+.carousel__nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 4; /* Ensure buttons appear above the overlay */
+}
+
+.carousel__prev,
+.carousel__next {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: background 0.3s;
+  z-index: 4; /* Explicitly set to ensure they appear above the overlay */
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--color-bg-3);
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+  z-index: 3; /* Ensure it appears above the overlay */
+}
+
+.btn:hover {
+  background: var(--color-bg-1);
+}
+
 .header__container {
+  position: absolute;
   margin-top: 10rem;
+  height: 100vh;
+  left: 5%;
 }
 
 .header__content {
@@ -241,15 +369,34 @@ nav {
 }
 
 .header__left {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header__left h1 {
+  color: #026f04;
+  /* background-image: linear-gradient(
+    45deg,
+    #008502 45%,
+
+    #ffffff 55%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .header__left p {
   margin-top: 1rem;
+  color: var(--white-color);
 }
 
 .callto__action {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .callto__action ul {
@@ -284,6 +431,7 @@ nav {
 
 .header__right {
   /* width: 30rem; */
+  display: none;
 }
 
 /* ======= header ends ========== */
@@ -320,7 +468,7 @@ nav {
 
 /* ======= About section starts ========== */
 .about__section {
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 .about__content {
