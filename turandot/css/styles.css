@@ -241,15 +241,15 @@ nav.window-scrolled {
 }
 
 .carousel__slide:nth-child(1) {
-  background-image: url("/images/banner-bg.jpg");
+  background-image: url("../images/banner-bg.jpg");
 }
 
 .carousel__slide:nth-child(2) {
-  background-image: url("/images/banner-bg2.jpg");
+  background-image: url("../images/banner-bg2.jpg");
 }
 
 .carousel__slide:nth-child(3) {
-  background-image: url("/images/banner-bg3.jpg");
+  background-image: url("../images/banner-bg3.jpg");
 }
 
 .carousel__slide {
