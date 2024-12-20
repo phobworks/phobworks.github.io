@@ -1015,6 +1015,9 @@ nav.window-scrolled {
       opacity: 0;
     }
   }
+  .carousel__content h1 {
+    font-size: 3.5rem;
+  }
   .callto__action ul {
     gap: 1rem;
   }
@@ -1054,6 +1057,12 @@ nav.window-scrolled {
 @media screen and (max-width: 768px) {
   .header__content {
     grid-template-columns: 1fr;
+  }
+  .carousel__content h1 {
+    font-size: 2.5rem;
+  }
+  .carousel__content p {
+    font-size: 1rem;
   }
   .quality__section {
     margin-top: 5rem;
