@@ -168,7 +168,7 @@ nav.window-scrolled {
 }
 
 .nav__logo {
-  width: 6rem;
+  width: 10rem;
   color: var(--white-color);
 }
 
@@ -1058,6 +1058,9 @@ nav.window-scrolled {
 }
 
 @media screen and (max-width: 768px) {
+  .nav__logo {
+    width: 8rem;
+  }
   .header__content {
     grid-template-columns: 1fr;
   }
