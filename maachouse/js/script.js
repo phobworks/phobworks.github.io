@@ -48,18 +48,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const newsContainer = document.getElementById("news-container");
   const prevButton = document.getElementById("prev-button");
   const nextButton = document.getElementById("next-button");
-  const itemsPerPage = 2;
   let currentPage = 1;
   let newsData = [];
 
+  // Calculate items per page based on screen width
+  const calculateItemsPerPage = () => {
+    return window.innerWidth < 768 ? 1 : 2; // 1 item for small screens, 2 for larger screens
+  };
+
+  let itemsPerPage = calculateItemsPerPage(); // Initial calculation
+
+  // Fetch the news data
   fetch("./js/news.json")
     .then((response) => response.json())
     .then((data) => {
       newsData = data;
       displayNews();
+    })
+    .catch((error) => {
+      console.error("Error fetching news data:", error);
     });
 
+  // Function to display news items
   const displayNews = () => {
+    if (!newsData.length) return;
+
     newsContainer.innerHTML = "";
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
@@ -69,27 +82,38 @@ document.addEventListener("DOMContentLoaded", () => {
       const newsContent = document.createElement("div");
       newsContent.classList.add("news__contents");
       newsContent.innerHTML = `
-              <div class="news__topic">
-              <i class="fa-solid fa-quote-left"></i>
-                <p>${news.content}</p>
-              </div>
-              <div class="news__img">
-                  <img src="${news.image}" alt="">
-              </div>
-              <div class="testi__author">
-                  <div><p>${news.name}</p></div>
-                  <div><span>${news.title}</span></div> 
-              </div>
-            
-          `;
+        <div class="news__topic">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>${news.content}</p>
+        </div>
+        
+        <div class="testi__author">
+          <div><p>${news.name}</p></div>
+          <div><span>${news.title}</span></div> 
+        </div>
+      `;
       newsContainer.appendChild(newsContent);
     });
 
+    // Update button states
     prevButton.disabled = currentPage === 1;
     nextButton.disabled =
       currentPage === Math.ceil(newsData.length / itemsPerPage);
   };
 
+  // Update itemsPerPage and redisplay on window resize
+  const updateLayout = () => {
+    const newItemsPerPage = calculateItemsPerPage();
+    if (newItemsPerPage !== itemsPerPage) {
+      itemsPerPage = newItemsPerPage;
+      currentPage = 1; // Reset to first page
+      displayNews();
+    }
+  };
+
+  window.addEventListener("resize", updateLayout);
+
+  // Pagination button event listeners
   prevButton.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
