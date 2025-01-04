@@ -49,11 +49,11 @@ h2 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 h3 {
@@ -578,7 +578,7 @@ nav.window-scrolled {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: 2.5rem;
+  /* margin-top: 2.5rem; */
 }
 
 .slider2 {
@@ -655,10 +655,24 @@ button.next {
 /* Swiper css ends */
 
 .core-int__text {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   box-shadow: var(--box-shadow2);
-  padding: 0 0.5rem 1.5rem 0.5rem;
+  padding: 1rem 0.5rem;
   border-radius: 0 0 8px 8px;
+  /* display: flex;
+  align-self: normal;
+  align-items: center;
+  flex-direction: column; */
+  /* flex: 1 0 20rem; */
+  height: 100%;
+}
+
+.core-int__text h4 {
+  margin-bottom: 1rem;
+}
+
+.core-int__text p {
+  margin-bottom: 1rem;
 }
 
 .core-int__btn {
@@ -671,6 +685,7 @@ button.next {
   justify-content: space-between;
   color: var(--color-bg-4);
   transition: var(--transition);
+  /* margin-top: auto; */
 }
 
 .core-int__btn a i {
