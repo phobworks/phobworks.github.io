@@ -235,10 +235,10 @@ ul li .navitems {
 
 .banner__container {
   display: grid;
-  grid-template-columns: 410px 480px 20%;
+  grid-template-columns: 30% 45% 20%;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 5%;
 }
 
 .banner__herotag {
@@ -340,8 +340,8 @@ ul li .navitems {
 
 .banner__image {
   position: relative;
-  width: 400px;
-  height: 400px;
+  /* width: 400px;
+  height: 400px; */
   /* padding: 0.5rem; */
   /* border-radius: 50%; */
   /* background-color: var(--color-yellow); */
