@@ -235,7 +235,7 @@ ul li .navitems {
 
 .banner__container {
   display: grid;
-  grid-template-columns: 30% 45% 20%;
+  grid-template-columns: 35% 40% 20%;
   align-items: center;
   justify-content: center;
   gap: 5%;
