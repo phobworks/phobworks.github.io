@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
     <!-- <script src="js/main.js/" defer></script> -->
     <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
@@ -268,11 +269,39 @@
     <!-- ============= Gallery Section Starts =========== -->
     <section class="gallery__section">
         <div class="gallery__container" id="gallery-container">
-            <!-- Images will be dynamically populated -->
-        </div>
-        <div class="pagination" id="pagination">
-            <button id="prev-button" disabled>Previous</button>
-            <button id="next-button">Next</button>
+            <a href="./images/gallery/g1.jpg" data-lightbox="models" data-title="Gallery Photos"> <img
+                    src="./images/gallery/g1.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g2.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g2.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g3.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g3.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g4.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g4.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g5.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g5.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g6.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g6.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g7.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g7.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g8.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g8.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g9.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g9.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g10.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g10.jpg" alt="">
+            </a>
+            <a href="./images/gallery/g11.jpg" data-lightbox="models" data-title="Gallery Photos">
+                <img src="./images/gallery/g11.jpg" alt="">
+            </a>
         </div>
     </section>
     <!-- ============= Gallery Section Starts =========== -->
@@ -338,7 +367,7 @@
     <!-- ============= Footer Section Ends =========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="/js/lightbox-plus-jquery.js"></script>
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function (event) {
@@ -407,79 +436,7 @@
             }
         });
     </script>
-    <script>
-        const images = [
-            './images/gallery/g1.jpg',
-            './images/gallery/g2.jpg',
-            './images/gallery/g3.jpg',
-            './images/gallery/g4.jpg',
-            './images/gallery/g5.jpg',
-            './images/gallery/g6.jpg',
-            './images/gallery/g7.jpg',
-            './images/gallery/g8.jpg',
-            './images/gallery/g9.jpg',
-            './images/gallery/g10.jpg',
-            './images/gallery/g11.jpg'
-        ];
 
-        const galleryContainer = document.getElementById('gallery-container');
-        const prevButton = document.getElementById('prev-button');
-        const nextButton = document.getElementById('next-button');
-
-        const calculateItemsPerPage = () => {
-            if (window.innerWidth <= 600) {
-                return 1; // Single row on small devices
-            }
-            return 2 * Math.floor(window.innerWidth / 300); // 2 rows for larger screens
-        };
-
-        let itemsPerPage = calculateItemsPerPage();
-        let currentPage = 1;
-
-        function renderGallery() {
-            const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const pageImages = images.slice(start, end);
-
-            galleryContainer.style.transform = `translateX(-${start * 300}px)`;
-            galleryContainer.innerHTML = '';
-
-            pageImages.forEach((src) => {
-                const imgDiv = document.createElement('div');
-                imgDiv.className = 'img__gal';
-                imgDiv.innerHTML = `<img src="${src}" alt="Gallery Image">`;
-                galleryContainer.appendChild(imgDiv);
-            });
-
-            // Update pagination buttons
-            prevButton.disabled = currentPage === 1;
-            nextButton.disabled = end >= images.length;
-        }
-
-        prevButton.addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                renderGallery();
-            }
-        });
-
-        nextButton.addEventListener('click', () => {
-            if (currentPage * itemsPerPage < images.length) {
-                currentPage++;
-                renderGallery();
-            }
-        });
-
-        // Initial render
-        renderGallery();
-
-        // Update itemsPerPage and re-render on window resize
-        window.addEventListener('resize', () => {
-            itemsPerPage = calculateItemsPerPage();
-            currentPage = 1; // Reset to first page
-            renderGallery();
-        });
-    </script>
 
 </body>
 
