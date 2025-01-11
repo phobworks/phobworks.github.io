@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles2.css">
     <!-- <script src="js/main.js/" defer></script> -->
-    <script src="./js/script.js" defer></script>
+    <script src="./js/script2.js" defer></script>
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +28,8 @@
                         </div>
                         <ul class="navlinks">
                             <!-- <li><a href="#">Home</a></li> -->
-                            <li><a href="the-artist.html">The Artist</a></li>
-                            <li><a href="the-other-life.html">The Other Life</a></li>
+                            <li><a href="#">The Artist</a></li>
+                            <li><a href="#">The Other Life</a></li>
                             <li><a href="#">Shop</a></li>
                             <!-- <li><a href="#">Events</a></li> -->
                         </ul>
@@ -44,13 +44,12 @@
         </nav>
         <!-- Banner Section starts -->
         <section class="banner__section">
-            <div class="banner__img">
-                <img src="./images/bannn.png" alt="">
-
-            </div>
             <div class="container banner__container">
 
+                <div class="banner__img">
+                    <img src="./images/bannn.png" alt="">
 
+                </div>
 
                 <div class="banner__content">
                     <div class="banner__text">
@@ -81,8 +80,6 @@
             </div>
         </section>
     </header>
-
-
     <!-- ============= Marquee Section Starts =========== -->
     <section class="marquee__section">
         <div class="carousel__content container">
@@ -130,8 +127,8 @@
                         <p>Thank you for being here. Let's rise, create, and shine together. </p>
 
                         <!-- <div class="about__btn btn">
-                            <a href="the-artist.html">Read More</a>
-                        </div> -->
+                                <a href="the-artist.html">Read More</a>
+                            </div> -->
                     </div>
                 </div>
                 <div class="about__sub">
@@ -251,31 +248,19 @@
                     </div> -->
                 </div>
             </div>
-            <!-- <div class="news__container">
+            <div class="news__container">
                 <p>Latest News</p>
                 <div id="news-container" class="news__content"></div>
                 <div class="pagination-buttons">
                     <button id="prev-button"><i class="fa-solid fa-chevron-left page__btn"></i></button>
                     <button id="next-button"><i class="fa-solid fa-chevron-right page__btn"></i></button>
                 </div>
-            </div> -->
+            </div>
 
         </div>
     </section>
 
     <!-- ============= Curator/News Section Ends =========== -->
-
-    <!-- ============= Gallery Section Starts =========== -->
-    <section class="gallery__section">
-        <div class="gallery__container" id="gallery-container">
-            <!-- Images will be dynamically populated -->
-        </div>
-        <div class="pagination" id="pagination">
-            <button id="prev-button" disabled>Previous</button>
-            <button id="next-button">Next</button>
-        </div>
-    </section>
-    <!-- ============= Gallery Section Starts =========== -->
 
     <!-- ============= Contact Section Starts =========== -->
     <section class="contact__section" id="contact-section">
@@ -338,7 +323,6 @@
     <!-- ============= Footer Section Ends =========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function (event) {
@@ -407,80 +391,6 @@
             }
         });
     </script>
-    <script>
-        const images = [
-            './images/gallery/g1.jpg',
-            './images/gallery/g2.jpg',
-            './images/gallery/g3.jpg',
-            './images/gallery/g4.jpg',
-            './images/gallery/g5.jpg',
-            './images/gallery/g6.jpg',
-            './images/gallery/g7.jpg',
-            './images/gallery/g8.jpg',
-            './images/gallery/g9.jpg',
-            './images/gallery/g10.jpg',
-            './images/gallery/g11.jpg'
-        ];
-
-        const galleryContainer = document.getElementById('gallery-container');
-        const prevButton = document.getElementById('prev-button');
-        const nextButton = document.getElementById('next-button');
-
-        const calculateItemsPerPage = () => {
-            if (window.innerWidth <= 600) {
-                return 1; // Single row on small devices
-            }
-            return 2 * Math.floor(window.innerWidth / 300); // 2 rows for larger screens
-        };
-
-        let itemsPerPage = calculateItemsPerPage();
-        let currentPage = 1;
-
-        function renderGallery() {
-            const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const pageImages = images.slice(start, end);
-
-            galleryContainer.style.transform = `translateX(-${start * 300}px)`;
-            galleryContainer.innerHTML = '';
-
-            pageImages.forEach((src) => {
-                const imgDiv = document.createElement('div');
-                imgDiv.className = 'img__gal';
-                imgDiv.innerHTML = `<img src="${src}" alt="Gallery Image">`;
-                galleryContainer.appendChild(imgDiv);
-            });
-
-            // Update pagination buttons
-            prevButton.disabled = currentPage === 1;
-            nextButton.disabled = end >= images.length;
-        }
-
-        prevButton.addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                renderGallery();
-            }
-        });
-
-        nextButton.addEventListener('click', () => {
-            if (currentPage * itemsPerPage < images.length) {
-                currentPage++;
-                renderGallery();
-            }
-        });
-
-        // Initial render
-        renderGallery();
-
-        // Update itemsPerPage and re-render on window resize
-        window.addEventListener('resize', () => {
-            itemsPerPage = calculateItemsPerPage();
-            currentPage = 1; // Reset to first page
-            renderGallery();
-        });
-    </script>
-
 </body>
 
 </html>

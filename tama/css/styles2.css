@@ -99,52 +99,6 @@ p {
   color: var(--color-gray-400);
 }
 
-.btn {
-  display: inline-block;
-  background: var(--color-secondary);
-  color: var(--color-black);
-  padding: 0.8rem 2rem;
-  width: fit-content;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.btn:hover {
-  background-color: var(--color-gray-0);
-  color: var(--color-black);
-  box-shadow: var(--boxshadow-white);
-}
-
-.btn.sm {
-  padding: 0.5rem 0 1.2rem;
-}
-
-.btn.lg {
-  padding: 1.3rem 2.3rem;
-}
-
-.btn.primary {
-  background: var(--color-primary);
-  color: var(--color-gray-0);
-}
-
-.btn.primary:hover {
-  background: var(--color-secondary);
-}
-
-.btn.light {
-  background: var(--color-gray-0);
-}
-
-/* section, */
-/* header, */
-footer {
-  /* this will make the sections stand above the highlights */
-  position: relative;
-  z-index: 1;
-}
-
-/* ========= NavBar Section Start ============= */
 header {
   background-image: url("../images/bg-header2.png");
   height: 100vh;
@@ -183,47 +137,28 @@ nav {
   /* border: 0.13rem solid var(--color-yellow); */
   padding: 0.5rem 1rem;
   border-radius: 1000px;
-  /* position: relative; */
+  position: relative;
 }
 
 .nav__logo a {
   font-family: "Zen Dots", sans-serif;
   font-weight: 400;
   font-style: normal;
-  transition: var(--transition);
 }
 
 .nav__logo {
   display: none;
 }
 
-.navlinks li a {
-  transition: var(--transition);
-}
-
-.navlinks li a:hover,
-.nav__logo a:hover {
-  color: var(--color-yellow);
-}
-
 .btn-action li a {
   background-color: var(--color-gray-700);
   padding: 0.8rem 1.2rem;
-  transition: var(--transition);
-}
-
-.btn-action li a:hover {
-  background-color: var(--color-gray-0);
-  color: var(--color-black);
 }
 
 .navbtn {
   display: none;
 }
 
-/* ========= NavBar Section End ============= */
-
-/* ========= Banner Section Starts ========== */
 .banner__section {
   /* margin-top: 3rem; */
 }
@@ -248,7 +183,6 @@ nav {
   bottom: 0;
   transform: translate(-50%);
   /* max-width: 430px; */
-  z-index: 3;
 }
 
 .banner__name h1 {
@@ -263,11 +197,9 @@ nav {
   transform: translate(-50%); */
   letter-spacing: 1rem;
   position: relative;
-  z-index: 5;
 }
 
 .banner__text {
-  z-index: 5;
 }
 
 .banner__text p {
@@ -329,7 +261,6 @@ nav {
   right: 5%;
   bottom: 0;
   padding: 1rem;
-  z-index: 5;
 }
 
 .banner__sign p {
@@ -338,13 +269,6 @@ nav {
   text-align: center;
   color: var(--color-gray-0);
 }
-
-/* .banner__image img {
-  border-radius: 50%;
-} */
-/* ========= Music Player ======== */
-
-/* ========= Banner Section Ends ============ */
 
 /* ========= Marquee Section Start ========== */
 .marquee__section {
@@ -517,7 +441,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  /* border-right: 1px solid var(--color-gray-500); */
+  border-right: 1px solid var(--color-gray-500);
   padding-right: 1rem;
 }
 
@@ -579,67 +503,6 @@ nav {
 }
 
 /* ========= Curator Section Ends ========== */
-
-/* ========= Gallery section starts ======== */
-.gallery__section {
-  padding: 20px;
-}
-
-.gallery__container {
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fill, 300px); */
-  width: 100%;
-  columns: 300px;
-  gap: 20px;
-  justify-content: center;
-}
-
-.img__gal {
-  overflow: hidden;
-}
-
-.img__gal img {
-  /* width: 100%; */
-  height: auto;
-  border-radius: 8px;
-}
-
-.pagination {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.pagination button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.pagination button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-}
-
-@media (max-width: 992px) {
-  .gallery__container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-  }
-
-  .img__gal {
-    flex: 0 0 300px;
-    scroll-snap-align: start;
-  }
-}
-
-/* ========= Gallery section ends ======== */
 
 /* ========= Contact Section Starts ========== */
 .contact__section {
@@ -725,279 +588,6 @@ nav {
 }
 
 /* ========= Footer Section Ends ========== */
-
-/* ========= The Artist Page  ========== */
-/* Nav Section Starts */
-/* .navbar__container {
-  display: flex;
-  justify-content: space-between;
-  place-items: center;
-  position: relative;
-  margin-top: 1rem;
-} */
-
-.navbar__container ul {
-  /* display: flex;
-  gap: 5rem; */
-}
-
-.social__banners {
-  /* display: flex;
-  gap: 2rem; */
-}
-.logo__artist {
-  display: flex;
-}
-
-/* Nav Section Ends */
-
-/* Banner Section Starts */
-.artist__banner {
-  margin-top: 7rem;
-}
-
-.a-banner__container {
-  display: grid;
-  grid-template-columns: 40% 50%;
-  gap: 10%;
-  align-items: center;
-}
-
-.a-banner__herotag p {
-  margin-top: 1rem;
-}
-
-.a-banner__image {
-  width: 500px;
-  /*  -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
-  mask-image: linear-gradient(#000, rgba(0, 0, 0, 0)); */
-}
-
-/* Banner Section Ends */
-
-/* Business Logo Starts */
-.business__logo {
-  margin-top: 7rem;
-}
-
-.business-logo__container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.business-logo__container img {
-  width: 15%;
-  aspect-ratio: 3/2;
-  object-fit: contain;
-  mix-blend-mode: color-burn;
-}
-
-/* Business Logo Ends */
-
-/* Artist About Starts */
-.art-about__container {
-  display: grid;
-  grid-template-columns: 50% 45%;
-  gap: 5%;
-}
-
-.art-about__img {
-  /* float: left; */
-  /* margin-right: 30px; */
-  /* width: 480px; */
-}
-
-.art-about__container p {
-  margin-top: 1rem;
-}
-
-/* Artist About Ends */
-
-/* Art Media Section Starts */
-.art-media__section {
-  margin-top: 5rem;
-  /* height: 100vh; */
-  display: grid;
-  align-items: center;
-}
-
-.art-media__containers {
-  display: grid;
-  grid-template-columns: 30% 60%;
-  gap: 10%;
-  align-items: center;
-}
-
-.art-media__containerss {
-  display: grid;
-  grid-template-columns: 60% 30%;
-  gap: 10%;
-  align-items: center;
-}
-
-.art-media__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.art-media__container {
-  margin-top: 2rem;
-}
-
-.art-media__container a {
-  color: var(--color-gray-500);
-}
-
-.art-musics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-  margin-top: 1rem;
-}
-
-.art-media__text p {
-  margin-top: 2rem;
-}
-
-.art-media__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-/* Art Media Section Ends */
-/* ========= The Artist Page Ends ========== */
-
-/* ========= The Other Life Page Ends ========== */
-/* Banner Section Starts */
-.other-banner__section {
-  margin-top: 8rem;
-}
-
-.other__hero {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-
-.other__hero h1,
-.other__hero p {
-  text-align: center;
-}
-
-.other__hero p {
-  margin-top: 1rem;
-}
-
-.other-banner__img {
-  /* margin-top: 2rem; */
-  /* width: 800px;
-  height: 500px; */
-  margin: 2rem auto;
-}
-
-.other-banner__img img {
-}
-
-/* Banner Section Ends */
-
-/* About Section Starts */
-.other-about__section {
-  margin-top: 7rem;
-}
-
-.other-about__container h4 {
-  text-align: center;
-}
-
-.other-about__container p {
-  margin-top: 1rem;
-}
-
-/* About Section Ends */
-
-/* Curator Section Starts */
-.other-curator__section {
-  margin-top: 7rem;
-  /* background: url("/images/the-other-life/bg-img2.jpg");
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  position: relative;
-  background-size: cover; */
-  /* background-attachment: fixed; */
-  /* overflow: hidden;
-  padding: 2rem 0; */
-}
-
-.other-curator__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-
-.other-curator__image {
-}
-
-.other-curator__text p {
-  margin-top: 1rem;
-}
-
-/* Curator Section Ends */
-
-/* Other Skills Starts*/
-.other-skills__section {
-  margin-top: 7rem;
-}
-
-.other-skills__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.skills__container p {
-  margin-top: 1rem;
-}
-
-.offering__cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.curator__card {
-  background-color: var(--color-gray-0);
-  color: var(--color-black);
-  padding: 1.5rem 1rem;
-  margin: 1rem 0;
-  position: relative;
-}
-
-.curator__card p {
-  color: var(--color-black);
-  text-align: center;
-}
-
-.curator__card img {
-  position: absolute;
-  border-radius: 50%;
-  padding: 10px;
-  width: 4rem;
-  height: 4rem;
-  overflow: hidden;
-  top: -2rem;
-  left: calc(50% - 2rem);
-}
-
-/* Other Skills Ends */
 
 /* ========= The Other Life Page Ends ========== */
 
@@ -1097,72 +687,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .curator__content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding-right: 1rem;
-  }
-  .a-banner__image {
-    width: 400px;
-  }
-  .art-about__img {
-    width: 380px;
-  }
-  .art-media__containers {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .art-media__containerss {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-  }
-  .other__hero {
-    width: 100%;
-  }
-  .other-curator__container {
-    grid-template-columns: 1fr;
-  }
-  .other-skills__container {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1;
-  }
-  a {
-    font-size: 1rem;
-  }
-
-  .container {
-    width: var(--container-width-md);
-  }
-
-  section > p {
-    margin-bottom: 3rem;
-  }
-  .sectionHeader p {
-    width: var(--container-width-md);
-    margin-inline: auto;
-  }
-
-  .swiper {
-    width: var(--container-width-md);
-  }
-
-  .sectionHeader {
-    margin-bottom: 1.5rem;
-  }
   .banner__content {
     text-align: center;
   }
@@ -1188,151 +713,4 @@ nav {
     transform: translate(-50%);
     bottom: 0;
   }
-  .carousel__content:before,
-  .carousel__content:after {
-    position: absolute;
-    top: 0;
-    width: 40px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-  }
-  .about__artist {
-    grid-template-columns: 1fr;
-    align-items: center;
-  }
-  .about__sub {
-    grid-template-columns: repeat(1, 1fr);
-    margin-top: 5rem;
-    align-items: center;
-  }
-  .artist__bio {
-    text-align: center;
-  }
-  .about__sub {
-    text-align: center;
-  }
-  .about__otherlife {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-    text-align: center;
-  }
-  .media__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .curator__container {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .curator__content {
-    border-right: none;
-    padding-right: 0;
-  }
-  .curator__bio {
-    text-align: center;
-  }
-  .news__container {
-    /* margin-left: 2rem; */
-    margin: auto;
-  }
-  .investment__intro {
-    text-align: center;
-  }
-  .investment__content {
-    text-align: center;
-  }
-  .investment__wrap {
-    flex-direction: column;
-  }
-  .form__section {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-  }
-  .smedia__container {
-    text-align: center;
-  }
-  .socials__content {
-    flex-direction: column;
-  }
-  .socials__content a {
-    text-align: center;
-  }
-  .form__detail {
-    gap: 1rem;
-    flex-direction: column;
-  }
-  .footer__section {
-    width: 100%;
-  }
-  .footer__copyright {
-    text-align: center;
-  }
-  .social__media {
-    justify-content: center;
-  }
-  .a-banner__container {
-    grid-template-columns: 1fr;
-  }
-  .a-banner__image {
-    width: 100%;
-  }
-  .a-banner__herotag {
-    text-align: center;
-  }
-  .art-about__container {
-    display: flex;
-    flex-direction: column;
-  }
-  .art-about__container h4 {
-    text-align: center;
-  }
-  .art-about__img {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  .art-musics {
-    grid-template-columns: 1fr;
-  }
-  .art-media__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .art-media__header a {
-    color: var(--color-gray-400);
-    font-size: 12px;
-  }
-  .art-media__text h5 {
-    text-align: center;
-  }
-  .other-curator__text h4,
-  .skills__container h4,
-  .offering__container h4 {
-    text-align: center;
-  }
-}
-
-.in__production {
-  /* margin-top: 10rem; */
-  height: 100vh;
-  position: relative;
-}
-
-.o__product {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.o__product h1 {
-  text-align: center;
-  color: var(--color-yellow);
-}
-
-.error-message {
-  color: red;
-  font-size: 0.9rem;
-  margin-top: 5px;
-  display: none;
 }
