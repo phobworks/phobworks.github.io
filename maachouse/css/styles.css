@@ -385,6 +385,12 @@ nav.window-scrolled {
   transform: translateY(10%);
 }
 
+.banner__story {
+  position: relative;
+  border-radius: 50% / 25%;
+  overflow: hidden;
+}
+
 .banner__story img {
   width: 100%; /* Ensure the image scales to its container */
   height: auto; /* Maintain aspect ratio */
@@ -392,11 +398,27 @@ nav.window-scrolled {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for a 3D effect */
 }
 
+.overlapping {
+  position: absolute;
+  width: 100%;
+  background-color: var(--primary-color);
+  bottom: 0;
+  opacity: 0.75;
+}
+
+.overlapping p {
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 16px;
+}
+
 /* ========== Banner Section Ends ======== */
 
 /* ========== About Section Starts ======== */
 .about__section {
-  margin-top: 20rem;
+  margin-top: 18rem;
 }
 
 .about__content {
