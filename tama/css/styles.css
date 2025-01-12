@@ -45,6 +45,14 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   width: var(--container-width-lg);
   margin-inline: auto;
@@ -146,13 +154,15 @@ footer {
 
 /* ========= NavBar Section Start ============= */
 header {
-  background-image: url("../images/bg-header2.png");
+  background-image: url("../images/banner-bg-1.jpg");
   height: 100vh;
   width: 100%;
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
+  z-index: 3;
 }
 
 nav {
@@ -249,6 +259,7 @@ nav {
   transform: translate(-50%);
   /* max-width: 430px; */
   z-index: 3;
+  display: none;
 }
 
 .banner__name h1 {
@@ -358,12 +369,12 @@ nav {
   position: absolute;
   top: 0;
   width: 80px;
-  height: 100%;
+  height: 10%;
   content: "";
   z-index: 2;
 }
 
-.carousel__content:before {
+.carousel__content::before {
   left: 0;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.923), rgb(0, 0, 0));
 }
@@ -1050,9 +1061,15 @@ nav {
   .banner__content {
     display: flex;
     flex-direction: column-reverse;
-    position: relative;
-    /* margin-top: 25rem; */
     position: absolute;
+    align-items: center;
+    text-align: center;
+    /* position: absolute;
+    left: 50%;
+    transform: translate(-50%); */
+  }
+  .banner__name h1 {
+    /* text-align: center; */
   }
   .banner__text p {
     font-weight: 600;
@@ -1130,6 +1147,13 @@ nav {
   .sectionHeader {
     margin-bottom: 1.5rem;
   }
+  /* .banner__content {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+  } */
   .banner__content {
     text-align: center;
   }
@@ -1276,6 +1300,38 @@ nav {
   .skills__container h4,
   .offering__container h4 {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* .banner__content {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    align-items: center;
+    top: -50%;
+    transform: translateY(-50%);
+  } */
+  .banner__content {
+    text-align: center;
+  }
+  .banner__img {
+    width: 100%;
+  }
+  .banner__name h1 {
+    font-size: 1.8rem;
+    /* color: var(--color-yellow); */
+  }
+  .banner__text p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .social__banner2-hidden,
+  .banner__sign p {
+    display: none;
   }
 }
 

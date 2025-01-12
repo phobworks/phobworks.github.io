@@ -100,9 +100,9 @@ p {
 }
 
 header {
-  background-image: url("../images/bg-header2.png");
+  background-image: url("../images/ban.png");
   height: 100vh;
-  width: 100%;
+  /* width: 100%; */
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
