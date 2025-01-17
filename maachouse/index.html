@@ -29,11 +29,19 @@
             <div class="container nav__container">
                 <a href="index.html" class="nav__logo"><img src="./images/maachouse-logo.png" alt=""></a>
                 <ul class="nav__links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="about.html">Component</a></li>
-                    <li><a href="initiatives.html">Initiatives</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav__link-item "><a class="active__page" href="index.html">Home</a></li>
+                    <li class="nav__link-item"><a href="about.html">About</a></li>
+                    <li class="dropdown nav__link-item active">
+                        <a class="dropdown__toggle">Component<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="#experiences">Experiences</a></li>
+                            <li><a href="#art-entertainment">Art & Entertainment</a></li>
+                            <li><a href="#spaces">Spaces</a></li>
+                            <li><a href="#communities">Communities</a></li>
+                            <li><a href="#merchandises">Merchandises</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__link-item"><a href="initiatives.html">Initiatives</a></li>
 
                 </ul>
                 <ul class="nav__action-btn">
@@ -283,12 +291,13 @@
         <div class="container about-statement__container">
             <div class="about__statement">
                 <div class="about__card1">
-                    <h1>Our Mission</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloribus sapiente, ut
-                        perspiciatis id eveniet! Cum eos eaque atque culpa.</p>
+                    <h1>Our Aim </h1>
+                    <p>We seek to drive positive transformational social engineering through stories, spaces and
+                        experiences.
+                    </p>
                 </div>
             </div>
-            <div class="about__statement2">
+            <!-- <div class="about__statement2">
                 <div class="about__card">
                     <div class="card__img">
                         <img src="./images/a1.jpg" alt="">
@@ -311,7 +320,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!-- =========== About statement section starts ============ -->

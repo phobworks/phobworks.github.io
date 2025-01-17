@@ -28,10 +28,19 @@
             <div class="container nav__container">
                 <a href="index.html" class="nav__logo"><img src="./images/maachouse-logo.png" alt=""></a>
                 <ul class="nav__links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="initiatives.html">Initiatives</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav__link-item"><a href="index.html">Home</a></li>
+                    <li class="nav__link-item"><a href="about.html">About</a></li>
+                    <li class="dropdown nav__link-item active">
+                        <a class="dropdown__toggle">Component<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="#experiences">Experiences</a></li>
+                            <li><a href="#art-entertainment">Art & Entertainment</a></li>
+                            <li><a href="#spaces">Spaces</a></li>
+                            <li><a href="#communities">Communities</a></li>
+                            <li><a href="#merchandises">Merchandises</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__link-item"><a class="active__page" href="initiatives.html">Initiatives</a></li>
 
                 </ul>
                 <ul class="nav__action-btn">
@@ -41,6 +50,8 @@
                 <button class="nav__toggle-btn" id="nav__toggle-close"><i class="fa-solid fa-xmark"></i></button>
             </div>
         </nav>
+
+
     </header>
     <section class="banner__section-2">
         <div class="container banner__header-2">

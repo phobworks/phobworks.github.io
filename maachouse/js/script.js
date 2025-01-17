@@ -1,7 +1,7 @@
-/* Navbar  */
 const nav = document.querySelector(".nav__links");
 const openNavBtn = document.querySelector("#nav__toggle-open");
 const closeNavBtn = document.querySelector("#nav__toggle-close");
+const navLinkItems = document.querySelectorAll(".nav__links li");
 
 const openNav = () => {
   nav.style.display = "flex";
@@ -13,6 +13,13 @@ const openNav = () => {
 openNavBtn.addEventListener("click", openNav);
 
 const closeNav = () => {
+  // Reset the dropdown items' styles
+  navLinkItems.forEach((item) => {
+    item.style.transform = ""; // Reset transform
+    item.style.opacity = ""; // Reset opacity
+    item.style.animation = ""; // Reset animation
+  });
+
   // Add reverse animation class
   nav.classList.add("reverse");
 
@@ -33,6 +40,22 @@ closeNavBtn.addEventListener("click", closeNav);
 // Close nav on link click
 nav.querySelectorAll("li a").forEach((navLink) => {
   navLink.addEventListener("click", closeNav);
+});
+
+// Remove specific styles on hover or click
+const removeStylesOnInteraction = (event) => {
+  const element = event.target.closest("li");
+  if (element) {
+    element.style.transform = "none"; // Removes transform
+    element.style.opacity = "1"; // Makes it fully visible
+    element.style.animation = "none"; // Stops animation
+  }
+};
+
+// Attach event listeners to all .nav__links li elements
+navLinkItems.forEach((item) => {
+  item.addEventListener("mouseover", removeStylesOnInteraction); // On hover
+  item.addEventListener("click", removeStylesOnInteraction); // On click
 });
 
 /* ======== nav bar scroll reveal ========= */
