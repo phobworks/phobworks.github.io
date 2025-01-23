@@ -245,9 +245,8 @@ nav {
 }
 /* ========== Banner Section Starts ======== */
 .banner__section {
-  /* position: relative; */
   position: relative;
-  background-color: black; /* Black background */
+  background-color: var(--primary-color);
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(
@@ -262,14 +261,36 @@ nav {
       rgba(255, 165, 0, 0.1) 50%,
       transparent 52%
     );
-  background-size: 10rem 10rem; /* Size of each cube */
-  border: none; /* Optional: No border around the header */
-  box-sizing: border-box; /* Ensure padding and borders are included in the element's total width and height */
+  background-size: 10rem 10rem;
+  border: none;
+  box-sizing: border-box;
 }
+
+/* .banner__section {
+  background-image: url("../images/bg-under6.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+  position: relative;
+  background-color: var(--primary-color);
+}
+
+.banner__section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+/*  background-color: rgba(0, 0, 0, 0.5); */ /* Adjust the opacity as needed */
+/* z-index: 1; */
+/* } */
 
 .banner__content {
   padding-top: 8rem;
-  /* position: relative; */
+  position: relative;
   /* left: 50%; */
   /* transform: translate(-50%); */
   text-align: center;
@@ -404,6 +425,7 @@ nav {
 .banner__image {
   /* margin-top: 13rem; */
   position: relative;
+  z-index: 22;
 }
 
 .banner__gallery {
@@ -419,6 +441,7 @@ nav {
   position: relative;
   border-radius: 50% / 25%;
   overflow: hidden;
+  border: 2px solid var(--color-bg-3);
 }
 
 .banner__story img {
