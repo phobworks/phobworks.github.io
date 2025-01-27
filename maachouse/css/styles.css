@@ -294,7 +294,6 @@ nav {
   /* left: 50%; */
   /* transform: translate(-50%); */
   text-align: center;
-  z-index: 99;
 }
 
 .banner__header {
@@ -654,7 +653,7 @@ nav {
 
 .core-int__swiper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   /* margin-top: 2.5rem; */
 }
@@ -1496,6 +1495,272 @@ textarea {
 
 /* ====== Contact section ends ======== */
 
+/* ====== Incubator program section starts ======== */
+.inc-about__section {
+  margin-top: 5rem;
+}
+
+.inc-about__container img {
+  border-radius: 8px;
+}
+
+.inc-about__container h3 {
+  margin-top: 3rem;
+  text-align: center;
+  /* color: var(--color-bg-3); */
+}
+
+.inc-about__container p {
+  margin-top: 1rem;
+}
+
+.inc__statement {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.statement__card {
+}
+
+.statement__img {
+  width: 64px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.statement__card h4 {
+  text-align: center;
+}
+
+.inc-about__section-2 {
+  margin-top: 5rem;
+}
+
+.inc-what__section h3 {
+  text-align: center;
+}
+
+.inc-what__section p {
+  margin-top: 1rem;
+}
+
+.card__section-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.card__con-2 {
+  background-color: var(--color-light);
+  padding: 3rem 2rem 2rem 2rem;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.card-header__con {
+  position: absolute;
+  top: -13%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card-header__con h4 {
+  background-color: var(--color-bg-3);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.card__con-2 ul {
+  /* margin-top: 1rem; */
+}
+
+.card__con-2 ul li {
+  list-style: disc;
+}
+
+.card__con-2 ul li span {
+  font-weight: bold;
+}
+
+/* Meet tamanisa section starts */
+
+.meet-artist__section {
+  margin-top: 5rem;
+}
+
+.meet-artist__container {
+  display: grid;
+  grid-template-columns: 40% 55%;
+  gap: 5%;
+}
+
+.artist-history__content p,
+.artist-history__content ul,
+.artist-history__content ul li,
+.artist-history__content-2 p {
+  margin-top: 1rem;
+}
+
+.artist-history__content ul li span {
+  font-weight: bold;
+}
+
+.artist-history__content-2 h4 {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Meet tamanisa section ends */
+
+/* Why invest section starts */
+.invest__section {
+  margin-top: 5rem;
+}
+
+.invest__container h3,
+.invest__card h4 {
+  text-align: center;
+}
+
+.invest__cards {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 1rem;
+}
+
+.invest__card p {
+  margin-top: 1rem;
+}
+
+/* Why invest section ends */
+
+/* Sponsor section starts */
+
+.sponsor__section {
+  margin-top: 5rem;
+}
+
+.sponsor__container {
+  display: grid;
+  grid-template-columns: 40% 55%;
+  gap: 5%;
+  align-items: center;
+}
+
+.sponsor__left h3 {
+  line-height: normal;
+}
+
+.sponsor__card {
+  margin-bottom: 1rem;
+}
+
+.sponsor__card ul {
+  margin-top: 0.5rem;
+}
+
+.sponsor__card ul li {
+  list-style: disc;
+}
+
+/* Sponsor section ends */
+
+/* ====== Incubator program section ends ======== */
+
+/* ====== Act one festival section starts ========= */
+.theme__section {
+  background-color: var(--color-bg-3);
+  padding: 2rem 0;
+  margin-top: 5rem;
+}
+.festival__theme {
+}
+
+.festival__theme h3 {
+  color: var(--white-color);
+  text-align: center;
+}
+
+.festival__theme h4 {
+  margin-top: 1.5rem;
+}
+
+.theme__content {
+  gap: 2rem;
+}
+
+.theme__card ul {
+  margin-top: 0.5rem;
+}
+
+.theme__card ul li {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
+.theme__card ul li span {
+  font-weight: bold;
+}
+/* Join us section Starts */
+.join-us__section {
+  margin-top: 5rem;
+}
+
+.join-us__container {
+  display: grid;
+  grid-template-columns: 40% 55%;
+  gap: 5%;
+  align-items: center;
+}
+
+.join-us__right {
+  background-color: var(--color-bg-3);
+  padding: 5rem 2rem;
+  border-radius: 10px;
+}
+
+.join-us__right h3 {
+  color: var(--white-color);
+}
+
+.join-us__right ul {
+  margin-left: 1rem;
+}
+
+.join-us__right ul li {
+  list-style: disc;
+}
+
+.join-us__right ul li span {
+  font-weight: bold;
+}
+
+.call-action__btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.join-us__right a {
+  background-color: var(--white-color);
+  padding: 0.8rem 1rem;
+  color: var(--primary-color);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.join-us__right a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Join us section ends */
+/* ====== Act one festival section ends ========= */
+
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
@@ -1709,6 +1974,9 @@ textarea {
   .contact__form form {
     grid-template-columns: 80%;
   }
+  .meet-artist__container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1814,5 +2082,25 @@ textarea {
   }
   .collab__content {
     padding: 1rem;
+  }
+  .inc__statement {
+    grid-template-columns: 1fr;
+  }
+  .card__section-2 {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .artist-history__content h4 {
+    text-align: center;
+  }
+  .artist-history__content-2 h4 {
+    margin-top: 5rem;
+  }
+  .sponsor__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .sponsor__card ul li {
+    margin-left: 1rem;
   }
 }

@@ -217,14 +217,15 @@ nav {
 }
 
 .btn-action li a {
-  background-color: var(--color-gray-700);
+  background-color: var(--color-gray-0);
+  color: var(--color-black);
   padding: 0.8rem 1.2rem;
   transition: var(--transition);
 }
 
 .btn-action li a:hover {
-  background-color: var(--color-gray-0);
-  color: var(--color-black);
+  background-color: var(--color-gray-700);
+  color: var(--color-gray-0);
 }
 
 .navbtn {
@@ -456,7 +457,7 @@ nav {
 
 .otherlife__image {
   width: auto;
-  height: 480px;
+  /* height: 480px; */
   object-fit: cover;
 }
 
