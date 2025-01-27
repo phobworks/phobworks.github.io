@@ -1761,6 +1761,82 @@ textarea {
 /* Join us section ends */
 /* ====== Act one festival section ends ========= */
 
+/* ========== Registration form section starts ========= */
+.reg-form__section {
+  margin-top: 5rem;
+}
+
+.reg-form__content {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.reg-form__content h3 {
+  text-align: center;
+}
+
+.reg-form__content form {
+  margin-top: 2rem;
+}
+
+.form__name,
+.form__address {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  /* grid-template-columns: repeat(1fr 1fr); */
+  gap: 1rem;
+}
+
+.form__contact {
+  display: grid;
+  gap: 1rem;
+}
+
+.form__name input,
+.form__contact input,
+.form__address input,
+.form__address select,
+.form__application select {
+  padding: 1rem 0.5rem;
+  border: var(--color-bg-3) 1px solid;
+  /* width: 70%; */
+}
+
+/* .form__application select {
+  width: 49%;
+} */
+
+.form__contact,
+.form__address,
+.form__application {
+  margin-top: 1rem;
+}
+
+.reg-form__content form button {
+  padding: 0.8rem 1rem;
+  background-color: var(--color-bg-3);
+  color: var(--white-color);
+  border-radius: 8px;
+  margin-top: 3rem;
+  width: 100%;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.reg-form__content form button:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.error-message {
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+/* ========== Registration form section ends ========= */
+
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
