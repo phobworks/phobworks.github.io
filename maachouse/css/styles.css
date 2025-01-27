@@ -1977,6 +1977,22 @@ textarea {
   .meet-artist__container {
     grid-template-columns: 1fr;
   }
+  .join-us__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5%;
+    align-items: center;
+  }
+  .join-us__left h3,
+  .join-us__right h3 {
+    text-align: center;
+  }
+  .join-us__right ul {
+    margin-top: 1rem;
+  }
+  .join-us__right ul li {
+    line-height: 2.5;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2102,5 +2118,9 @@ textarea {
   }
   .sponsor__card ul li {
     margin-left: 1rem;
+  }
+  .invest__cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
   }
 }
