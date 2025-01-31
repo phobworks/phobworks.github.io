@@ -11,7 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $involvement = htmlspecialchars($_POST["get-involved"]);
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("Invalid email format");
+        echo "<div style='color: red;'>Invalid email format</div>";
+        exit;
     }
 
     $to = "phedwallace36th@live.com";  // Replace with your email
@@ -20,9 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email\r\nReply-To: $email\r\n";
 
     if (mail($to, $subject, $message, $headers)) {
-        echo "Form submitted successfully!";
+        echo "<div style='color: green;'>Form submitted successfully!</div>";
     } else {
-        echo "There was an error sending the form.";
+        echo "<div style='color: red;'>There was an error sending the form.</div>";
     }
 }
-

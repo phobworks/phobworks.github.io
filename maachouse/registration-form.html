@@ -384,7 +384,9 @@
                             <small class="error-message"></small>
                         </div>
                     </div>
+                    <div id="formMessage"></div> <!-- Message will be displayed here -->
                     <button type="submit">Sumbit</button>
+
             </div>
             <!-- <div class="form__btn"> -->
 
@@ -445,6 +447,7 @@
             e.preventDefault();
 
             let isValid = true;
+            let formData = new FormData(this);
 
             function showError(input, message) {
                 let errorElement = input.nextElementSibling;
@@ -542,10 +545,32 @@
             }
 
             if (isValid) {
-                this.submit();
+                // Use AJAX to send form data
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "send_email.php", true);
+                xhr.onload = function () {
+                    const response = xhr.responseText;
+                    const messageContainer = document.getElementById("formMessage");
+
+                    // Display the response message
+                    messageContainer.innerHTML = response;
+
+                    // Reset form and hide message after 3 seconds if submission is successful
+                    if (response.includes("Form submitted successfully!")) {
+                        document.getElementById("registrationForm").reset();
+
+                        setTimeout(() => {
+                            messageContainer.innerHTML = ""; // Clear the message
+                        }, 3000); // Message disappears after 3 seconds
+                    }
+                };
+                xhr.send(formData);
             }
         });
+
+
     </script>
+
 
 </body>
 

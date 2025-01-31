@@ -151,3 +151,131 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+/* =========== Gsap Animation ========== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const bannerSection = document.querySelector(".banner__container");
+
+  for (let i = 0; i < 10; i++) {
+    const circle = document.createElement("div");
+    circle.classList.add("banner__header-circle");
+
+    // Set initial random position within banner__section
+    circle.style.position = "absolute";
+    circle.style.width = "10px";
+    circle.style.height = "10px";
+    circle.style.borderRadius = "50%";
+    circle.style.backgroundColor = "rgba(255, 204, 0, 0.275)";
+    circle.style.zIndex = "1";
+    circle.style.left = `${Math.random() * bannerSection.clientWidth}px`;
+    circle.style.top = `${Math.random() * bannerSection.clientHeight}px`;
+    circle.style.overFlowX = "hidden";
+
+    bannerSection.appendChild(circle);
+
+    gsap.to(circle, {
+      x: "random(-50, 100)",
+      y: "random(-50, 100)",
+      duration: 5,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+      repeatRefresh: true, // Ensures new random values each cycle
+    });
+  }
+});
+
+// Ensure GSAP and ScrollTrigger are loaded
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener("DOMContentLoaded", () => {
+  // H1 Zoom In Effect on Load
+  gsap.fromTo(
+    ".banner__header h1",
+    { scale: 0, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 1.5, ease: "power2.out" }
+  );
+
+  // Paragraph Slide Up Effect after H1
+  gsap.fromTo(
+    ".banner__content p",
+    { scale: 0, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 1, ease: "power2.out", delay: 1 }
+  );
+
+  // Call to Action Button Delayed Effect
+  gsap.fromTo(
+    ".callto__action",
+    { scale: 0, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 1, ease: "power2.out", delay: 2 }
+  );
+
+  // Banner Gallery Animation
+  gsap.fromTo(
+    ".banner__gallery",
+    { scale: 0 },
+    { scale: 1, duration: 1, ease: "power2.out", delay: 3 }
+  );
+
+  // Reverse Animations on Scroll Down
+  ScrollTrigger.create({
+    trigger: ".banner__section",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    onUpdate: (self) => {
+      let progress = self.progress;
+      gsap.to(".banner__header h1", {
+        scale: 1 - progress,
+        opacity: 1 - progress,
+      });
+      gsap.to(".banner__content p", {
+        scale: 1 - progress,
+        opacity: 1 - progress,
+      });
+      gsap.to(".callto__action", {
+        scale: 1 - progress,
+        opacity: 1 - progress,
+      });
+      gsap.to(".banner__gallery", {
+        scale: 1 - progress,
+        opacity: 1 - progress,
+      });
+    },
+  });
+});
+
+// gsap.registerPlugin(ScrollTrigger);
+
+const sections = document.querySelectorAll(
+  ".about__section, .core-int__section, .about-statement__section, .event__section, .achievement__section, .testimonial__section, .collab__section"
+);
+
+// Apply overflow hidden globally
+document.documentElement.style.overflowX = "hidden";
+// document.body.style.overflowX = "hidden";
+
+sections.forEach((section) => {
+  // Ensure no horizontal scroll is triggered by the scale effect
+  section.style.transformOrigin = "center";
+
+  gsap.fromTo(
+    section,
+    { scale: 1.1, opacity: 0 }, // Slightly reduced scale to prevent overflow
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 1.5,
+      delay: 1, // Adds delay before zooming out
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true,
+        toggleActions: "play reverse play reverse",
+      },
+    }
+  );
+});
