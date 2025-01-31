@@ -231,7 +231,7 @@ nav {
 .nav__action-btn li a {
   background-color: var(--color-bg-3);
   color: var(--white-color);
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 8px;
   transition: var(--transition);
 }
@@ -2025,6 +2025,9 @@ textarea {
   }
   .join-us__right ul li {
     line-height: 2.5;
+  }
+  .footer__content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
