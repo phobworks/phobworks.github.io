@@ -241,6 +241,12 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.to(".banner__gallery", {
         scale: 1 - progress,
         opacity: 1 - progress,
+        scrollTrigger: {
+          trigger: ".banner__gallery",
+          start: "center", // Wait until .banner__gallery reaches the center
+          end: "center", // Maintain visibility for a bit before scrolling
+          toggleActions: "play none none reverse", // Prevent repeated playbacks
+        },
       });
     },
   });

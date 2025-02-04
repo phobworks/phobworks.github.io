@@ -2,7 +2,7 @@
   --primary-color: #000000;
   --color-primary-variant: #e5a55d;
   --color-bg-1: hsla(39, 56%, 33%, 0.237);
-  --color-bg-2: #2861ff;
+  --color-bg-2: #0047ab;
   --color-bg-3: #ffce00;
   --color-bg-4: #ffce00;
   --color-bg-5: rgba(255, 204, 0, 0.275);
@@ -421,7 +421,7 @@ nav {
 
 /* ========== About Section Starts ======== */
 .about__section {
-  margin-top: 10rem;
+  margin-top: 18rem;
 }
 
 .about__content {
