@@ -1354,6 +1354,9 @@ textarea {
   .nav__links li a:hover {
     color: var(--black-color);
   }
+  .nav__links li a.active {
+    color: var(--black-color);
+  }
   .nav__links li:nth-child(6) a {
     display: block;
   }
