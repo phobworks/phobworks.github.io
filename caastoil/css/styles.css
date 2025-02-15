@@ -155,6 +155,10 @@ nav.window-scrolled {
   color: var(--red-color);
 }
 
+.nav__links li a.active {
+  color: var(--red-color);
+}
+
 .nav__links li:nth-child(6) a {
   display: none;
 }
@@ -777,7 +781,7 @@ input[type="radio"] {
 }
 
 .our-services__section {
-  margin: 5rem 0 -5rem 0;
+  margin: 5rem 0 0 0;
 }
 
 .our-services__container {
@@ -1255,6 +1259,62 @@ textarea {
 
 /* ============ Contact us section Ends =============== */
 
+/* ============ Policy section starts ============ */
+.policy-banner__section {
+  background-image: url("../images/policy-banner.jpg");
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.policy-banner__section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.policy__section {
+  margin-top: 5rem;
+}
+
+.policy__content h4 {
+  color: var(--red-color);
+  margin-top: 1.5rem;
+}
+
+.policy__content p {
+  margin-top: 1rem;
+}
+
+.policy__content ul {
+  margin-top: 1rem;
+}
+
+.policy__content ul li {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.policy__content ul li ul li {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.policy__last {
+  margin-bottom: 5rem;
+}
+
+/* =========== Policy section ends ============== */
+
 /* ======= Media Queries (Medium Devices)====== */
 @media screen and (max-width: 1024px) {
   .container {
@@ -1513,6 +1573,9 @@ textarea {
   }
   .our-services__container {
     display: none;
+  }
+  .our-services__section {
+    margin: 5rem 0 -5rem 0;
   }
   .our-services__container2 {
     display: grid;
