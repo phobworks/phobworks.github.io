@@ -1442,6 +1442,10 @@ textarea {
     padding: 0.5rem 0.8rem;
     font-size: 9px;
   }
+  .about-text__container {
+    gap: 12%;
+    align-items: start;
+  }
   .about__content2 {
     margin-top: 10rem;
     grid-template-columns: repeat(1, 1fr);

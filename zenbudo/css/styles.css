@@ -1435,6 +1435,10 @@ footer {
     animation-delay: 1200ms;
   }
 
+  /* .nav__links li:nth-child(6) {
+    animation-delay: 1400ms;
+  } */
+
   @keyframes animation2 {
     to {
       transform: rotate(0);

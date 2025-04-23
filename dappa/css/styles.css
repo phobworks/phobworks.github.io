@@ -695,6 +695,10 @@ footer {
   gap: 2rem;
 }
 
+.footer__title {
+  font-size: 3rem;
+}
+
 .footer__btn {
   width: 5rem;
   height: 5rem;

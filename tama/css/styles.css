@@ -645,6 +645,20 @@ nav {
   gap: 1rem;
 }
 
+.social__media a i {
+  padding: 1rem;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__media a i:hover {
+  box-shadow: var(--boxshadow-white);
+}
+
 .form__container form {
   display: flex;
   flex-direction: column;
@@ -667,14 +681,16 @@ nav {
 }
 
 .form__content button {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
   padding: 15px;
   cursor: pointer;
   transition: var(--transition);
 }
 
 .form__content button:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-gray-0);
+  /* background-color: var(--color-secondary); */
+  /* color: var(--color-gray-0); */
   box-shadow: var(--boxshadow-red);
 }
 
@@ -763,7 +779,7 @@ nav {
   width: 15%;
   aspect-ratio: 3/2;
   object-fit: contain;
-  mix-blend-mode: color-burn;
+  /* mix-blend-mode: color-burn; */
 }
 
 /* Business Logo Ends */
@@ -1091,9 +1107,6 @@ nav {
   .a-banner__image {
     width: 400px;
   }
-  .art-about__img {
-    width: 380px;
-  }
   .art-media__containers {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1101,6 +1114,12 @@ nav {
     display: flex;
     flex-direction: column-reverse;
     gap: 2rem;
+  }
+  .art-media__section {
+    margin-top: 7rem;
+  }
+  .art-media__text p {
+    margin-top: 1rem;
   }
   .other__hero {
     width: 100%;
@@ -1110,6 +1129,16 @@ nav {
   }
   .other-skills__container {
     grid-template-columns: 1fr;
+  }
+  .art-about__container {
+    grid-template-columns: 1fr;
+  }
+  .form__detail {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .media__section {
+    height: auto;
   }
 }
 
@@ -1203,6 +1232,7 @@ nav {
   }
   .about__sub {
     text-align: center;
+    margin-top: 8rem;
   }
   .about__otherlife {
     display: flex;
@@ -1273,10 +1303,7 @@ nav {
   .a-banner__herotag {
     text-align: center;
   }
-  .art-about__container {
-    display: flex;
-    flex-direction: column;
-  }
+
   .art-about__container h4 {
     text-align: center;
   }
