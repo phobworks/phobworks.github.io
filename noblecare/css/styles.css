@@ -301,7 +301,7 @@ nav {
 .banner-ext__head {
   display: flex;
   gap: 3rem;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .banner-ext__head i {
@@ -309,7 +309,8 @@ nav {
   font-size: 1.5rem;
 }
 
-.banner-ext__head h3 {
+.banner-ext__head p {
+  font-weight: bold;
 }
 
 .banner-ext__contents p {
