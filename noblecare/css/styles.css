@@ -356,6 +356,10 @@ nav {
   font-size: 30px;
 }
 
+.about__icon p {
+  font-weight: bold;
+}
+
 #icon-1 {
   color: var(--color-primary-variant);
 }
