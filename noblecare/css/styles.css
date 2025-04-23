@@ -794,7 +794,7 @@ nav {
 .newsletter__section {
   margin-top: 7rem;
   position: relative;
-  background-color: #33106779;
+  background-color: var(--primary-color);
   padding: 6rem 0;
 }
 
@@ -841,12 +841,16 @@ nav {
 }
 
 .newsletter__form button {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--color-black);
   padding: 0.8rem 1rem;
   border-radius: 8px;
   transition: var(--transition);
   cursor: pointer;
+}
+
+.newsletter__form button:hover {
+  color: var(--white-color);
 }
 
 .newsletter__right {
