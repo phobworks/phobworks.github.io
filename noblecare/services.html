@@ -17,13 +17,13 @@
 <body>
     <nav>
         <div class="nav__upper">
-            <small><a href="#main__content">Skip to main content</a></small>
+            <small><a href="#main-content">Skip to main content</a></small>
             <small>Welcome to Noble Care</small>
             <small><i class="fa-regular fa-clock"></i> Mon-Fri: 9am to 6pm/ Sat: 9am to 5pm</small>
         </div>
         <div class="container-xlg nav__logo-container">
             <a href="index.html" class="nav__logo"><img src="./images/logo-1.png" alt="Noble care Logo"></a>
-            <div class="nav__contact">
+            <div class="nav__contact container-sm ">
                 <div class="nav__email">
                     <div class="nav__icon">
                         <i class="fa-solid fa-envelope-open"></i>
@@ -54,7 +54,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="nav_quote">
-                    <button>Get a Quote</button>
+                    <a href="quote.html">Get a Quote</a>
                 </div>
                 <button aria-label="Open navigation menu" class="nav__toggle-btn" id="nav__toggle-open"
                     aria-controls="menuOverlay" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
@@ -65,27 +65,27 @@
             <div class="menu__overlay" id="menuOverlay" role="dialog" aria-hidden="true"></div>
             <div class="mobile__menu">
                 <ul class="nav__ul">
-                    <li aria-hidden="true"><a href="index.html">Home</a></li>
-                    <li aria-hidden="true"><a href="about.html">About</a></li>
-                    <li aria-hidden="true"><a href="services.html">Services</a></li>
-                    <li aria-hidden="true"><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="nav_quote">
-                    <button>Get a Quote</button>
+                    <a href="quote.html">Get a Quote</a>
                 </div>
             </div>
-            <main class="banner__text" id="main-content">
+            <div class="banner__text" id="main-content">
                 <h1>Our Services</h1>
-            </main>
-        </div>
+            </div>
 
     </nav>
 
     <!-- ========== Save more section starts ========== -->
-    <section class="save__more-section">
+
+    <section class="save__more-services" aria-labelledby="services-heading">
         <div class="container-xlg save__more-container">
             <div class="save__more-left">
-                <small>Our Services</small>
+                <small id="services-heading">Our Services</small>
                 <h2>We Believe We Can Save More <span>Lives</span></h2>
             </div>
             <div class="save__more-right">
@@ -95,28 +95,28 @@
             </div>
         </div>
         <div class="container-xlg our-services__container">
-            <div class="services__cards">
-                <i class="fa-solid fa-hands-holding-child"></i>
+            <div class="services__cards" aria-label="Personal Care">
+                <i class="fa-solid fa-hands-holding-child" aria-hidden="true"></i>
                 <h3>Personal Care</h3>
                 <p>Assisting with daily living activities such as bathing, dressing, and mobility. </p>
             </div>
-            <div class="services__cards">
-                <i class="fa-solid fa-list-check"></i>
+            <div class="services__cards" aria-label="Household Tasks">
+                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
                 <h3>Household Tasks</h3>
                 <p>Light cleaning, laundry, and meal preparation. </p>
             </div>
-            <div class="services__cards">
-                <i class="fa-solid fa-house-medical-circle-check"></i>
+            <div class="services__cards" aria-label="Medication Management">
+                <i class="fa-solid fa-house-medical-circle-check" aria-hidden="true"></i>
                 <h3>Medication Management</h3>
                 <p>Reminders and assistance with medication administration. </p>
             </div>
-            <div class="services__cards">
-                <i class="fa-solid fa-hospital-user"></i>
+            <div class="services__cards" aria-label="Companionship">
+                <i class="fa-solid fa-hospital-user" aria-hidden="true"></i>
                 <h3>Companionship</h3>
                 <p>Providing social interaction and emotional support. </p>
             </div>
-            <div class="services__cards">
-                <i class="fa-solid fa-heart"></i>
+            <div class="services__cards" aria-label="Specialized Care">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
                 <h3>Specialized Care</h3>
                 <p>Support for individuals with specific needs, including dementia, all sort of mobility issues, and
                     other health conditions. </p>
@@ -156,11 +156,11 @@
     <section class="wyh-choose__section">
         <div class="container-xlg why-choose__container">
             <div class="why-choose__content">
-                <div class="why-choose__left">
+                <div class="why-choose__left about-why__left">
                     <img src="./images/why-choose-us2.jpg"
                         alt="Caregivers interacting warmly with elderly women in wheelchairs in a community care setting">
                 </div>
-                <div class="why-choose__right">
+                <div class="why-choose__right about-why__right">
                     <small>Why Choose Us</small>
                     <h2>Professional Care You Can Trust</h2>
                     <p>At Noble Care and Support, we understand that every individual deserves compassionate care,
@@ -193,13 +193,28 @@
 
     <!--  ========== Why choose us section ends ======== -->
 
+    <!-- ========== Testimonial section starts ====== -->
+
+    <section class="testimonial__section testimonial__services" aria-labelledby="testimonial-heading">
+        <div class="container-xlg testimonial__container" id="testimonial-heading">
+            <div class="carousel">
+                <button class="nav-btn prev-btn" aria-label="Previous testimonial">&#8592;</button>
+                <div id="testimonial-container"></div>
+                <button class="nav-btn next-btn" aria-label="Next testimonial">&#8594;</button>
+                <div class="pagination" id="pagination-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--  ========== Testimonial section ends ======== -->
+
     <!--  ========== Frequently ask section starts ======== -->
-    <section class="frequently__section">
+    <section class="frequently__section frequently__services" aria-labelledby="frequently-asked-heading">
         <div class="container-xlg frequently__container">
             <div class="frequently__content">
                 <div class="frequently__left">
-                    <div class="frequently__icon">
-                        <i class="fa-solid fa-house-chimney"></i>
+                    <div class="frequently__icon" aria-label="Home Icon">
+                        <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
                         <p>100%</p>
                         <small>We care like family.</small>
                     </div>
@@ -208,7 +223,7 @@
                     <div class="frequently__bg"></div>
                 </div>
                 <div class="frequently__right">
-                    <small>Frequently Asked Questions</small>
+                    <small id="frequently-asked-heading">Frequently Asked Questions</small>
                     <h2>We Make Them Happy</h2>
                     <div class="frequently__accordion">
                         <button class="accordion" aria-expanded="false" aria-controls="panel1" id="accordion1">What
@@ -254,21 +269,6 @@
     </section>
 
     <!--  ========== Frequently ask section starts ======== -->
-
-    <!-- ========== Testimonial section starts ====== -->
-
-    <section class="testimonial__section">
-        <div class="container-xlg testimonial__container">
-            <div class="carousel">
-                <button class="nav-btn prev-btn">&#8592;</button>
-                <div id="testimonial-container"></div>
-                <button class="nav-btn next-btn">&#8594;</button>
-                <div class="pagination" id="pagination-dots"></div>
-            </div>
-        </div>
-    </section>
-
-    <!--  ========== Testimonial section ends ======== -->
 
     <!--  ========== Footer section starts ======== -->
     <footer class="footer__about">

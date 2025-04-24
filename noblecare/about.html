@@ -17,13 +17,13 @@
 <body>
     <nav>
         <div class="nav__upper">
-            <small><a href="#main__content">Skip to main content</a></small>
+            <small><a href="#main-content">Skip to main content</a></small>
             <small>Welcome to Noble Care</small>
             <small><i class="fa-regular fa-clock"></i> Mon-Fri: 9am to 6pm/ Sat: 9am to 5pm</small>
         </div>
         <div class="container-xlg nav__logo-container">
             <a href="index.html" class="nav__logo"><img src="./images/logo-1.png" alt="Noble care Logo"></a>
-            <div class="nav__contact">
+            <div class="nav__contact container-sm ">
                 <div class="nav__email">
                     <div class="nav__icon">
                         <i class="fa-solid fa-envelope-open"></i>
@@ -54,7 +54,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="nav_quote">
-                    <button>Get a Quote</button>
+                    <a href="quote.html">Get a Quote</a>
                 </div>
                 <button aria-label="Open navigation menu" class="nav__toggle-btn" id="nav__toggle-open"
                     aria-controls="menuOverlay" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
@@ -65,19 +65,18 @@
             <div class="menu__overlay" id="menuOverlay" role="dialog" aria-hidden="true"></div>
             <div class="mobile__menu">
                 <ul class="nav__ul">
-                    <li aria-hidden="true"><a href="index.html">Home</a></li>
-                    <li aria-hidden="true"><a href="about.html">About</a></li>
-                    <li aria-hidden="true"><a href="services.html">Services</a></li>
-                    <li aria-hidden="true"><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="nav_quote">
-                    <button>Get a Quote</button>
+                    <a href="quote.html">Get a Quote</a>
                 </div>
             </div>
-            <main class="banner__text" id="main-content">
+            <div class="banner__text" id="main-content">
                 <h1>About Us</h1>
-            </main>
-        </div>
+            </div>
 
     </nav>
 
@@ -106,23 +105,23 @@
     </section>
 
     <!-- ========== Small banner area section starts ========== -->
-    <section class="s-banner__section">
+    <section class="s-banner__section" aria-labelledby="other-services">
         <div class="container-xlg s-banner__container">
-            <div class="s-banner__cards">
-                <i class="fa-solid fa-bed-pulse"></i>
-                <p>Health Care</p>
+            <div class="s-banner__cards" aria-label="Health Care">
+                <i class="fa-solid fa-bed-pulse" aria-hidden="true"></i>
+                <p id="other-services">Health Care</p>
             </div>
-            <div class="s-banner__cards">
-                <i class="fa-solid fa-house-medical"></i>
-                <p>Resident Care</p>
+            <div class="s-banner__cards" aria-label="Resident Care">
+                <i class="fa-solid fa-house-medical" aria-hidden="true"></i>
+                <p id="other-services">Resident Care</p>
             </div>
-            <div class="s-banner__cards">
-                <i class="fa-solid fa-user-nurse"></i>
-                <p>Nursing Care</p>
+            <div class="s-banner__cards" aria-label="Nursing Care">
+                <i class="fa-solid fa-user-nurse" aria-hidden="true"></i>
+                <p id="other-services">Nursing Care</p>
             </div>
-            <div class="s-banner__cards">
-                <i class="fa-solid fa-stethoscope"></i>
-                <p>Quality Support</p>
+            <div class="s-banner__cards" aria-label="Quality Support">
+                <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+                <p id="other-services">Quality Support</p>
             </div>
         </div>
     </section>
@@ -132,36 +131,37 @@
 
     <!--  ========== Why choose us section starts ======== -->
 
-    <section class="wyh-choose__section">
+    <section class="wyh-choose__section" aria-labelledby="why-choose-us-heading">
         <div class="container-xlg why-choose__container">
             <div class="why-choose__content">
-                <div class="why-choose__left">
+                <div class="why-choose__left about-why__left">
                     <img src="./images/why-choose-us2.jpg"
                         alt="Caregivers interacting warmly with elderly women in wheelchairs in a community care setting">
                 </div>
-                <div class="why-choose__right">
-                    <small>Why Choose Us</small>
+                <div class="why-choose__right about-why__right">
+                    <small id="why-choose-us-heading">Why Choose Us</small>
                     <h2>Professional Care You Can Trust</h2>
                     <p>At Noble Care and Support, we understand that every individual deserves compassionate care,
                         delivered with dignity, respect, and professionalism. Here's why families trust us:</p>
                     <div class="why-choose__cards">
                         <div class="why-choose__card">
-                            <p><i class="fa-solid fa-check"></i><span>CQC Regulated</span></p>
+                            <p><i class="fa-solid fa-check" aria-label="check" aria-hidden="true"></i><span>CQC
+                                    Regulated</span></p>
                         </div>
                         <div class="why-choose__card">
-                            <p><i class="fa-solid fa-check"></i><span>Trained & Trusted Staff</span></p>
+                            <p><i class="fa-solid fa-check" aria-label="check" aria-hidden="true"></i><span>Trained &
+                                    Trusted Staff</span>
+                            </p>
                         </div>
                         <div class="why-choose__card">
-                            <p><i class="fa-solid fa-check"></i><span> Comfort of Your Home</span></p>
+                            <p><i class="fa-solid fa-check" aria-label="check" aria-hidden="true"></i><span> Comfort of
+                                    Your Home</span>
+                            </p>
                         </div>
                         <div class="why-choose__card">
-                            <p><i class="fa-solid fa-check"></i><span>24/7 Support & Flexibility</span></p>
-                        </div>
-                        <div class="why-choose__card">
-                            <p><span></span></p>
-                        </div>
-                        <div class="why-choose__card">
-                            <p><span></span></p>
+                            <p><i class="fa-solid fa-check" aria-label="check" aria-hidden="true"></i><span>24/7 Support
+                                    &
+                                    Flexibility</span></p>
                         </div>
                     </div>
 

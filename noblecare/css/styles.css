@@ -12,6 +12,7 @@
   --container-width-xlg: 74%;
   --container-width-lg: 88%;
   --container-width-md: 92%;
+  --container-width-sm: 98%;
 
   --transition: all 400ms ease;
   --box-shadow: 10px 10px 14px 1px rgba(00, 00, 00, 0.2);
@@ -188,7 +189,7 @@ nav {
   background-color: var(--white-color);
   margin-top: 0;
   padding: 1rem;
-  z-index: 3;
+  z-index: 5;
 }
 
 .nav__menu .nav__logo {
@@ -971,6 +972,39 @@ footer {
 
 /* ========= About us section ends ========= */
 
+/* ========= Services section starts ========= */
+.save__more-services {
+  margin-top: 7rem;
+}
+.testimonial__services {
+  margin-top: 10rem;
+}
+
+.frequently__services {
+  margin-top: 7rem;
+}
+
+/* ========= Services section ends ========= */
+
+/* ========= contact us section starts ========= */
+.contact-page__section {
+  margin-top: 7rem;
+}
+
+.contact-page__content {
+  text-align: center;
+}
+
+.contact-page__content h2 {
+  font-weight: bold;
+}
+
+.contact-page__content ul {
+  margin-top: 2rem;
+}
+
+/* ========= contact us section ends ========= */
+
 /* ======= Media Queries (Medium Devices)====== */
 @media screen and (max-width: 1024px) {
   .container-xlg {
@@ -1030,8 +1064,8 @@ footer {
     background-color: var(--white-color);
     width: 70%;
     max-width: 300px;
-    height: 50%;
-    z-index: 2;
+    height: auto;
+    z-index: 4;
     transform: translateX(100%); /* Push it off-screen */
     transition: transform 0.3s ease-in-out;
     display: block; /* Make sure it's block but hidden via transform */
@@ -1111,4 +1145,95 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+  .container-sm {
+    /* width: var(--container-width-sm); */
+    /* position: relative; */
+  }
+  .nav__upper {
+    gap: 1rem;
+  }
+  .nav__upper small a,
+  .nav__upper small {
+    font-size: 0.7rem;
+  }
+  .nav__logo-container {
+    padding: 0.8rem 0;
+  }
+  .nav__contact {
+    gap: 0;
+  }
+  .banner__ext {
+    margin-top: 5rem;
+  }
+  .banner-ext__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about__left h2 {
+    font-size: 2rem;
+  }
+  .about__img {
+    width: 200px;
+    justify-content: center;
+  }
+  .about__right .about__right-shape {
+    width: 300px;
+    height: 300px;
+  }
+  .save__more-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .save__more-left h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .our-services__container {
+    grid-template-columns: 1fr;
+  }
+  .s-banner__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonial__section {
+    padding: 2rem 0;
+    background-position: center;
+  }
+  .why-choose__content {
+    grid-template-columns: 1fr;
+  }
+  .why-choose__right {
+    margin-top: 15rem;
+  }
+  .frequently__content {
+    grid-template-columns: 1fr;
+  }
+  .newsletter__section {
+    margin-top: 10rem;
+  }
+  .newsletter__left {
+    margin-top: 0;
+  }
+  .newsletter__content {
+    grid-template-columns: 1fr;
+    gap: 10%;
+    /* align-items: center; */
+  }
+  .newsletter__right {
+    display: none;
+  }
+  .footer__content {
+    grid-template-columns: 1fr;
+  }
+  .about-why__left {
+    display: none;
+  }
+  .about-why__right {
+    margin-top: 0;
+  }
 }
