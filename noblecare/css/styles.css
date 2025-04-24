@@ -1003,6 +1003,11 @@ footer {
   margin-top: 2rem;
 }
 
+.contact__map {
+  margin-top: 5rem;
+  border: var(--primary-color) 1px solid;
+}
+
 /* ========= contact us section ends ========= */
 
 /* ======= Media Queries (Medium Devices)====== */
