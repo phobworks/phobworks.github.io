@@ -869,6 +869,23 @@ nav {
 
 /* ========= Newsletter section ends ======== */
 
+/* ========= licensed section starts ======== */
+.licensed__section {
+  margin-top: 7rem;
+}
+
+.licensed__content {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.licensed__content img {
+  width: 200px;
+}
+
+/* ========= licensed section ends ======== */
+
 /* ========= Footer section starts ======== */
 footer {
   margin-top: 7rem;
