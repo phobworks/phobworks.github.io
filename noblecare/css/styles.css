@@ -119,7 +119,7 @@ nav {
 }
 
 .nav__logo {
-  width: 6rem;
+  width: 12rem;
 }
 
 .nav__contact {
@@ -899,7 +899,7 @@ footer {
 }
 
 .footer__cards img {
-  width: 10rem;
+  width: 15rem;
 }
 
 .footer__cards p,
@@ -1045,6 +1045,9 @@ footer {
   }
   .nav__logo-container a {
     display: none;
+  }
+  .nav__logo {
+    width: 15rem;
   }
   .nav__contact {
     /* display: flex; */
