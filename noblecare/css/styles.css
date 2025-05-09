@@ -464,7 +464,10 @@ nav {
   padding: 2rem 1rem;
   box-shadow: var(--box-shadow);
   width: auto;
-  height: 350px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .services__cards i {
@@ -484,7 +487,21 @@ nav {
 
 .services__cards h3,
 .services__cards p {
-  margin-top: 1rem;
+  margin: 1rem 0;
+}
+
+.services__link {
+  margin-top: auto;
+}
+
+.services__link a {
+  color: var(--primary-color);
+  font-weight: 400;
+  transition: var(--transition);
+}
+
+.services__link a:hover {
+  color: var(--color-black);
 }
 
 /* ========= Save more section ends ======== */
@@ -999,6 +1016,26 @@ footer {
 
 .frequently__services {
   margin-top: 7rem;
+}
+
+.our-services__container2 {
+  margin-top: 3rem;
+}
+
+.services__cards2 {
+  margin-top: 2rem;
+}
+
+.services__cards2 ul p {
+  font-weight: bold;
+}
+
+.services__cards2 ul {
+  padding-left: 2rem;
+}
+
+.services__cards2 ul li {
+  list-style: disc;
 }
 
 /* ========= Services section ends ========= */
